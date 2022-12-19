@@ -8,3 +8,5 @@ export const fields: string[] = [
   'Energy',
   'Mining',
 ];
+
+export { productCategories, carouselItems } from './products';

@@ -5,7 +5,6 @@ import {
   Grid,
   GridItem,
   Image,
-  Link,
   Text,
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
@@ -31,7 +30,7 @@ export const Footer = () => {
           bg="yellow"
           w={{ base: '100%', lg: '80%' }}
         >
-          <Newsletter />
+          {/* <Newsletter /> */}
         </Box>
         <Box mb="30px" h={{ base: '500px', sm: '280px', lg: '100px' }} />
 
@@ -72,27 +71,27 @@ export const Footer = () => {
 
             <GridItem mt={{ base: '2rem', md: '0' }}>
               <NextLink href="/about" passHref>
-                <Link
+                <Text
                   fontWeight={500}
                   mt={{ base: 10 }}
                   mb={3}
                   _hover={{ textDecor: 'none' }}
                 >
                   About Us
-                </Link>
+                </Text>
               </NextLink>
             </GridItem>
             <Divider my="1rem" display={{ md: 'none' }} />
             <GridItem>
               <NextLink href="/deals" passHref>
-                <Link
+                <Text
                   fontWeight={500}
                   mt={{ base: 10 }}
                   mb={3}
                   _hover={{ textDecor: 'none' }}
                 >
                   Deals Store
-                </Link>
+                </Text>
               </NextLink>
             </GridItem>
           </Grid>
@@ -122,19 +121,19 @@ export const Footer = () => {
                 passHref
                 className="py-2 link-item"
               >
-                <Link {...linkStyles}>Terms and Conditions </Link>
+                <Text {...linkStyles}>Terms and Conditions </Text>
               </NextLink>
 
               <NextLink href="/privacy" passHref className="py-2">
-                <Link {...linkStyles}>Privacy Policy</Link>
+                <Text {...linkStyles}>Privacy Policy</Text>
               </NextLink>
 
               <NextLink href="/after-sales-policies" passHref className="py-2">
-                <Link {...linkStyles}>After Sales Policy</Link>
+                <Text {...linkStyles}>After Sales Policy</Text>
               </NextLink>
 
               <NextLink href="/waranty-policy" passHref className="py-2">
-                <Link {...linkStyles}>Warranty Policy</Link>
+                <Text {...linkStyles}>Warranty Policy</Text>
               </NextLink>
             </Flex>
           </Flex>

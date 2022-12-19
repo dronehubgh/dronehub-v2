@@ -1,0 +1,53 @@
+.dh-swiper {
+  height: 100%;
+  width: 90%;
+
+  .swiper-slide {
+    height: 100%;
+    width: 100%;
+    color: #fff;
+  }
+
+  .swiper-pagination {
+    text-align: left;
+    margin-left: 2rem;
+  }
+
+  .swiper-pagination-bullet {
+    width: 60px;
+    height: 8px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    color: #000;
+    opacity: 1;
+    background: #fff;
+  }
+
+  .swiper-pagination-bullet-active {
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      border-bottom-left-radius: 5px;
+      border-top-left-radius: 5px;
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      background: #007aff;
+      animation: progress 10s linear 1;
+    }
+  }
+}
+
+@keyframes progress {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}

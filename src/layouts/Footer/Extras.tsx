@@ -1,4 +1,4 @@
-import { Link, List, ListItem, Text } from '@chakra-ui/react';
+import { List, ListItem, Text } from '@chakra-ui/react';
 import NextLink from 'next/link';
 
 export const Extras = () => {
@@ -15,7 +15,7 @@ export const Extras = () => {
           py={{ base: 2, lg: 2 }}
         >
           <NextLink href="/blog" passHref>
-            <Link _hover={{ textDecor: 'none' }}>Blog</Link>
+            <Text _hover={{ textDecor: 'none' }}>Blog</Text>
           </NextLink>
         </ListItem>
 
@@ -25,7 +25,7 @@ export const Extras = () => {
           py={{ base: 2, lg: 2 }}
         >
           <NextLink href="/event" passHref>
-            <Link _hover={{ textDecor: 'none' }}>Events</Link>
+            <Text _hover={{ textDecor: 'none' }}>Events</Text>
           </NextLink>
         </ListItem>
 
@@ -35,7 +35,7 @@ export const Extras = () => {
           py={{ base: 2, lg: 2 }}
         >
           <NextLink href="/" passHref>
-            <Link _hover={{ textDecor: 'none' }}>Feedback</Link>
+            <Text _hover={{ textDecor: 'none' }}>Feedback</Text>
           </NextLink>
         </ListItem>
 
@@ -45,7 +45,7 @@ export const Extras = () => {
           py={{ base: 2, lg: 2 }}
         >
           <NextLink href="/" passHref>
-            <Link _hover={{ textDecor: 'none' }}>Customer Stories</Link>
+            <Text _hover={{ textDecor: 'none' }}>Customer Stories</Text>
           </NextLink>
         </ListItem>
 
@@ -55,7 +55,7 @@ export const Extras = () => {
           py={{ base: 2, lg: 2 }}
         >
           <NextLink href="/product" passHref>
-            <Link _hover={{ textDecor: 'none' }}>Strategic Partnership</Link>
+            <Text _hover={{ textDecor: 'none' }}>Strategic Partnership</Text>
           </NextLink>
         </ListItem>
       </List>

@@ -1,4 +1,4 @@
-import { Link, List, ListItem, Text } from '@chakra-ui/react';
+import { List, ListItem, Text } from '@chakra-ui/react';
 import NextLink from 'next/link';
 
 export const Services = () => {
@@ -15,7 +15,7 @@ export const Services = () => {
           py={{ base: 2, lg: 2 }}
         >
           <NextLink href="/drone-repairs" passHref>
-            <Link _hover={{ textDecor: 'none' }}>Drone Repairs</Link>
+            <Text _hover={{ textDecor: 'none' }}>Drone Repairs</Text>
           </NextLink>
         </ListItem>
 
@@ -25,7 +25,7 @@ export const Services = () => {
           py={{ base: 2, lg: 2 }}
         >
           <NextLink href="/drone-maintenance" passHref>
-            <Link _hover={{ textDecor: 'none' }}>Drone Maintenance</Link>
+            <Text _hover={{ textDecor: 'none' }}>Drone Maintenance</Text>
           </NextLink>
         </ListItem>
 
@@ -35,7 +35,7 @@ export const Services = () => {
           py={{ base: 2, lg: 2 }}
         >
           <NextLink href="/" passHref>
-            <Link _hover={{ textDecor: 'none' }}>Drone Software</Link>
+            <Text _hover={{ textDecor: 'none' }}>Drone Software</Text>
           </NextLink>
         </ListItem>
 
@@ -45,7 +45,7 @@ export const Services = () => {
           py={{ base: 2, lg: 2 }}
         >
           <NextLink href="/drone-consultation" passHref>
-            <Link _hover={{ textDecor: 'none' }}>Drone Consulting</Link>
+            <Text _hover={{ textDecor: 'none' }}>Drone Consulting</Text>
           </NextLink>
         </ListItem>
 
@@ -55,7 +55,7 @@ export const Services = () => {
           py={{ base: 2, lg: 2 }}
         >
           <NextLink href="/drone-detection" passHref>
-            <Link _hover={{ textDecor: 'none' }}>Drone Detection</Link>
+            <Text _hover={{ textDecor: 'none' }}>Drone Detection</Text>
           </NextLink>
         </ListItem>
         <ListItem
@@ -64,7 +64,7 @@ export const Services = () => {
           py={{ base: 2, lg: 2 }}
         >
           <NextLink href="/drone-rentals" passHref>
-            <Link _hover={{ textDecor: 'none' }}>Drone Rentals</Link>
+            <Text _hover={{ textDecor: 'none' }}>Drone Rentals</Text>
           </NextLink>
         </ListItem>
         <ListItem
@@ -73,7 +73,7 @@ export const Services = () => {
           py={{ base: 2, lg: 2 }}
         >
           <NextLink href="/drone-applied-research" passHref>
-            <Link _hover={{ textDecor: 'none' }}>Drone Research</Link>
+            <Text _hover={{ textDecor: 'none' }}>Drone Research</Text>
           </NextLink>
         </ListItem>
         <ListItem
@@ -82,7 +82,7 @@ export const Services = () => {
           py={{ base: 2, lg: 2 }}
         >
           <NextLink href="/drone-eduction" passHref>
-            <Link _hover={{ textDecor: 'none' }}>Drone Education</Link>
+            <Text _hover={{ textDecor: 'none' }}>Drone Education</Text>
           </NextLink>
         </ListItem>
         <ListItem
@@ -91,7 +91,7 @@ export const Services = () => {
           py={{ base: 2, lg: 2 }}
         >
           <NextLink href="/custom-solution" passHref>
-            <Link _hover={{ textDecor: 'none' }}>Custom Solutions</Link>
+            <Text _hover={{ textDecor: 'none' }}>Custom Solutions</Text>
           </NextLink>
         </ListItem>
       </List>

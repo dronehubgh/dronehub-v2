@@ -1,7 +1,8 @@
 import React from 'react';
+import { Products } from '../../features';
 
 const AllProductsPage = () => {
-  return <div>All Products</div>;
+  return <Products />;
 };
 
 export default AllProductsPage;

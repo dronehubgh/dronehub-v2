@@ -1,4 +1,4 @@
-import { BoxProps, LinkProps } from '@chakra-ui/react';
+import { BoxProps, TextProps } from '@chakra-ui/react';
 
 export const footerBoxStyles: BoxProps = {
   mb: -28,
@@ -8,7 +8,7 @@ export const footerBoxStyles: BoxProps = {
   pos: 'relative',
 };
 
-export const linkStyles: LinkProps = {
+export const linkStyles: TextProps = {
   textDecoration: 'none',
   _hover: { color: 'gray.300' },
 };

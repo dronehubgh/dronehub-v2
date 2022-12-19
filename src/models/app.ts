@@ -12,3 +12,17 @@ export interface INewsletterFormValues {
   email: string;
   industry: string;
 }
+
+export interface ICarouselItem {
+  id: string;
+  title: string;
+  description: string;
+  imageUrl: string;
+  cta: ReactNode;
+}
+
+export interface IProductCategory {
+  id: string;
+  name: string;
+  iconUrl: string;
+}

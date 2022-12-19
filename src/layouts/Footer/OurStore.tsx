@@ -15,7 +15,7 @@ export const OurStore = () => {
           py={{ base: 2, lg: 2 }}
         >
           <NextLink href="/product" passHref>
-            <Link _hover={{ textDecor: 'none' }}>Consumer Drones</Link>
+            <Text _hover={{ textDecor: 'none' }}>Consumer Drones</Text>
           </NextLink>
         </ListItem>
 
@@ -25,7 +25,7 @@ export const OurStore = () => {
           py={{ base: 2, lg: 2 }}
         >
           <NextLink href="/product" passHref>
-            <Link _hover={{ textDecor: 'none' }}>Enterprise Drones</Link>
+            <Text _hover={{ textDecor: 'none' }}>Enterprise Drones</Text>
           </NextLink>
         </ListItem>
 
@@ -35,7 +35,7 @@ export const OurStore = () => {
           py={{ base: 2, lg: 2 }}
         >
           <NextLink href="/product" passHref>
-            <Link _hover={{ textDecor: 'none' }}>Drone Accessories</Link>
+            <Text _hover={{ textDecor: 'none' }}>Drone Accessories</Text>
           </NextLink>
         </ListItem>
 
@@ -45,7 +45,7 @@ export const OurStore = () => {
           py={{ base: 2, lg: 2 }}
         >
           <NextLink href="/product" passHref>
-            <Link _hover={{ textDecor: 'none' }}>Cameras & Gimbals</Link>
+            <Text _hover={{ textDecor: 'none' }}>Cameras & Gimbals</Text>
           </NextLink>
         </ListItem>
 
@@ -55,7 +55,7 @@ export const OurStore = () => {
           py={{ base: 2, lg: 2 }}
         >
           <NextLink href="/product" passHref>
-            <Link _hover={{ textDecor: 'none' }}>Software Solutions </Link>
+            <Text _hover={{ textDecor: 'none' }}>Software Solutions </Text>
           </NextLink>
         </ListItem>
       </List>

@@ -4,11 +4,11 @@ import { BiChevronRight } from 'react-icons/bi';
 import { Box, Flex } from '@chakra-ui/react';
 
 export const ProductCTAButtons = () => (
-  <Flex>
-    <Box w="50%" mx={1}>
+  <Flex justify={{ base: 'center', lg: 'flex-start' }}>
+    <Box mx={1}>
       <IconButton title="Learn more" icon={<BiChevronRight />} />
     </Box>
-    <Box w="50%" mx={1}>
+    <Box mx={1}>
       <ReserveNowMenu />
     </Box>
   </Flex>

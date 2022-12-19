@@ -4,7 +4,7 @@ export const cardStyles: FlexProps = {
   flexDir: 'column',
   bg: 'white',
   h: '30rem',
-  w: '26rem',
+  w: '30rem',
   p: '2rem',
   boxSizing: 'border-box',
   rounded: 'sm',
