@@ -16,20 +16,18 @@ export const ProductSlider = () => {
     modules: [Navigation, A11y],
     spaceBetween: isXLarge ? 50 : isLarge ? 200 : isMedium ? 100 : 50,
     slidesPerView: isLarge ? 3 : isMedium ? 2 : 1,
-    loop: true,
+    // loop: true,
   };
 
   return (
     <Box w="100%">
       <Swiper {...sliderSettings}>
         <SwiperSlide>
-          <Box>
-            <ProductCard
-              title="Card 1"
-              cta={<ProductCTAButtons />}
-              imageUrl="./assets/images/drones/drone-2.png"
-            />
-          </Box>
+          <ProductCard
+            title="Card 1"
+            cta={<ProductCTAButtons />}
+            imageUrl="./assets/images/drones/drone-2.png"
+          />
         </SwiperSlide>
         <SwiperSlide>
           <ProductCard
