@@ -15,7 +15,7 @@ import { Extras } from './Extras';
 import { GetInTouch } from './GetInTouch';
 import { OurStore } from './OurStore';
 import { Services } from './Services';
-import { footerBoxStyles, linkStyles } from './_styles';
+import { footerBoxStyles, linkTextStyles } from './_styles';
 
 export const Footer = () => {
   return (
@@ -30,7 +30,7 @@ export const Footer = () => {
           bg="yellow"
           w={{ base: '100%', lg: '80%' }}
         >
-          {/* <Newsletter /> */}
+          <Newsletter />
         </Box>
         <Box mb="30px" h={{ base: '500px', sm: '280px', lg: '100px' }} />
 
@@ -121,19 +121,19 @@ export const Footer = () => {
                 passHref
                 className="py-2 link-item"
               >
-                <Text {...linkStyles}>Terms and Conditions </Text>
+                <Text {...linkTextStyles}>Terms and Conditions </Text>
               </NextLink>
 
               <NextLink href="/privacy" passHref className="py-2">
-                <Text {...linkStyles}>Privacy Policy</Text>
+                <Text {...linkTextStyles}>Privacy Policy</Text>
               </NextLink>
 
               <NextLink href="/after-sales-policies" passHref className="py-2">
-                <Text {...linkStyles}>After Sales Policy</Text>
+                <Text {...linkTextStyles}>After Sales Policy</Text>
               </NextLink>
 
               <NextLink href="/waranty-policy" passHref className="py-2">
-                <Text {...linkStyles}>Warranty Policy</Text>
+                <Text {...linkTextStyles}>Warranty Policy</Text>
               </NextLink>
             </Flex>
           </Flex>

@@ -12,3 +12,8 @@ export const linkStyles: LinkProps = {
   textDecoration: 'none',
   _hover: { color: 'gray.300' },
 };
+
+export const linkTextStyles: TextProps = {
+  textDecoration: 'none',
+  _hover: { color: 'gray.300' },
+};

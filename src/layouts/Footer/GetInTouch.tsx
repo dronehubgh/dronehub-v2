@@ -1,5 +1,4 @@
-import React from 'react';
-import { Box, Divider, Flex, Icon, Link, Text } from '@chakra-ui/react';
+import { Box, Flex, Icon, Link, Text } from '@chakra-ui/react';
 import { BiPhone } from 'react-icons/bi';
 import { FiMail } from 'react-icons/fi';
 import { linkStyles } from './_styles';
