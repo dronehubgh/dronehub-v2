@@ -59,7 +59,7 @@ export const ProductSection = ({
             {items.map((item) => (
               <Tab
                 key={uid()}
-                fontSize="xl"
+                fontSize={{ base: 'md', md: 'xl' }}
                 color="gray.100"
                 _active={{ bg: '' }}
                 _selected={{ fontWeight: 'bold', borderBottom: '2px' }}
