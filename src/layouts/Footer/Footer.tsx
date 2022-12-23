@@ -132,7 +132,7 @@ export const Footer = () => {
                 <Text {...linkTextStyles}>After Sales Policy</Text>
               </NextLink>
 
-              <NextLink href="/waranty-policy" passHref className="py-2">
+              <NextLink href="/warranty-policy" passHref className="py-2">
                 <Text {...linkTextStyles}>Warranty Policy</Text>
               </NextLink>
             </Flex>

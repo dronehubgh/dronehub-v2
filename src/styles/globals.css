@@ -29,7 +29,10 @@ a {
 
 a:hover {
   color: #b8b7b7 !important;
+}
 
+.nav-item~.text-dark:hover {
+  color: #656565 !important;
 }
 
 .dropdown-toggle::after {

@@ -8,7 +8,7 @@ interface IconButtonProps extends ButtonProps {
 
 export const IconButton = ({ title, icon, ...rest }: IconButtonProps) => (
   <Button title={title} {...rest}>
-    <Box as="span" mx="15px">
+    <Box as="span" mx="2">
       {icon}
     </Box>
   </Button>

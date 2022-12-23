@@ -18,11 +18,20 @@ export interface ICarouselItem {
   title: string;
   description: string;
   imageUrl: string;
-  cta: ReactNode;
+  cta?: ReactNode;
 }
 
+export interface IProductOverview extends ICarouselItem {
+  outOfStock?: boolean;
+}
 export interface IProductCategory {
   id: string;
   name: string;
   iconUrl: string;
+}
+
+export interface INavItem {
+  id: string;
+  name: string;
+  link: string;
 }

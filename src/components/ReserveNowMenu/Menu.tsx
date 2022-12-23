@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Button, Spacer } from '@chakra-ui/react';
+import { Box, Button, Spacer, Text } from '@chakra-ui/react';
 import { FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
 import { BiChevronDown } from 'react-icons/bi';
 import { IMenuItem } from '../../models/app';
@@ -29,7 +29,10 @@ export const ReserveNowMenu = ({
         data-bs-toggle="dropdown"
         aria-expanded="false"
       >
-        Reserve now <Spacer /> <BiChevronDown />
+        <Text as="span" mx="2">
+          Reserve now
+        </Text>{' '}
+        <BiChevronDown />
       </Button>
 
       <Box as="ul" className="dropdown-menu dropdown-menu-end">

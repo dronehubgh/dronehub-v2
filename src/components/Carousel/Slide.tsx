@@ -1,20 +1,21 @@
 import { Box, Flex, Heading, Image, Text } from '@chakra-ui/react';
 import { ICarouselItem } from '../../models/app';
+import {
+  headerBoxStyles,
+  headingStyles,
+  imageBoxStyles,
+  slideStyles,
+} from './_styles';
 
 export const Slide = ({ item }: { item: ICarouselItem }) => {
   return (
-    <Flex
-      align="center"
-      p="1rem"
-      display={{ base: 'block', lg: 'flex' }}
-      h="100%"
-    >
-      <Box textAlign={{ base: 'center', lg: 'left' }}>
-        <Heading size="2xl">{item.title}</Heading>
+    <Flex {...slideStyles}>
+      <Box {...headerBoxStyles}>
+        <Heading {...headingStyles}>{item.title}</Heading>
         <Text my="3">{item.description}</Text>
         {item.cta}
       </Box>
-      <Box w="100%" my={{ base: '70px', lg: '0' }}>
+      <Box w="100%" {...imageBoxStyles}>
         <Image src={item.imageUrl} alt="product image" w="100%" m="auto" />
       </Box>
     </Flex>

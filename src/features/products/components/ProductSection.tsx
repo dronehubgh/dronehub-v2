@@ -1,40 +1,30 @@
 import { Box, Heading } from '@chakra-ui/react';
-import { string } from 'prop-types';
 import React, { ReactNode } from 'react';
-import { ProductSlider } from './Slider/ProductSlider';
+import { productSection } from './_styles';
+
+const { headingStyles, boxStyles } = productSection;
 
 interface ProductSectionProps {
   title: string;
+  subTitle: string;
   bgImageUrl: string;
-  drones: ReactNode;
-  accessories?: ReactNode;
+  content: ReactNode;
 }
 
 export const ProductSection = ({
   title,
+  subTitle,
   bgImageUrl,
-  drones,
-  accessories,
+  content,
 }: ProductSectionProps) => {
   return (
-    <Box
-      bgImage={bgImageUrl}
-      h="900px"
-      bgSize="cover"
-      p={{ base: '1rem 0 1rem 1rem', lg: '5rem 0 5rem 5rem' }}
-    >
+    <Box bgImage={bgImageUrl} {...boxStyles}>
       <Box h="100%">
-        <Heading
-          pb="3rem"
-          color="white"
-          size="2xl"
-          px={{ base: '4rem', md: '0', lg: '3rem' }}
-          w={{ base: '100%', md: '70%', lg: '45%' }}
-          m={{ base: 'auto', lg: '0' }}
-        >
-          {title}
-        </Heading>
-        {drones}
+        <Box pt="2rem" pb="3rem">
+          <Heading {...headingStyles}>{title}</Heading>
+          <Heading {...headingStyles}>{subTitle}</Heading>
+        </Box>
+        {content}
       </Box>
     </Box>
   );

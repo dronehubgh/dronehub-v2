@@ -1,13 +1,15 @@
 import { FlexProps, HeadingProps, TextProps } from '@chakra-ui/react';
 
 export const cardStyles: FlexProps = {
+  pos: 'relative',
+  overflow: 'hidden',
   flexDir: 'column',
   bg: 'white',
-  h: '30rem',
-  w: '30rem',
+  h: { base: '30rem', xl: '32rem' },
+  w: { base: '20rem', lg: '26rem', xl: '28rem', '2xl': '32rem' },
   p: '2rem',
   boxSizing: 'border-box',
-  rounded: 'sm',
+  rounded: 'md',
   shadow: 'md',
   my: '0.5rem',
   mx: 'auto',
