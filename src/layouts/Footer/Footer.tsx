@@ -32,11 +32,14 @@ export const Footer = () => {
         >
           <Newsletter />
         </Box>
-        <Box mb="30px" h={{ base: '500px', sm: '280px', lg: '100px' }} />
+        <Box h={{ base: '200px', lg: '100px' }} />
 
         {/* ------ footer details starts here */}
         <Box w={{ base: '90%', lg: '80%' }} m="auto">
-          <Flex my="6rem" flexDir={{ base: 'column', md: 'row' }}>
+          <Flex
+            my={{ base: '4rem', lg: '6rem' }}
+            flexDir={{ base: 'column', md: 'row' }}
+          >
             <Box w={{ base: '100%', md: '20%' }} mx="15px" py="1rem">
               <Image src="/assets/logo-white.svg" alt="Drone hub logo" />
             </Box>

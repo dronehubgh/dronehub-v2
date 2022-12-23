@@ -21,7 +21,7 @@ export const cardStyles: FlexProps = {
   w: '100%',
   mx: 'auto',
   boxSizing: 'border-box',
-  p: '6rem',
+  p: { base: '3rem', md: '6rem' },
   textAlign: 'center',
   align: 'center',
   justify: 'center',
