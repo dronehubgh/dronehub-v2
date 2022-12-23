@@ -46,7 +46,7 @@ export const productSection: { [key: string]: any } = {
   boxStyles: {
     h: { base: '750px', lg: '900px' },
     bgSize: 'cover',
-    p: { base: '10px', md: '1rem', lg: '3rem 0 3rem 3rem' },
+    p: { base: '0px', md: '1rem', lg: '3rem 0 3rem 3rem' },
   },
 
   headingStyles: {

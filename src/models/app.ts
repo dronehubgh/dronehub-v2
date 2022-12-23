@@ -24,6 +24,12 @@ export interface ICarouselItem {
 export interface IProductOverview extends ICarouselItem {
   outOfStock?: boolean;
 }
+
+export interface IProductSectionItem {
+  name: string;
+  displayName: string;
+  products: IProductOverview[];
+}
 export interface IProductCategory {
   id: string;
   name: string;

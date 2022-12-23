@@ -1,12 +1,10 @@
-import { Box, IconButton } from '@chakra-ui/react';
+import { Box, Flex, IconButton } from '@chakra-ui/react';
 import { ReactNode } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { useMedia } from 'react-use';
 import { A11y, Navigation } from 'swiper';
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
 import { SwiperOptions } from 'swiper/types/swiper-options';
-import { ProductCard } from '../ProductCard/ProductCard';
-import { ProductCTAButtons } from '../ProductCTAButtons';
 import { v4 as uid } from 'uuid';
 interface ProductSliderProps {
   productCards: ReactNode[];
@@ -26,12 +24,24 @@ export const ProductSlider = ({ productCards }: ProductSliderProps) => {
 
   return (
     <Box w="100%">
-      <Swiper {...sliderSettings}>
-        {productCards.map((card) => (
-          <SwiperSlide key={uid()}>{card}</SwiperSlide>
-        ))}
-        <SwipeNavButtons />
-      </Swiper>
+      {productCards.length === 0 ? (
+        <Flex
+          justify="center"
+          align="center"
+          minH="500px"
+          color="gray.100"
+          className="fst-italic"
+        >
+          No Items Available for this tab
+        </Flex>
+      ) : (
+        <Swiper {...sliderSettings}>
+          {productCards.map((card) => (
+            <SwiperSlide key={uid()}>{card}</SwiperSlide>
+          ))}
+          <SwipeNavButtons />
+        </Swiper>
+      )}
     </Box>
   );
 };

@@ -34,7 +34,7 @@ export const ProductCard = ({
         )}
       </Box>
       <Flex {...imageBoxStyles}>
-        <Image src={imageUrl} alt="product image" w="100%" />
+        <Image src={imageUrl} alt="product image" w="100%" mx="auto" />
       </Flex>
 
       {outOfStock && (
