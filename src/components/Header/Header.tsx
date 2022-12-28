@@ -1,8 +1,8 @@
 import { NavbarLarge } from './NavbarLarge';
 import { v4 as uid } from 'uuid';
 import { INavItem } from '../../models/app';
-import { useMedia } from 'react-use';
 import { NavbarSmall } from './NavbarSmall';
+import { useMediaQuery } from '@chakra-ui/react';
 
 const navItems: INavItem[] = [
   {
@@ -33,10 +33,15 @@ const navItems: INavItem[] = [
 ];
 
 export const Header = () => {
-  const isMedium = useMedia('(min-width: 1024px)');
-  return isMedium ? (
-    <NavbarLarge navItems={navItems} />
-  ) : (
-    <NavbarSmall navItems={navItems} />
+  const [isLarge] = useMediaQuery('(min-width: 1024px)');
+
+  return (
+    <>
+      {isLarge ? (
+        <NavbarLarge navItems={navItems} />
+      ) : (
+        <NavbarSmall navItems={navItems} />
+      )}
+    </>
   );
 };
