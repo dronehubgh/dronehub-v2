@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { Box, Flex, Heading, Image, Text } from '@chakra-ui/react';
+import { Box, Flex, FlexProps, Heading, Image, Text } from '@chakra-ui/react';
 import {
   cardStyles,
   headingStyles,
@@ -13,6 +13,12 @@ interface ProductCardProps {
   imageUrl: string;
   cta: ReactNode;
   outOfStock?: boolean;
+  restStyles?: IOverrides;
+}
+
+export interface IOverrides {
+  image?: FlexProps;
+  card?: FlexProps;
 }
 
 export const ProductCard = ({
@@ -21,19 +27,22 @@ export const ProductCard = ({
   imageUrl,
   cta,
   outOfStock,
+  restStyles,
 }: ProductCardProps) => {
   return (
-    <Flex {...cardStyles}>
-      <Heading {...headingStyles}>{title}</Heading>
-      <Text {...textStyles}>{description}</Text>
-      <Box my="0.6rem">
-        {outOfStock ? (
-          <p className="text-danger fw-bold fst-italic">Out of Stock</p>
-        ) : (
-          cta
-        )}
+    <Flex {...cardStyles} {...restStyles?.card}>
+      <Box>
+        <Heading {...headingStyles}>{title}</Heading>
+        <Text {...textStyles}>{description}</Text>
+        <Box my="0.6rem">
+          {outOfStock ? (
+            <p className="text-danger fw-bold fst-italic">Out of Stock</p>
+          ) : (
+            cta
+          )}
+        </Box>
       </Box>
-      <Flex {...imageBoxStyles}>
+      <Flex {...imageBoxStyles} {...restStyles?.image}>
         <Image src={imageUrl} alt="product image" w="100%" mx="auto" />
       </Flex>
 

@@ -1,6 +1,10 @@
+import { ReactNode } from 'react';
 import { Carousel } from '../../components';
 import { carouselItems, productOverviews } from '../../data/products';
+import { IProductOverview } from '../../models/app';
 import { Categories } from './components/Categories';
+import { LatestReleases } from './components/LatestReleases';
+import { IOverrides, ProductCard } from './components/ProductCard/ProductCard';
 import { ProductCTAButtons } from './components/ProductCTAButtons';
 import { ProductSection } from './components/ProductSection';
 
@@ -20,6 +24,8 @@ export const Products = () => (
   <>
     <Carousel items={items} />
     <Categories />
+    <LatestReleases />
+
     <ProductSection
       title="Mavic Series"
       subTitle="Powerful Aerial Adventure"
@@ -71,6 +77,23 @@ export const Products = () => (
   </>
 );
 
+export const generateProductCards = (
+  items: IProductOverview[],
+  restStyles?: IOverrides
+): ReactNode[] => {
+  return items.map((item) => (
+    <ProductCard
+      key={item.id}
+      title={item.title}
+      description={item.description}
+      cta={item.cta || <ProductCTAButtons />}
+      imageUrl={item.imageUrl}
+      outOfStock={item.outOfStock}
+      restStyles={restStyles}
+    />
+  ));
+};
+
 export { ProductCard } from './components/ProductCard/ProductCard';
 export { ProductSlider } from './components/Slider/ProductSlider';
-export { ProductCTAButtons };
+export { ProductCTAButtons, LatestReleases };

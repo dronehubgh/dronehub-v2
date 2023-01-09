@@ -24,8 +24,8 @@ export const NavbarLarge = ({ navItems }: NavbarLargeProps) => {
   }, [y]);
 
   const logoUrl = isScrolled
-    ? 'assets/images/logo/logo-dark.png'
-    : 'assets/images/logo/logo-white.png';
+    ? '/assets/images/logo/logo-dark.png'
+    : '/assets/images/logo/logo-white.png';
 
   return (
     <Box

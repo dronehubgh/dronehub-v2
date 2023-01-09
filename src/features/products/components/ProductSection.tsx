@@ -7,13 +7,11 @@ import {
   TabPanels,
   Tabs,
 } from '@chakra-ui/react';
-import React, { ReactNode, useId } from 'react';
-import { IProductOverview, IProductSectionItem } from '../../../models/app';
-import { ProductCard } from './ProductCard/ProductCard';
-import { ProductCTAButtons } from './ProductCTAButtons';
+import { v4 as uid } from 'uuid';
+import { generateProductCards } from '..';
+import { IProductSectionItem } from '../../../models/app';
 import { ProductSlider } from './Slider/ProductSlider';
 import { productSection } from './_styles';
-import { v4 as uid } from 'uuid';
 
 const { headingStyles, boxStyles } = productSection;
 
@@ -30,19 +28,6 @@ export const ProductSection = ({
   bgImageUrl,
   items,
 }: ProductSectionProps) => {
-  const generateProductCards = (items: IProductOverview[]): ReactNode[] => {
-    return items.map((item) => (
-      <ProductCard
-        key={item.id}
-        title={item.title}
-        description={item.description}
-        cta={item.cta || <ProductCTAButtons />}
-        imageUrl={item.imageUrl}
-        outOfStock={item.outOfStock}
-      />
-    ));
-  };
-
   return (
     <Box bgImage={bgImageUrl} {...boxStyles}>
       <Box h="100%">

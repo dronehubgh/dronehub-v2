@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import { IconType } from 'react-icons/lib';
 
 export interface IMenuItem {
   id: string;
@@ -39,5 +40,13 @@ export interface IProductCategory {
 export interface INavItem {
   id: string;
   name: string;
+  link: string;
+}
+
+export interface IContactItem {
+  id: string;
+  heading: string;
+  text: string;
+  icon: IconType;
   link: string;
 }

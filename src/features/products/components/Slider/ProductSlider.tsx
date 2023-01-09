@@ -49,7 +49,7 @@ export const ProductSlider = ({ productCards }: ProductSliderProps) => {
 const SwipeNavButtons = () => {
   const swiper = useSwiper();
   return (
-    <Box m="1rem">
+    <Box m="1.5rem">
       <IconButton
         rounded="full"
         icon={<FaChevronLeft />}

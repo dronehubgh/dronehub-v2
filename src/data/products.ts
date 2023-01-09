@@ -90,38 +90,38 @@ export const productOverviews: { [key: string]: IProductSectionItem[] } = {
           id: uid(),
           title: 'DJI Mini 3 Pro',
           description: 'Consumer Drone',
-          imageUrl: 'assets/images/drones/mavic/DJI_MIni_3_Pro_1.png',
+          imageUrl: '/assets/images/drones/mavic/DJI_MIni_3_Pro_1.png',
         },
         {
           id: uid(),
           title: 'DJI Mini 2',
           description: 'Consumer Drone',
-          imageUrl: 'assets/images/drones/mavic/DJI_Mini2_2.png',
+          imageUrl: '/assets/images/drones/mavic/DJI_Mini2_2.png',
         },
         {
           id: uid(),
           title: 'Mavic Air 2',
           description: 'Consumer Drone',
-          imageUrl: 'assets/images/drones/mavic/Mavic_Air2_2.png',
+          imageUrl: '/assets/images/drones/mavic/Mavic_Air2_2.png',
         },
         {
           id: uid(),
           title: 'DJI AIR 2S',
           description: 'Consumer Drone',
-          imageUrl: 'assets/images/drones/mavic/DJI_2S_1.png',
+          imageUrl: '/assets/images/drones/mavic/DJI_2S_1.png',
         },
         {
           id: uid(),
           title: 'Mavic 3',
           description: 'Prosumer Drone',
-          imageUrl: 'assets/images/drones/mavic/Mavic_3_2.png',
+          imageUrl: '/assets/images/drones/mavic/Mavic_3_2.png',
         },
         {
           id: uid(),
           title: 'Mavic 2 Enterprise Advanced',
           description: 'Enterprise Drone',
           imageUrl:
-            'assets/images/drones/mavic/Mavic _2_Enterprise_Advanced_1.png',
+            '/assets/images/drones/mavic/Mavic _2_Enterprise_Advanced_1.png',
         },
         {
           id: uid(),
@@ -134,13 +134,13 @@ export const productOverviews: { [key: string]: IProductSectionItem[] } = {
           id: uid(),
           title: 'DJI Mini SE',
           description: 'Consumer Drone',
-          imageUrl: 'assets/images/drones/mavic/DJI_Mini_SE_2.png',
+          imageUrl: '/assets/images/drones/mavic/DJI_Mini_SE_2.png',
         },
         {
           id: uid(),
           title: 'Mavic Mini',
           description: 'Consumer Drone',
-          imageUrl: 'assets/images/drones/mavic/Mavic_Mini_2.png',
+          imageUrl: '/assets/images/drones/mavic/Mavic_Mini_2.png',
         },
         {
           id: uid(),
@@ -345,3 +345,42 @@ export const productOverviews: { [key: string]: IProductSectionItem[] } = {
     },
   ],
 };
+
+export const latestReleases = [
+  {
+    id: uid(),
+    title: 'DJI Mini 3 Pro',
+    description: 'Consumer Drone',
+    imageUrl: 'assets/images/drones/mavic/DJI_MIni_3_Pro_1.png',
+  },
+  {
+    id: uid(),
+    title: 'DJI FPV',
+    description: 'Consumer Drone',
+    imageUrl: 'assets/images/latest-releases/DJI_FPV_Drone_1.png',
+  },
+  {
+    id: uid(),
+    title: 'Matrice 30T',
+    description: 'Consumer Drone',
+    imageUrl: 'assets/images/drones/mavic/DJI_Mini2_2.png',
+  },
+  {
+    id: uid(),
+    title: 'DJI Air 2S',
+    description: 'Consumer Drone',
+    imageUrl: 'assets/images/drones/mavic/DJI_Mini2_2.png',
+  },
+  {
+    id: uid(),
+    title: 'Zenmuse P1',
+    description: 'Aerial Camera',
+    imageUrl: 'assets/images/drones/mavic/DJI_Mini2_2.png',
+  },
+  {
+    id: uid(),
+    title: 'Zenmuse L1',
+    description: 'Aerial Camera',
+    imageUrl: 'assets/images/drones/mavic/DJI_Mini2_2.png',
+  },
+];
