@@ -1,9 +1,10 @@
 import type { NextPage } from 'next';
+import { Products } from '../features';
 
 const Home: NextPage = () => {
   return (
     <div>
-      <h1>Hello Drone Hub</h1>
+      <Products />;
     </div>
   );
 };
