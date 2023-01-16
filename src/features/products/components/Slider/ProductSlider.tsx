@@ -11,9 +11,9 @@ interface ProductSliderProps {
 }
 
 export const ProductSlider = ({ productCards }: ProductSliderProps) => {
-  const isXLarge = useMedia('(min-width: 1420px)');
-  const isLarge = useMedia('(min-width: 1280px)');
-  const isMedium = useMedia('(min-width: 1024px)');
+  const isXLarge = useMedia('(min-width: 1420px)', false);
+  const isLarge = useMedia('(min-width: 1280px)', false);
+  const isMedium = useMedia('(min-width: 1024px)', false);
 
   const sliderSettings: SwiperOptions = {
     modules: [Navigation, A11y],
