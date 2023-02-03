@@ -7,13 +7,12 @@ export const btnStyles: ButtonProps = {
   borderRadius: '5px',
   borderWidth: 1,
   borderColor: 'gray.300',
-  w: { base: '100%', md: '160px' },
+  w: '100%',
   h: '45px',
   fontSize: { base: '12px', md: '14px' },
   my: 2,
   bg: 'white',
   variant: 'outline',
-  mx: 1,
 };
 
 export const menuItemStyles: MenuItemProps = {

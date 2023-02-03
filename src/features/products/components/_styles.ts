@@ -44,9 +44,8 @@ export const categoryTextStyles: TextProps = {
 
 export const productSection: { [key: string]: any } = {
   boxStyles: {
-    h: { base: '800px', lg: '950px' },
     bgSize: 'cover',
-    p: { base: '0px', md: '1rem', lg: '3rem 0 3rem 3rem' },
+    p: { base: '0px', md: '1rem', lg: '3rem 0 2rem 2rem' },
   },
 
   headingStyles: {

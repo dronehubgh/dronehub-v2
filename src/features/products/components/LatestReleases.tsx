@@ -1,5 +1,4 @@
-import { Box, FlexProps, Heading } from '@chakra-ui/react';
-import React from 'react';
+import { Box, Heading } from '@chakra-ui/react';
 import { generateProductCards } from '..';
 import { latestReleases } from '../../../data/products';
 import { IOverrides } from './ProductCard/ProductCard';
@@ -20,7 +19,7 @@ const styles: IOverrides = {
 
 export const LatestReleases = () => {
   return (
-    <Box mb="3rem" p={{ base: '0px', md: '1rem', lg: '3rem 0 3rem 3rem' }}>
+    <Box mb="3rem" p={{ base: '1rem', lg: '3rem 0 3rem 3rem' }}>
       <Heading
         size="lg"
         pt="2rem"

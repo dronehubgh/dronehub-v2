@@ -29,7 +29,7 @@ export const ReserveNowMenu = ({
         data-bs-toggle="dropdown"
         aria-expanded="false"
       >
-        <Text as="span" mx="2">
+        <Text as="span" mx="1">
           Reserve now
         </Text>{' '}
         <BiChevronDown />

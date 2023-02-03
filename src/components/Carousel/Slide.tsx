@@ -13,7 +13,13 @@ export const Slide = ({ item }: { item: ICarouselItem }) => {
       <Box {...headerBoxStyles}>
         <Heading {...headingStyles}>{item.title}</Heading>
         <Text my="3">{item.description}</Text>
-        {item.cta}
+
+        <Box
+          maxW={{ base: '250px', lg: '100%' }}
+          mx={{ base: 'auto', lg: 'left' }}
+        >
+          {item.cta}
+        </Box>
       </Box>
       <Box w="100%" {...imageBoxStyles}>
         <Image src={item.imageUrl} alt="product image" w="100%" m="auto" />

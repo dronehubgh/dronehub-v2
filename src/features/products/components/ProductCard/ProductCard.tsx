@@ -1,5 +1,5 @@
-import React, { ReactNode } from 'react';
 import { Box, Flex, FlexProps, Heading, Image, Text } from '@chakra-ui/react';
+import { ReactNode } from 'react';
 import {
   cardStyles,
   headingStyles,
@@ -43,7 +43,7 @@ export const ProductCard = ({
         </Box>
       </Box>
       <Flex {...imageBoxStyles} {...restStyles?.image}>
-        <Image src={imageUrl} alt="product image" w="100%" mx="auto" />
+        <Image src={imageUrl} alt="product image" h="100%" mx="auto" />
       </Flex>
 
       {outOfStock && (
@@ -54,7 +54,7 @@ export const ProductCard = ({
           left="0"
           w="100%"
           p="2rem"
-          opacity="0.7"
+          opacity="0.65"
           color="gray.100"
           className="fst-italic"
         >

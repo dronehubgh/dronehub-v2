@@ -6,10 +6,10 @@ import { CTAStyles } from './_styles';
 
 export const ProductCTAButtons = () => (
   <Flex {...CTAStyles}>
-    <Box mx={1}>
+    <Box mr={2}>
       <IconButton title="Learn more" icon={<BiChevronRight />} />
     </Box>
-    <Box mx={1}>
+    <Box>
       <ReserveNowMenu />
     </Box>
   </Flex>

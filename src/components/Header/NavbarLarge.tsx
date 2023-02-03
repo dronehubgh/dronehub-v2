@@ -36,7 +36,7 @@ export const NavbarLarge = ({ navItems }: NavbarLargeProps) => {
     >
       <Flex
         px="1rem"
-        w={{ base: '100%', lg: '90%' }}
+        w={{ base: '100%', lg: '95%', xl: '90%' }}
         m="auto"
         py="0.5rem"
         justify="space-between"
@@ -60,7 +60,7 @@ export const NavbarLarge = ({ navItems }: NavbarLargeProps) => {
             </NextLink>
           ))}
         </Box>
-        <Box>
+        <Flex gap="10px">
           <Button
             title="Consumer Solutions"
             bg="transparent"
@@ -71,7 +71,7 @@ export const NavbarLarge = ({ navItems }: NavbarLargeProps) => {
             bg={isScrolled ? 'brand.blue' : 'white'}
             color={isScrolled ? 'gray.100' : 'brand.blue'}
           />
-        </Box>
+        </Flex>
       </Flex>
     </Box>
   );
