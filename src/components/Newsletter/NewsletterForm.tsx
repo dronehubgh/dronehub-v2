@@ -17,7 +17,6 @@ const onSubmit = async (
   actions: FormikHelpers<INewsletterFormValues>
 ) => {
   await new Promise((resolve) => setTimeout(resolve, 1000));
-  console.log(values);
   actions.resetForm();
 };
 
