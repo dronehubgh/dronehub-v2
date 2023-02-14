@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Button, Spacer, Text } from '@chakra-ui/react';
+import { Box, Button, ButtonProps, Spacer, Text } from '@chakra-ui/react';
 import { FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
 import { BiChevronDown } from 'react-icons/bi';
 import { IMenuItem } from '../../models/app';
@@ -10,24 +10,25 @@ import { MenuItem } from './MenuItem';
 interface IReserveNowMenuButtonProps {
   bgColor?: string;
   color?: string;
+  restStyles?: ButtonProps;
 }
 
 export const ReserveNowMenu = ({
   bgColor,
   color,
+  restStyles,
 }: IReserveNowMenuButtonProps) => {
   return (
     <Box className="dropdown">
       <Button
         {...btnStyles}
         className="dropdown-toggle"
-        bgColor={bgColor}
-        color={color}
-        _hover={{ bg: bgColor, color, shadow: 'md' }}
-        _active={{ bg: bgColor, color }}
+        // _hover={{ bg: bgColor, color, shadow: 'md' }}
+        // _active={{ bg: bgColor, color }}
         role="button"
         data-bs-toggle="dropdown"
         aria-expanded="false"
+        {...restStyles}
       >
         <Text as="span" mx="1">
           Reserve now

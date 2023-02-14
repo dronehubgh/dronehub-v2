@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import { v4 as uid } from 'uuid';
+import { ISolutionsItems } from '../features/home/components/SolutionsOverview/Solutions';
 import {
   ICarouselItem,
   IProductCategory,
@@ -9,29 +10,29 @@ import {
 export const carouselItems = (cta: ReactNode): ICarouselItem[] => [
   {
     id: uid(),
-    title: 'Everything You Love About Drones Begins Here ',
-    description: 'Consumer. Professional. Enterprise.',
+    description: 'Everything You Love About Drones Begins Here ',
+    tagline: 'Consumer. Professional. Enterprise.',
     cta,
     imageUrl: 'assets/images/carousel-drones/p1.png',
   },
   {
     id: uid(),
-    title: 'Explore in a way only you can',
-    description: 'Consumer. Professional. Enterprise.',
+    description: 'Explore in a way only you can',
+    tagline: 'Consumer. Professional. Enterprise.',
     cta,
     imageUrl: 'assets/images/carousel-drones/mavic-2-ea.png',
   },
   {
     id: uid(),
-    title: 'Explore in a way only you can',
-    description: 'Consumer. Professional. Enterprise.',
+    description: 'Explore in a way only you can',
+    tagline: 'Consumer. Professional. Enterprise.',
     cta,
     imageUrl: 'assets/images/carousel-drones/mavic_mini_1.png',
   },
   {
     id: uid(),
-    title: 'Explore in a way only you can',
-    description: 'Consumer. Professional. Enterprise.',
+    description: 'Explore in a way only you can',
+    tagline: 'Consumer. Professional. Enterprise.',
     cta,
     imageUrl: 'assets/images/carousel-drones/phantom_4_Pro_V2_3.png',
   },
@@ -351,36 +352,104 @@ export const latestReleases = [
     id: uid(),
     title: 'DJI Mini 3 Pro',
     description: 'Consumer Drone',
-    imageUrl: 'assets/images/drones/mavic/DJI_MIni_3_Pro_1.png',
+    imageUrl: '/assets/images/drones/mavic/DJI_MIni_3_Pro_1.png',
   },
   {
     id: uid(),
     title: 'DJI FPV',
     description: 'Consumer Drone',
-    imageUrl: 'assets/images/latest-releases/DJI_FPV_Drone_1.png',
+    imageUrl: '/assets/images/latest-releases/DJI_FPV_Drone_1.png',
   },
   {
     id: uid(),
     title: 'Matrice 30T',
     description: 'Consumer Drone',
-    imageUrl: 'assets/images/drones/mavic/DJI_Mini2_2.png',
+    imageUrl: '/assets/images/drones/mavic/DJI_Mini2_2.png',
   },
   {
     id: uid(),
     title: 'DJI Air 2S',
     description: 'Consumer Drone',
-    imageUrl: 'assets/images/drones/mavic/DJI_Mini2_2.png',
+    imageUrl: '/assets/images/drones/mavic/DJI_Mini2_2.png',
   },
   {
     id: uid(),
     title: 'Zenmuse P1',
     description: 'Aerial Camera',
-    imageUrl: 'assets/images/drones/mavic/DJI_Mini2_2.png',
+    imageUrl: '/assets/images/drones/mavic/DJI_Mini2_2.png',
   },
   {
     id: uid(),
     title: 'Zenmuse L1',
     description: 'Aerial Camera',
-    imageUrl: 'assets/images/drones/mavic/DJI_Mini2_2.png',
+    imageUrl: '/assets/images/drones/mavic/DJI_Mini2_2.png',
+  },
+];
+
+export const solutionsItems: ISolutionsItems[] = [
+  {
+    imageUrl:
+      'https://res.cloudinary.com/djmx11b6s/image/upload/v1676298172/donehub-assets/drones/Mavic_Air2_1_czal7u.png',
+    categories: ['Surveying', 'Agriculture', 'Construction'],
+  },
+  {
+    imageUrl:
+      'https://res.cloudinary.com/djmx11b6s/image/upload/v1676298146/donehub-assets/drones/Mavic_Mini_1_rzimwl.png',
+    categories: [
+      'Surveying',
+      'Construction',
+      'Media & Entertainment',
+      'Forestry',
+    ],
+  },
+  {
+    imageUrl:
+      'https://res.cloudinary.com/djmx11b6s/image/upload/v1676298136/donehub-assets/drones/Mavic_Mini_2_cf6g4w.png',
+    categories: ['Media & Entertainment', 'Surveying', 'Mining', 'Forestry'],
+  },
+  {
+    imageUrl:
+      'https://res.cloudinary.com/djmx11b6s/image/upload/v1676298113/donehub-assets/drones/Matrice_30_3_c9n86v.png',
+    categories: ['Surveying', 'Forestry', 'Agriculture'],
+  },
+  {
+    imageUrl:
+      'https://res.cloudinary.com/djmx11b6s/image/upload/v1676298057/donehub-assets/drones/Phantom_4_Multispectral_3_sajvta.png',
+    categories: ['Security', 'Energy & Infrastructure', 'Forestry'],
+  },
+  {
+    imageUrl:
+      'https://res.cloudinary.com/djmx11b6s/image/upload/v1676297949/donehub-assets/drones/Mavic_3_Multispectral_1_hzlxxk.png',
+    categories: ['Forestry', 'Construction', 'Agriculture'],
+  },
+  {
+    imageUrl:
+      'https://res.cloudinary.com/djmx11b6s/image/upload/v1676297958/donehub-assets/drones/Mavic_3_Thermal_1_ctaqk2.png',
+    categories: [
+      'Public Safety',
+      'Forestry',
+      'Energy & Infrastructure',
+      'Construction',
+    ],
+  },
+  {
+    imageUrl:
+      'https://res.cloudinary.com/djmx11b6s/image/upload/v1676297995/donehub-assets/drones/Agras_T20_2_n3x2z1.png',
+    categories: ['Construction', 'Media & Entertainment', 'Forestry'],
+  },
+  {
+    imageUrl:
+      'https://res.cloudinary.com/djmx11b6s/image/upload/v1676298016/donehub-assets/drones/Phantom_4_Pro_V2_1_iz2iba.png',
+    categories: [
+      'Surveying',
+      'Energy & Infrastructure',
+      'Media & Entertainment',
+      'Forestry',
+    ],
+  },
+  {
+    imageUrl:
+      'https://res.cloudinary.com/djmx11b6s/image/upload/v1676298033/donehub-assets/drones/Phantom_4_Pro_V2_2_blsanp.png',
+    categories: ['Surveying', 'Energy & Infrastructure'],
   },
 ];

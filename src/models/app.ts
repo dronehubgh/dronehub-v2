@@ -1,5 +1,13 @@
 import { ReactNode } from 'react';
 import { IconType } from 'react-icons/lib';
+import { SanityImageSource } from '@sanity/image-url/lib/types/types';
+
+export interface IAccessory {
+  id: string;
+  name: string;
+  description: string;
+  image: SanityImageSource;
+}
 
 export interface IMenuItem {
   id: string;
@@ -16,14 +24,19 @@ export interface INewsletterFormValues {
 
 export interface ICarouselItem {
   id: string;
-  title: string;
   description: string;
+  tagline: string;
   imageUrl: string;
   cta?: ReactNode;
 }
 
-export interface IProductOverview extends ICarouselItem {
+export interface IProductOverview {
   outOfStock?: boolean;
+  id: string;
+  title: string;
+  description: string;
+  imageUrl: string;
+  cta?: ReactNode;
 }
 
 export interface IProductSectionItem {
@@ -49,4 +62,17 @@ export interface IContactItem {
   text: string;
   icon: IconType;
   link: string;
+}
+
+export interface IMainBannerData {
+  heading: string;
+  tagline: string;
+  featuredProducts: IMainBannerFeaturedProducts[];
+}
+
+export interface IMainBannerFeaturedProducts {
+  id: string;
+  name: string;
+  tagline: string;
+  imageUrl: string;
 }

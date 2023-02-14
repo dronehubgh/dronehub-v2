@@ -1,7 +1,7 @@
 import { Box, Heading } from '@chakra-ui/react';
-import { generateProductCards } from '..';
+import { IOverrides } from '../../../components/ProductCard/ProductCard';
+import { generateProductCards } from '../../../components';
 import { latestReleases } from '../../../data/products';
-import { IOverrides } from './ProductCard/ProductCard';
 import { ProductSlider } from './Slider/ProductSlider';
 
 const styles: IOverrides = {

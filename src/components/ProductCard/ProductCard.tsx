@@ -1,5 +1,7 @@
 import { Box, Flex, FlexProps, Heading, Image, Text } from '@chakra-ui/react';
 import { ReactNode } from 'react';
+import { ProductCTAButtons } from '..';
+import { IProductOverview } from '../../models/app';
 import {
   cardStyles,
   headingStyles,
@@ -25,7 +27,6 @@ export const ProductCard = ({
   title,
   description,
   imageUrl,
-  cta,
   outOfStock,
   restStyles,
 }: ProductCardProps) => {
@@ -38,7 +39,9 @@ export const ProductCard = ({
           {outOfStock ? (
             <p className="text-danger fw-bold fst-italic">Out of Stock</p>
           ) : (
-            cta
+            <ProductCTAButtons
+              btn2Styles={{ bg: 'brand.blue', color: 'gray.100' }}
+            />
           )}
         </Box>
       </Box>
@@ -72,4 +75,20 @@ ProductCard.defaultProps = {
   imageUrl: '',
   cta: <></>,
   outOfStock: false,
+};
+
+export const generateProductCards = (
+  items: IProductOverview[],
+  restStyles?: IOverrides
+): ReactNode[] => {
+  return items.map((item) => (
+    <ProductCard
+      key={item.id}
+      title={item.title}
+      description={item.description}
+      imageUrl={item.imageUrl}
+      outOfStock={item.outOfStock}
+      restStyles={restStyles}
+    />
+  ));
 };

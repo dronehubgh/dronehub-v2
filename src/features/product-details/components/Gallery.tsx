@@ -1,6 +1,5 @@
 import { Box, Grid, GridItem, GridItemProps, Image } from '@chakra-ui/react';
-import React from 'react';
-import { pxHalf } from '../../../consts';
+import { galleryGridStyles } from './_styles';
 
 const gridItemStyles: GridItemProps = {
   display: 'flex',
@@ -12,15 +11,7 @@ const gridItemStyles: GridItemProps = {
 export const Gallery = () => {
   return (
     <Box>
-      <Grid
-        autoColumns="100px"
-        gap={5}
-        py={pxHalf}
-        mx="1rem"
-        bg="white"
-        templateRows={{ lg: 'repeat(2, 1fr)', base: 'repeat(4, 1fr)' }}
-        templateColumns={{ lg: 'repeat(3, 1fr)', base: 'repeat(4, 1fr)' }}
-      >
+      <Grid {...galleryGridStyles}>
         <GridItem
           {...gridItemStyles}
           rowSpan={{ base: 1, lg: 2 }}

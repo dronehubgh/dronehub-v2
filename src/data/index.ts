@@ -20,7 +20,7 @@ export const contactList: IContactItem[] = [
   {
     id: uid(),
     icon: FiPhone,
-    heading: 'Call',
+    heading: 'Call Us',
     text: 'To book repair service, we will need a brief',
     link: 'tel: +233 (0) 55 446 0012',
   },
@@ -52,5 +52,33 @@ export const contactList: IContactItem[] = [
     heading: 'Send a Message',
     text: 'When repair is complete, we will',
     link: 'https://instagram.com',
+  },
+];
+
+export const OurServicesData = [
+  {
+    title: 'Drone Education',
+    description: 'Enhance your skills. Become a pro.',
+    imageUrl:
+      'https://res.cloudinary.com/djmx11b6s/image/upload/v1675907080/donehub-assets/Accesories/illus-1_nzxg7m.png',
+  },
+  {
+    title: 'Drone Consulting',
+    description: 'Get expert advice for the best drone experience.',
+    imageUrl:
+      'https://res.cloudinary.com/djmx11b6s/image/upload/v1675907404/donehub-assets/Accesories/illus-13_tarlur.png',
+  },
+  {
+    title: 'Drone Repair',
+    description: 'Have a drone problem? Let’s help you fix it.',
+    imageUrl:
+      'https://res.cloudinary.com/djmx11b6s/image/upload/v1675907261/donehub-assets/Accesories/illus-4_vtgl3j.png',
+  },
+  {
+    title: 'Drone Rental',
+    description:
+      'Need drone support for whatever reason? No problem. Rent a drone for your needs.',
+    imageUrl:
+      'https://res.cloudinary.com/djmx11b6s/image/upload/v1675907291/donehub-assets/Accesories/illus-5_vegu2n.png',
   },
 ];

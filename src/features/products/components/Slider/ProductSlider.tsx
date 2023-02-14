@@ -1,4 +1,4 @@
-import { Box, Flex, IconButton } from '@chakra-ui/react';
+import { Box, Flex, IconButton, IconButtonProps } from '@chakra-ui/react';
 import { ReactNode } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { useMedia } from 'react-use';
@@ -6,6 +6,7 @@ import { A11y, Navigation } from 'swiper';
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
 import { SwiperOptions } from 'swiper/types/swiper-options';
 import { v4 as uid } from 'uuid';
+import { SwiperNavButtons } from '../../../../components';
 import { NoItemsAvailable } from './NoItemsAvailable';
 interface ProductSliderProps {
   productCards: ReactNode[];
@@ -43,40 +44,11 @@ export const ProductSlider = ({ productCards }: ProductSliderProps) => {
               {card}
             </SwiperSlide>
           ))}
-          <SwipeNavButtons
+          <SwiperNavButtons
             disable={getSlidesPerView().slide >= productCards.length}
           />
         </Swiper>
       )}
-    </Box>
-  );
-};
-
-const SwipeNavButtons = ({ disable }: { disable: boolean }) => {
-  const swiper = useSwiper();
-  return (
-    <Box m="1.5rem">
-      <IconButton
-        rounded="full"
-        icon={<FaChevronLeft />}
-        aria-label="Prev"
-        borderColor="brand.blue"
-        borderWidth="1px"
-        onClick={() => swiper.slidePrev()}
-        disabled={disable}
-      />
-      <IconButton
-        rounded="full"
-        aria-label="Next"
-        bgColor="brand.blue"
-        color="gray.100"
-        mx="1rem"
-        _hover={{ bgColor: 'brand.blue', color: 'gray.100' }}
-        _active={{ bgColor: 'brand.blue', color: 'gray.100' }}
-        icon={<FaChevronRight />}
-        onClick={() => swiper.slideNext()}
-        disabled={disable}
-      />
     </Box>
   );
 };

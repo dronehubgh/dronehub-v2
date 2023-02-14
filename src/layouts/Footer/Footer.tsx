@@ -9,6 +9,7 @@ import {
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import { Newsletter } from '../../components';
+import { ReadyForMore } from '../../components/ReadyForMore';
 import { ConnectWithUs } from './ConnectWithUs';
 import { ExploreProducts } from './ExploreProducts';
 import { Extras } from './Extras';
@@ -20,14 +21,14 @@ import { footerBoxStyles, linkTextStyles } from './_styles';
 export const Footer = () => {
   return (
     <Box>
-      <Box h="320px" />
+      <ReadyForMore />
+      <Box h={{ base: '320px', lg: '0' }} bg="green" />
       <Box {...footerBoxStyles}>
         <Box
           pos="absolute"
           top="-320px"
           left="50%"
           transform="translateX(-50%)"
-          bg="yellow"
           w={{ base: '100%', lg: '80%' }}
         >
           <Newsletter />

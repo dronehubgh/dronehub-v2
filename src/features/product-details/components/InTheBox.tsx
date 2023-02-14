@@ -39,7 +39,7 @@ export const InTheBox = () => {
               _focus={{ border: 'none', boxShadow: 'none' }}
               fontWeight="400"
               color="#979797"
-              fontSize={{ lg: '36px', md: '30px', base: '24px' }}
+              fontSize={{ lg: '36px', md: '30px', base: '18px' }}
               _selected={{
                 fontWeight: 700,
                 color: 'brand.blue',
@@ -53,7 +53,7 @@ export const InTheBox = () => {
               _focus={{ border: 'none', boxShadow: 'none' }}
               fontWeight="400"
               color="#979797"
-              fontSize={{ lg: '36px', md: '30px', base: '24px' }}
+              fontSize={{ lg: '36px', md: '30px', base: '18px' }}
               _selected={{
                 fontWeight: 700,
                 color: 'brand.blue',
@@ -80,58 +80,67 @@ export const InTheBox = () => {
                 >
                   <GridItem>
                     <Image
-                      h={{ md: '50vh', lg: '70vh' }}
+                      h={{ md: '40vh', lg: '50vh' }}
                       w="100%"
                       objectFit="cover"
-                      src="/images/au-1.png"
+                      src="https://res.cloudinary.com/djmx11b6s/image/upload/v1675947889/donehub-assets/design-02_dsnlsm.png"
                       alt=""
                     />
                   </GridItem>
                   <GridItem>
                     <Image
-                      h={{ md: '50vh', lg: '70vh' }}
+                      h={{ md: '40vh', lg: '50vh' }}
                       w="100%"
                       objectFit="cover"
-                      src="/images/au-2.png"
+                      src="https://res.cloudinary.com/djmx11b6s/image/upload/v1675947889/donehub-assets/design-03_uhy9t3.png"
                       alt=""
                     />
                   </GridItem>
                   <GridItem>
                     <Box
-                      h={{ md: '50vh', lg: '70vh' }}
+                      h={{ md: '40vh', lg: '50vh' }}
                       w="100%"
                       objectFit="cover"
                     >
                       <Image
-                        h={{ md: '25vh', lg: '35vh' }}
+                        h={{ md: '20vh', lg: '25vh' }}
                         mb={2}
                         w="100%"
                         objectFit="cover"
-                        src="/images/au-3.png"
+                        src="https://res.cloudinary.com/djmx11b6s/image/upload/v1675947889/donehub-assets/design-04_tcpwem.png"
                         alt=""
                       />
                       <Image
-                        h={{ md: '25vh', lg: '35vh' }}
+                        h={{ md: '20vh', lg: '25vh' }}
                         w="100%"
                         objectFit="cover"
-                        src="/images/au-4.png"
+                        src="https://res.cloudinary.com/djmx11b6s/image/upload/v1675947889/donehub-assets/design-01_ig6myn.png"
                         alt=""
                       />
                     </Box>
                   </GridItem>
                   <GridItem>
                     <Image
-                      h={{ md: '50vh', lg: '70vh' }}
+                      h={{ md: '40vh', lg: '50vh' }}
                       w="100%"
                       objectFit="cover"
-                      src="/images/au-5.png"
+                      src="https://res.cloudinary.com/djmx11b6s/image/upload/v1675947929/donehub-assets/design-e00_o0ouay.png"
                       alt=""
                     />
                   </GridItem>
                 </Grid>
               </Flex>
             </TabPanel>
-            <TabPanel></TabPanel>
+            <TabPanel h="50vh">
+              <Text
+                fontStyle="italic"
+                h="100%"
+                textAlign="center"
+                lineHeight="50vh"
+              >
+                No Items available for this tab
+              </Text>
+            </TabPanel>
           </TabPanels>
         </Tabs>
       </Box>

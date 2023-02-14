@@ -1,6 +1,7 @@
 import { Box, Flex, Image, Text } from '@chakra-ui/react';
 import React from 'react';
 import { productCategories } from '../../../data';
+import { IProductCategory } from '../../../models/app';
 import {
   categoriesStyles,
   categoryStyles,
@@ -8,10 +9,14 @@ import {
   categoryImgStyles,
 } from './_styles';
 
-export const Categories = () => {
+interface ICategoriesProps {
+  categories: IProductCategory[];
+}
+
+export const Categories = ({ categories }: ICategoriesProps) => {
   return (
     <Flex {...categoriesStyles}>
-      {productCategories.map((category) => (
+      {categories.map((category) => (
         <Box key={category.id} {...categoryStyles}>
           <Image
             src={category.iconUrl}

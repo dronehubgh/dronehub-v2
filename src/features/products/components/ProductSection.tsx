@@ -8,7 +8,7 @@ import {
   Tabs,
 } from '@chakra-ui/react';
 import { v4 as uid } from 'uuid';
-import { generateProductCards } from '..';
+import { generateProductCards } from '../../../components';
 import { IProductSectionItem } from '../../../models/app';
 import { ProductSlider } from './Slider/ProductSlider';
 import { productSection } from './_styles';
