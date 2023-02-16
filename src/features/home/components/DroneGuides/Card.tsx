@@ -9,7 +9,7 @@ interface CardProps extends BoxProps {
 export const Card = ({ title, ...rest }: CardProps) => {
   return (
     <Box minW="300px" p="2rem" color="gray.200" {...rest}>
-      <Text fontSize="2.5rem" fontWeight="700">
+      <Text fontSize={{ base: '1.7rem', lg: '2.5rem' }} fontWeight="700">
         {title}
       </Text>
       <Flex align="center" mt="4rem" fontSize="1.5rem" fontWeight="700">

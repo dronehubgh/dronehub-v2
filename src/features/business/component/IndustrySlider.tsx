@@ -5,7 +5,7 @@ import { A11y, Autoplay, Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { SwiperOptions } from 'swiper/types/swiper-options';
 import { v4 as uid } from 'uuid';
-import { Button, IconButton, SwiperNavButtons } from '../../../components';
+import { IconButton, SwiperNavButtons } from '../../../components';
 import { industries } from '../../../data/industry';
 
 const slideStyles: CSSProperties = {
