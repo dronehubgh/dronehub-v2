@@ -1,6 +1,6 @@
 import { Box, Button, Flex, Text } from '@chakra-ui/react';
 import React, { MouseEventHandler, useState } from 'react';
-import { solutionsItems } from '../../../../data/products';
+import { solutionsItems } from '../../data/products';
 import { SolutionsSlider } from './SolutionsSlider';
 
 export interface ISolutionsItems {
@@ -96,14 +96,15 @@ export const TabButton = ({
   return (
     <Button
       borderRadius="0"
-      bg="white"
+      bgColor={selectedItem === text ? 'brand.blue' : 'white'}
+      color={selectedItem === text ? 'white' : 'gray.800'}
+      _hover={{ bgColor: selectedItem === text ? 'none' : 'gray.200' }}
+      _active={{ bgColor: 'none' }}
       borderWidth="1px"
       borderColor="gray.200"
       h={{ base: '35px', lg: '55px' }}
       mx={{ base: '0.5rem', lg: '1rem' }}
       my="0.5rem"
-      borderBottomWidth={selectedItem === text ? '2px' : '1px'}
-      borderBottomColor={selectedItem === text ? 'brand.blue' : 'gray.200'}
       onClick={onClick}
     >
       {text}

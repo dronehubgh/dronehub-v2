@@ -1,11 +1,10 @@
 import type { NextPage } from 'next';
-import { OurServices } from '../components';
+import { OurServices, Solutions } from '../components';
 import {
   DroneGuides,
   MainBanner,
   OurFocus,
   SliderGallery,
-  Solutions,
   Testimonials,
 } from '../features';
 import { getHomeBannerData } from '../functions/data-formatters';

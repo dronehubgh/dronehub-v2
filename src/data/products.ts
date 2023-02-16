@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import { v4 as uid } from 'uuid';
-import { ISolutionsItems } from '../features/home/components/SolutionsOverview/Solutions';
+import { ISolutionsItems } from '../components/SolutionsOverview/Solutions';
 import {
   ICarouselItem,
   IProductCategory,

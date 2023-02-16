@@ -7,7 +7,7 @@ import {
   useMediaQuery,
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
-import { ReserveNowMenu } from '../../../components';
+import { CustomMenuButton } from '../../../components';
 import { commonPx } from '../../../consts';
 
 export const Header = () => {
@@ -43,7 +43,7 @@ export const Header = () => {
       </Box>
       <Flex>
         {isLarge && <Navigation isLarge={isLarge} />}
-        <ReserveNowMenu
+        <CustomMenuButton
           bgColor={isLarge ? 'transparent' : 'gray.100'}
           color={isLarge ? 'gray.100' : 'brand.blue'}
         />

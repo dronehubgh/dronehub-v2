@@ -5,4 +5,3 @@ export { OurFocus } from './components/OurFocus';
 export { Testimonials } from './components/Testimonials';
 
 export { DroneGuides } from './components/DroneGuides/DroneGuides';
-export { Solutions } from './components/SolutionsOverview/Solutions';

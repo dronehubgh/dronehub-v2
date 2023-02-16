@@ -7,31 +7,27 @@ import { v4 as uid } from 'uuid';
 import { btnStyles } from '..';
 import { MenuItem } from './MenuItem';
 
-interface IReserveNowMenuButtonProps {
-  bgColor?: string;
-  color?: string;
-  restStyles?: ButtonProps;
+interface IReserveNowMenuButtonProps extends ButtonProps {
+  title?: string;
 }
 
-export const ReserveNowMenu = ({
-  bgColor,
-  color,
-  restStyles,
+export const CustomMenuButton = ({
+  title,
+  ...rest
 }: IReserveNowMenuButtonProps) => {
   return (
-    <Box className="dropdown">
+    <Box className="dropdown" w="100%">
       <Button
         {...btnStyles}
         className="dropdown-toggle"
-        // _hover={{ bg: bgColor, color, shadow: 'md' }}
-        // _active={{ bg: bgColor, color }}
         role="button"
         data-bs-toggle="dropdown"
         aria-expanded="false"
-        {...restStyles}
+        minW="120px"
+        {...rest}
       >
         <Text as="span" mx="1">
-          Reserve now
+          {title}
         </Text>{' '}
         <BiChevronDown />
       </Button>
@@ -50,9 +46,8 @@ export const ReserveNowMenu = ({
   );
 };
 
-ReserveNowMenu.defaultProps = {
-  bgColor: 'brand.blue',
-  color: 'gray.100',
+CustomMenuButton.defaultProps = {
+  title: 'Reserve now',
 };
 
 const menuItems: IMenuItem[] = [

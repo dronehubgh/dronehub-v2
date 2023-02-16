@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconButton, ReserveNowMenu } from '..';
+import { IconButton, CustomMenuButton } from '..';
 import { BiChevronRight } from 'react-icons/bi';
 import { Box, ButtonProps, Flex, FlexProps } from '@chakra-ui/react';
 import { CTAStyles } from '../../features/products/components/_styles';
@@ -27,11 +27,7 @@ export const ProductCTAButtons = ({
       />
     </Box>
     <Box>
-      <ReserveNowMenu
-        bgColor="brand.blue"
-        color="gray.100"
-        restStyles={btn2Styles}
-      />
+      <CustomMenuButton title="Reserve now" {...btn2Styles} />
     </Box>
   </Flex>
 );

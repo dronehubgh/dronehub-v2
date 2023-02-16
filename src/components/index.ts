@@ -1,10 +1,11 @@
 export { Button } from './Buttons/Button';
 export { IconButton } from './Buttons/IconButton';
 export { MenuButton } from './Buttons/MenuButton';
-export { ReserveNowMenu } from './ReserveNowMenu/Menu';
+export { CustomMenuButton } from './CustomMenuButton/Menu';
 export { Newsletter } from './Newsletter/NewsletterCard';
 export { Carousel } from './Carousel/Carousel';
 export { Contact } from './Contact/Contact';
+export { Solutions } from './SolutionsOverview/Solutions';
 
 export { ProductCTAButtons } from './Buttons/ProductCTAButtons';
 export { generateProductCards, ProductCard } from './ProductCard/ProductCard';

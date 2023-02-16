@@ -3,9 +3,9 @@ import { CSSProperties } from 'react';
 import { A11y, Autoplay, Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { SwiperOptions } from 'swiper/types/swiper-options';
-import { SwiperNavButtons } from '../../../../components';
-import { ISolutionsItems } from './Solutions';
 import { v4 as uid } from 'uuid';
+import { SwiperNavButtons } from '../SwiperNavButtons';
+import { ISolutionsItems } from './Solutions';
 
 const slideStyles: CSSProperties = {
   maxWidth: '400px',
