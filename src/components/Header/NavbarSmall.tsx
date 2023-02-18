@@ -17,6 +17,7 @@ import NextLink from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { MdShortText } from 'react-icons/md';
 import { useWindowScroll } from 'react-use';
+import { logoDark, logoLight } from '../../consts';
 import { INavItem } from '../../models/app';
 import { Button } from '../Buttons/Button';
 import styles from './Header.module.scss';
@@ -40,9 +41,7 @@ export const NavbarSmall = ({ navItems }: NavbarLargeProps) => {
     }
   }, [y]);
 
-  const logoUrl = isScrolled
-    ? '/assets/images/logo/logo-dark.png'
-    : '/assets/images/logo/logo-white.png';
+  const logoUrl = isScrolled ? logoDark : logoLight;
 
   return (
     <Box

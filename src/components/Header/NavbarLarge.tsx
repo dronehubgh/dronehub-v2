@@ -2,6 +2,7 @@ import { Box, Flex, Image } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import React, { useEffect, useState } from 'react';
 import { useWindowScroll } from 'react-use';
+import { logoDark, logoLight } from '../../consts';
 import { INavItem } from '../../models/app';
 import { Button } from '../Buttons/Button';
 import styles from './Header.module.scss';
@@ -23,9 +24,7 @@ export const NavbarLarge = ({ navItems }: NavbarLargeProps) => {
     }
   }, [y]);
 
-  const logoUrl = isScrolled
-    ? '/assets/images/logo/logo-dark.png'
-    : '/assets/images/logo/logo-white.png';
+  const logoUrl = isScrolled ? logoDark : logoLight;
 
   return (
     <Box
