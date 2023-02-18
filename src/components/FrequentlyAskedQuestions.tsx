@@ -9,7 +9,7 @@ import {
   AccordionButtonProps,
   Heading,
 } from '@chakra-ui/react';
-import { IconButton } from '../../../components';
+import { IconButton } from '.';
 import { FaChevronRight } from 'react-icons/fa';
 
 const btnStyles: AccordionButtonProps = {

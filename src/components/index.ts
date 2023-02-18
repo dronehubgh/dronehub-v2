@@ -6,6 +6,7 @@ export { Newsletter } from './Newsletter/NewsletterCard';
 export { Carousel } from './Carousel/Carousel';
 export { Contact } from './Contact/Contact';
 export { Solutions } from './SolutionsOverview/Solutions';
+export { FrequentlyAskedQuestions } from './FrequentlyAskedQuestions';
 
 export { ProductCTAButtons } from './Buttons/ProductCTAButtons';
 export { generateProductCards, ProductCard } from './ProductCard/ProductCard';
