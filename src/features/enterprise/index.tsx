@@ -1,5 +1,6 @@
 import { Box, Button, ButtonProps, Flex, Text } from '@chakra-ui/react';
-import { useState } from 'react';
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
 import { Assure } from './Assure';
 import IntegrationProgram from './IntegrationProgram';
 
@@ -18,7 +19,19 @@ const btnStyles: ButtonProps = {
 };
 
 export const EnterpriseFeature = () => {
+  const router = useRouter();
+  const query = router.query;
+  console.log(query);
+
   const [selectedIndex, setSelectedIndex] = useState(0);
+
+  useEffect(() => {
+    if (query?.type === 'assure') {
+      setSelectedIndex(1);
+    } else {
+      setSelectedIndex(0);
+    }
+  }, [query]);
 
   return (
     <Box>

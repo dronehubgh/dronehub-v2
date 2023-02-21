@@ -32,11 +32,13 @@ export const EnterprisePlans = () => {
         my="3rem"
       >
         <EnterpriseCard
+          link="/enterprise?type=integration-program"
           title="Enterprise Integration Program"
           description="Designed to support businesses to seamlessly integrate drone technology into their work operations."
           bgColor="#D7E9FE"
         />
         <EnterpriseCard
+          link="/enterprise?type=assure"
           title="Enterprise Assure"
           description="Designed as an essential support plan for drones purchased from us."
           bgColor="#FFEECC"

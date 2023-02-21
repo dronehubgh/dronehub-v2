@@ -1,4 +1,5 @@
 import { Box, Flex, Image } from '@chakra-ui/react';
+import Link from 'next/link';
 import NextLink from 'next/link';
 import React, { useEffect, useState } from 'react';
 import { useWindowScroll } from 'react-use';
@@ -65,11 +66,13 @@ export const NavbarLarge = ({ navItems }: NavbarLargeProps) => {
             bg="transparent"
             color={isScrolled ? 'brand.blue' : 'gray.100'}
           />
-          <Button
-            title="Enterprise Solutions"
-            bg={isScrolled ? 'brand.blue' : 'white'}
-            color={isScrolled ? 'gray.100' : 'brand.blue'}
-          />
+          <Link href="/enterprise?type=integration-program">
+            <Button
+              title="Enterprise Solutions"
+              bg={isScrolled ? 'brand.blue' : 'white'}
+              color={isScrolled ? 'gray.100' : 'brand.blue'}
+            />
+          </Link>
         </Flex>
       </Flex>
     </Box>

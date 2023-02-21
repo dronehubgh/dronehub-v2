@@ -1,4 +1,5 @@
 import { Box, Flex, Text } from '@chakra-ui/react';
+import Link from 'next/link';
 import { CSSProperties } from 'react';
 import { FaChevronRight } from 'react-icons/fa';
 import { A11y, Autoplay, Navigation } from 'swiper';
@@ -6,7 +7,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { SwiperOptions } from 'swiper/types/swiper-options';
 import { v4 as uid } from 'uuid';
 import { IconButton, SwiperNavButtons } from '../../../components';
-import { industries } from '../../../data/industry';
+import { IndustryOverView } from '../../../data/industry';
 
 const slideStyles: CSSProperties = {
   maxWidth: '100%',
@@ -29,7 +30,7 @@ export const IndustrySlider = () => {
   return (
     <Box w="100%" h="100%">
       <Swiper {...sliderSettings} style={{ width: '100%', height: '100%' }}>
-        {industries.map((industry) => (
+        {IndustryOverView.map((industry) => (
           <SwiperSlide key={uid()} style={slideStyles}>
             <Flex
               h="100%"
@@ -55,14 +56,16 @@ export const IndustrySlider = () => {
                 <Text my="1rem" maxW="350px">
                   {industry.description}
                 </Text>
-                <IconButton
-                  fontSize="14px"
-                  color="gray.800"
-                  title="Learn more"
-                  maxW="150px"
-                  borderColor="gray.600"
-                  icon={<FaChevronRight size="12px" />}
-                />
+                <Link href={industry.link}>
+                  <IconButton
+                    fontSize="14px"
+                    color="gray.800"
+                    title="Learn more"
+                    maxW="150px"
+                    borderColor="gray.600"
+                    icon={<FaChevronRight size="12px" />}
+                  />
+                </Link>
               </Flex>
             </Flex>
           </SwiperSlide>

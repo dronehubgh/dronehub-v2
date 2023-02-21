@@ -26,7 +26,7 @@ export const SolutionsSlider = ({ items }: { items: ISolutionsItems[] }) => {
       <Swiper {...sliderSettings} style={{ width: '100%', height: '100%' }}>
         {items.map((item) => (
           <SwiperSlide key={uid()} style={slideStyles}>
-            <Flex justify="center" align="center" h="100%">
+            <Flex justify="center" align="center" h="100%" bgColor="white">
               <Image src={item.imageUrl} alt="" />
             </Flex>
           </SwiperSlide>

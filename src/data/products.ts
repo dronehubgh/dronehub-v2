@@ -390,7 +390,7 @@ export const solutionsItems: ISolutionsItems[] = [
   {
     imageUrl:
       'https://res.cloudinary.com/djmx11b6s/image/upload/v1676298172/donehub-assets/drones/Mavic_Air2_1_czal7u.png',
-    categories: ['Surveying', 'Agriculture', 'Construction'],
+    categories: ['Surveying', 'Agriculture', 'Construction', 'Public Safety'],
   },
   {
     imageUrl:
