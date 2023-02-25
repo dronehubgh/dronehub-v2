@@ -61,11 +61,13 @@ export const NavbarLarge = ({ navItems }: NavbarLargeProps) => {
           ))}
         </Box>
         <Flex gap="10px">
-          <Button
-            title="Consumer Solutions"
-            bg="transparent"
-            color={isScrolled ? 'brand.blue' : 'gray.100'}
-          />
+          <Link href="/consumer">
+            <Button
+              title="Consumer Solutions"
+              bg="transparent"
+              color={isScrolled ? 'brand.blue' : 'gray.100'}
+            />
+          </Link>
           <Link href="/enterprise?type=integration-program">
             <Button
               title="Enterprise Solutions"

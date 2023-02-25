@@ -1,19 +1,21 @@
 import { Box } from '@chakra-ui/react';
 import { NextPage } from 'next';
 import React from 'react';
-import { OurServices, Solutions } from '../components';
+import { OurServices, Partners, Solutions } from '../components';
+import { Banner } from '../components';
 import {
-  BusinessBanner,
   EnterprisePlans,
   FrequentlyAskedQuestions,
   IndustrySlider,
-  Partners,
 } from '../features';
+
+const coverImage =
+  'https://res.cloudinary.com/djmx11b6s/image/upload/v1676544493/donehub-assets/business-bg_ypmtbq.png';
 
 const BusinessPage: NextPage = () => {
   return (
     <>
-      <BusinessBanner />
+      <Banner coverImage={coverImage} />
       <IndustrySlider />
       <Solutions />
       <EnterprisePlans />

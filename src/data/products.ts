@@ -391,6 +391,8 @@ export const solutionsItems: ISolutionsItems[] = [
     imageUrl:
       'https://res.cloudinary.com/djmx11b6s/image/upload/v1676298172/donehub-assets/drones/Mavic_Air2_1_czal7u.png',
     categories: ['Surveying', 'Agriculture', 'Construction', 'Public Safety'],
+    name: 'Mavic Air 2',
+    type: 'Enterprise',
   },
   {
     imageUrl:
@@ -401,26 +403,36 @@ export const solutionsItems: ISolutionsItems[] = [
       'Media & Entertainment',
       'Forestry',
     ],
+    name: 'Mavic Mini',
+    type: 'Enterprise',
   },
   {
     imageUrl:
       'https://res.cloudinary.com/djmx11b6s/image/upload/v1676298136/donehub-assets/drones/Mavic_Mini_2_cf6g4w.png',
     categories: ['Media & Entertainment', 'Surveying', 'Mining', 'Forestry'],
+    name: 'Mavic Mini 2',
+    type: 'Enterprise',
   },
   {
     imageUrl:
       'https://res.cloudinary.com/djmx11b6s/image/upload/v1676298113/donehub-assets/drones/Matrice_30_3_c9n86v.png',
     categories: ['Surveying', 'Forestry', 'Agriculture'],
+    name: 'Matrice 30',
+    type: 'Consumer',
   },
   {
     imageUrl:
       'https://res.cloudinary.com/djmx11b6s/image/upload/v1676298057/donehub-assets/drones/Phantom_4_Multispectral_3_sajvta.png',
     categories: ['Security', 'Energy & Infrastructure', 'Forestry'],
+    name: 'Phantom 4 Multispectral',
+    type: 'Enterprise',
   },
   {
     imageUrl:
       'https://res.cloudinary.com/djmx11b6s/image/upload/v1676297949/donehub-assets/drones/Mavic_3_Multispectral_1_hzlxxk.png',
     categories: ['Forestry', 'Construction', 'Agriculture'],
+    name: 'Mavic 3 Multispectral',
+    type: 'Consumer',
   },
   {
     imageUrl:
@@ -431,11 +443,15 @@ export const solutionsItems: ISolutionsItems[] = [
       'Energy & Infrastructure',
       'Construction',
     ],
+    name: 'Mavic 3 Thermal',
+    type: 'Consumer',
   },
   {
     imageUrl:
       'https://res.cloudinary.com/djmx11b6s/image/upload/v1676297995/donehub-assets/drones/Agras_T20_2_n3x2z1.png',
     categories: ['Construction', 'Media & Entertainment', 'Forestry'],
+    name: 'Agras T20',
+    type: 'Consumer',
   },
   {
     imageUrl:
@@ -446,10 +462,14 @@ export const solutionsItems: ISolutionsItems[] = [
       'Media & Entertainment',
       'Forestry',
     ],
+    name: 'Phantom 4 Pro V2',
+    type: 'Enterprise',
   },
   {
     imageUrl:
       'https://res.cloudinary.com/djmx11b6s/image/upload/v1676298033/donehub-assets/drones/Phantom_4_Pro_V2_2_blsanp.png',
     categories: ['Surveying', 'Energy & Infrastructure'],
+    name: 'Phantom 4 Pro V1',
+    type: 'Enterprise',
   },
 ];

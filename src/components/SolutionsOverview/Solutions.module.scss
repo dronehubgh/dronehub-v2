@@ -1,0 +1,11 @@
+.solutionsSlider {
+  .solutionsSlide {
+    .sliderDetails {
+      display: none;
+    }
+
+    &:hover .sliderDetails {
+      display: block;
+    }
+  }
+}

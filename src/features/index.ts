@@ -4,3 +4,4 @@ export * from './home';
 export * from './business';
 export * from './enterprise';
 export * from './industries';
+export * from './consumer';

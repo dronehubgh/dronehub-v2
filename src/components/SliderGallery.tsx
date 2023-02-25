@@ -4,8 +4,12 @@ import { useMedia } from 'react-use';
 import { A11y, Autoplay, Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { SwiperOptions } from 'swiper/types/swiper-options';
+import { v4 as uid } from 'uuid';
 
-export const SliderGallery = () => {
+interface SliderGalleryProps {
+  images: string[];
+}
+export const SliderGallery = ({ images }: SliderGalleryProps) => {
   const xxl = useMedia('(min-width: 1492px)', false);
   const xl = useMedia('(min-width: 1190px)', false);
   const lg = useMedia('(min-width: 1024px)', false);
@@ -57,41 +61,15 @@ export const SliderGallery = () => {
         style={{ width: '100%', height: '100%' }}
         className="dh-slider-gallery"
       >
-        <SwiperSlide
-          style={{
-            ...slideStyles,
-            background:
-              'center / cover no-repeat url(https://res.cloudinary.com/djmx11b6s/image/upload/v1676022073/donehub-assets/agro_o2ttkr.png)',
-          }}
-        />
-        <SwiperSlide
-          style={{
-            ...slideStyles,
-            background:
-              'center / cover no-repeat url(https://res.cloudinary.com/djmx11b6s/image/upload/v1676022136/donehub-assets/slide2_xjgd27.png)',
-          }}
-        />
-        <SwiperSlide
-          style={{
-            ...slideStyles,
-            background:
-              'center / cover no-repeat url(https://res.cloudinary.com/djmx11b6s/image/upload/v1676022122/donehub-assets/slide-1_mbundf.png)',
-          }}
-        />
-        <SwiperSlide
-          style={{
-            ...slideStyles,
-            background:
-              'center / cover no-repeat url(https://res.cloudinary.com/djmx11b6s/image/upload/v1676022160/donehub-assets/header-middle_gvagnz.png)',
-          }}
-        />
-        <SwiperSlide
-          style={{
-            ...slideStyles,
-            background:
-              'center / cover no-repeat url(https://res.cloudinary.com/djmx11b6s/image/upload/v1676022191/donehub-assets/banner-img_cu8aii.png)',
-          }}
-        />
+        {images.map((imageUrl) => (
+          <SwiperSlide
+            key={uid()}
+            style={{
+              ...slideStyles,
+              background: `center / cover no-repeat url(${imageUrl})`,
+            }}
+          />
+        ))}
       </Swiper>
     </Box>
   );

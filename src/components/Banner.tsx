@@ -1,15 +1,18 @@
 import { Box, Flex, Text } from '@chakra-ui/react';
 import React from 'react';
 
-export const Banner = () => {
+interface IBannerProps {
+  coverImage: string;
+}
+export const Banner = ({ coverImage }: IBannerProps) => {
   return (
     <Flex
       boxSizing="border-box"
       p="2rem"
       alignItems="center"
       minH="500px"
-      bg="top / cover no-repeat url(https://res.cloudinary.com/djmx11b6s/image/upload/v1676544493/donehub-assets/business-bg_ypmtbq.png)"
-      boxShadow={{ base: 'inset 0 0 0 2000px rgba(0, 0, 0, 0.5)', lg: 'none' }}
+      bg={`top / cover no-repeat url(${coverImage})`}
+      boxShadow="inset 0 0 0 2000px rgba(0, 0, 0, 0.3)"
     >
       <Text
         w="80%"

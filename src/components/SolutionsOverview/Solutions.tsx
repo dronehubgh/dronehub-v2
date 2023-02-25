@@ -6,9 +6,15 @@ import { SolutionsSlider } from './SolutionsSlider';
 export interface ISolutionsItems {
   imageUrl: string;
   categories: string[];
+  name: string;
+  type: 'Consumer' | 'Enterprise';
 }
 
-export const Solutions = () => {
+interface ISolutionsProps {
+  title?: string;
+}
+
+export const Solutions = ({ title }: ISolutionsProps) => {
   const [selectedItemText, setSelectedItemText] = useState('Surveying');
   const [filteredItems, setFilteredItems] =
     useState<ISolutionsItems[]>(solutionsItems);
@@ -28,7 +34,7 @@ export const Solutions = () => {
         fontSize="2xl"
         fontWeight="bold"
       >
-        Drones Solutions for Every Industry
+        {title || 'Drones Solutions for Every Industry'}
       </Text>
       <Flex px={{ base: '2rem', lg: '4rem' }} flexWrap="wrap" mb="2rem">
         <TabButton

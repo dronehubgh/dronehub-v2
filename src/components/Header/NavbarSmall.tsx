@@ -13,6 +13,7 @@ import {
   Image,
   useDisclosure,
 } from '@chakra-ui/react';
+import Link from 'next/link';
 import NextLink from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { MdShortText } from 'react-icons/md';
@@ -111,14 +112,18 @@ export const NavbarSmall = ({ navItems }: NavbarLargeProps) => {
 
               <DrawerFooter>
                 <Box>
-                  <Button
-                    title="Consumer Solutions"
-                    bg="brand.blue"
-                    color="gray.100"
-                    w="90%"
-                    mx="auto"
-                  />
-                  <Button title="Enterprise Solutions" w="90%" mx="auto" />
+                  <Link href="/consumer">
+                    <Button
+                      title="Consumer Solutions"
+                      bg="brand.blue"
+                      color="gray.100"
+                      w="90%"
+                      mx="auto"
+                    />
+                  </Link>
+                  <Link href="/enterprise?type=integration-program">
+                    <Button title="Enterprise Solutions" w="90%" mx="auto" />
+                  </Link>
                 </Box>
               </DrawerFooter>
             </DrawerContent>
