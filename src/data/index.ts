@@ -82,3 +82,31 @@ export const OurServicesData = [
       'https://res.cloudinary.com/djmx11b6s/image/upload/v1675907291/donehub-assets/Accesories/illus-5_vegu2n.png',
   },
 ];
+
+export const AllServicesData = [
+  ...OurServicesData,
+  {
+    title: 'Drone Maintenance',
+    description: 'Top-level maintenance to keep your drone airworthy.',
+    imageUrl:
+      'https://res.cloudinary.com/djmx11b6s/image/upload/v1677543416/donehub-assets/services/illus-23_sq5q1s.png',
+  },
+  {
+    title: 'Drone Detection Solution',
+    description: 'Protect your airspace.',
+    imageUrl:
+      'https://res.cloudinary.com/djmx11b6s/image/upload/v1676505622/donehub-assets/industry-images/aerial_surveying_zg22fl.png',
+  },
+  {
+    title: 'Custom Solutions',
+    description: 'Unique drone solutions for each project.',
+    imageUrl:
+      'https://res.cloudinary.com/djmx11b6s/image/upload/v1677543417/donehub-assets/services/illus-18_mbxnv5.png',
+  },
+  {
+    title: 'Drone Applied Research',
+    description: 'Get accurate research results with drones.',
+    imageUrl:
+      'https://res.cloudinary.com/djmx11b6s/image/upload/v1677543416/donehub-assets/services/illus-29_dcrmh6.png',
+  },
+];

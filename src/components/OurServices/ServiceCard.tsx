@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Image, Text } from '@chakra-ui/react';
+import { Box, Flex, FlexProps, Heading, Image, Text } from '@chakra-ui/react';
 import { ProductCTAButtons } from '../Buttons/ProductCTAButtons';
 import {
   cardStyles,
@@ -7,7 +7,7 @@ import {
   textStyles,
 } from './_styles';
 
-interface ServiceCardProps {
+interface ServiceCardProps extends FlexProps {
   title: string;
   description: string;
   imageUrl: string;
@@ -17,9 +17,10 @@ export const ServiceCard = ({
   title,
   description,
   imageUrl,
+  ...rest
 }: ServiceCardProps) => {
   return (
-    <Flex {...cardStyles}>
+    <Flex {...cardStyles} {...rest}>
       <Flex
         {...imageBoxStyles}
         bg={`center / cover no-repeat url(${imageUrl})`}

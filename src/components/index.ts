@@ -8,6 +8,7 @@ export { CustomMenuButton } from './CustomMenuButton/Menu';
 export { FrequentlyAskedQuestions } from './FrequentlyAskedQuestions';
 export { Newsletter } from './Newsletter/NewsletterCard';
 export { OurServices } from './OurServices/OurServices';
+export { ServiceCard } from './OurServices/ServiceCard';
 export { generateProductCards, ProductCard } from './ProductCard/ProductCard';
 export { Solutions } from './SolutionsOverview/Solutions';
 export { SolutionsSlider } from './SolutionsOverview/SolutionsSlider';
