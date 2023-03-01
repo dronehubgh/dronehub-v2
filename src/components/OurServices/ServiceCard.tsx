@@ -1,4 +1,4 @@
-import { Box, Flex, FlexProps, Heading, Image, Text } from '@chakra-ui/react';
+import { Box, Flex, FlexProps, Text } from '@chakra-ui/react';
 import { ProductCTAButtons } from '../Buttons/ProductCTAButtons';
 import {
   cardStyles,
@@ -11,12 +11,14 @@ interface ServiceCardProps extends FlexProps {
   title: string;
   description: string;
   imageUrl: string;
+  btn1Link: string;
 }
 
 export const ServiceCard = ({
   title,
   description,
   imageUrl,
+  btn1Link,
   ...rest
 }: ServiceCardProps) => {
   return (
@@ -30,6 +32,7 @@ export const ServiceCard = ({
         <Text {...textStyles}>{description}</Text>
         <Box my="0.6rem">
           <ProductCTAButtons
+            btn1Link={btn1Link}
             btn1Styles={{ borderColor: 'gray.100', color: 'gray.100' }}
             btn2Styles={{ bg: 'gray.100', color: 'brand.blue' }}
           />
@@ -43,4 +46,5 @@ ServiceCard.defaultProps = {
   title: 'Card Title',
   description: 'Lorem ipsum dolor sit amet consectetur',
   imageUrl: '',
+  btn1Link: '#',
 };

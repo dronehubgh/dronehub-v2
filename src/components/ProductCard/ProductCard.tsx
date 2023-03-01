@@ -40,6 +40,7 @@ export const ProductCard = ({
             <p className="text-danger fw-bold fst-italic">Out of Stock</p>
           ) : (
             <ProductCTAButtons
+              btn1Link="#"
               btn2Styles={{ bg: 'brand.blue', color: 'gray.100' }}
             />
           )}

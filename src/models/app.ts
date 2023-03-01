@@ -27,6 +27,7 @@ export interface ICarouselItem {
   description: string;
   tagline: string;
   imageUrl: string;
+  link: string;
   cta?: ReactNode;
 }
 

@@ -1,4 +1,4 @@
-import { Carousel, Contact, OurServices } from '../../components';
+import { ProductsCarousel, Contact, OurServices } from '../../components';
 import { Products } from './components/Products';
 
 import { ICarouselItem, IProductCategory } from '../../models/app';
@@ -12,7 +12,7 @@ interface IProductsProps {
 
 export const ProductsFeature = ({ categories, bannerData }: IProductsProps) => (
   <>
-    <Carousel items={bannerData} />
+    <ProductsCarousel items={bannerData} />
     <Categories categories={categories} />
     <LatestReleases />
     <Products />

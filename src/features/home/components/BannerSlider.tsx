@@ -62,6 +62,7 @@ export const BannerSlider = ({ featuredProducts }: BannerSlider) => {
               </Text>
               <Box w="90%" mx="auto">
                 <ProductCTAButtons
+                  btn1Link={`/products/${product.id}`}
                   containerStyles={{ justify: 'center' }}
                   btn1Styles={{
                     borderColor: 'gray.100',

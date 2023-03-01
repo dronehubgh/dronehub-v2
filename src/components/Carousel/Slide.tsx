@@ -20,6 +20,7 @@ export const Slide = ({ item }: { item: ICarouselItem }) => {
           mx={{ base: 'auto', lg: 'left' }}
         >
           <ProductCTAButtons
+            btn1Link="#"
             btn1Styles={{ borderColor: 'gray.100', color: 'gray.100' }}
             btn2Styles={{ bg: 'gray.100', color: 'brand.blue' }}
           />

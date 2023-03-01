@@ -26,6 +26,7 @@ export const AllServicesSmall = () => {
             title={data.title}
             description={data.description}
             imageUrl={data.imageUrl}
+            btn1Link={data.link}
           />
         ))}
       />

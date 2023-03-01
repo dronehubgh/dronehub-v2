@@ -7,6 +7,7 @@ export interface ISolutionsItems {
   imageUrl: string;
   categories: string[];
   name: string;
+  link: string;
   type: 'Consumer' | 'Enterprise';
 }
 

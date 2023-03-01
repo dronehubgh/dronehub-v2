@@ -59,18 +59,21 @@ export const OurServicesData = [
   {
     title: 'Drone Education',
     description: 'Enhance your skills. Become a pro.',
+    link: '/services/drone-education',
     imageUrl:
       'https://res.cloudinary.com/djmx11b6s/image/upload/v1675907080/donehub-assets/Accesories/illus-1_nzxg7m.png',
   },
   {
     title: 'Drone Consulting',
     description: 'Get expert advice for the best drone experience.',
+    link: '/services/drone-consulting',
     imageUrl:
       'https://res.cloudinary.com/djmx11b6s/image/upload/v1675907404/donehub-assets/Accesories/illus-13_tarlur.png',
   },
   {
     title: 'Drone Repair',
     description: 'Have a drone problem? Let’s help you fix it.',
+    link: '/services/drone-repair',
     imageUrl:
       'https://res.cloudinary.com/djmx11b6s/image/upload/v1675907261/donehub-assets/Accesories/illus-4_vtgl3j.png',
   },
@@ -78,6 +81,7 @@ export const OurServicesData = [
     title: 'Drone Rental',
     description:
       'Need drone support for whatever reason? No problem. Rent a drone for your needs.',
+    link: '/services/drone-rental',
     imageUrl:
       'https://res.cloudinary.com/djmx11b6s/image/upload/v1675907291/donehub-assets/Accesories/illus-5_vegu2n.png',
   },
@@ -88,25 +92,52 @@ export const AllServicesData = [
   {
     title: 'Drone Maintenance',
     description: 'Top-level maintenance to keep your drone airworthy.',
+    link: '/services/drone-maintenance',
     imageUrl:
       'https://res.cloudinary.com/djmx11b6s/image/upload/v1677543416/donehub-assets/services/illus-23_sq5q1s.png',
   },
   {
     title: 'Drone Detection Solution',
     description: 'Protect your airspace.',
+    link: '/services/drone-detection',
     imageUrl:
       'https://res.cloudinary.com/djmx11b6s/image/upload/v1676505622/donehub-assets/industry-images/aerial_surveying_zg22fl.png',
   },
   {
     title: 'Custom Solutions',
     description: 'Unique drone solutions for each project.',
+    link: '/services/custom-solutions',
     imageUrl:
       'https://res.cloudinary.com/djmx11b6s/image/upload/v1677543417/donehub-assets/services/illus-18_mbxnv5.png',
   },
   {
     title: 'Drone Applied Research',
     description: 'Get accurate research results with drones.',
+    link: '/services/drone-applied-research',
     imageUrl:
       'https://res.cloudinary.com/djmx11b6s/image/upload/v1677543416/donehub-assets/services/illus-29_dcrmh6.png',
+  },
+];
+
+export const repairProcess = [
+  {
+    title: 'Service Request',
+    info: 'Book a repair service by calling or emailing us with a brief description of the issue.',
+  },
+  {
+    title: 'Drop-off',
+    info: 'Drop off your drone at our store for repair. ',
+  },
+  {
+    title: 'Repair Estimate',
+    info: 'After we assess and diagnose the fault with your drone, we provide you with a repair estimate and timeline.',
+  },
+  {
+    title: 'Repair & Testing',
+    info: 'Once approved, we carry out the repairs and test fly to ensure the drone works as expected.',
+  },
+  {
+    title: 'Payment & Pickup',
+    info: 'On completion of repair, you are required to pick up your drone after payment.',
   },
 ];

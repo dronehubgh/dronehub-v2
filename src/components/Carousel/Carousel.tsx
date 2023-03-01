@@ -5,7 +5,7 @@ import { ICarouselItem } from '../../models/app';
 import { Slide } from './Slide';
 import { carouselStyles } from './_styles';
 
-export const Carousel = ({ items }: { items: ICarouselItem[] }) => {
+export const ProductsCarousel = ({ items }: { items: ICarouselItem[] }) => {
   const pagination = {
     clickable: true,
     renderBullet: (_index: number, className: string) => {

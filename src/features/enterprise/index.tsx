@@ -21,7 +21,6 @@ const btnStyles: ButtonProps = {
 export const EnterpriseFeature = () => {
   const router = useRouter();
   const query = router.query;
-  console.log(query);
 
   const [selectedIndex, setSelectedIndex] = useState(0);
 

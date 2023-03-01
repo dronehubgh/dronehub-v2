@@ -14,6 +14,7 @@ export const carouselItems = (cta: ReactNode): ICarouselItem[] => [
     tagline: 'Consumer. Professional. Enterprise.',
     cta,
     imageUrl: 'assets/images/carousel-drones/p1.png',
+    link: '#',
   },
   {
     id: uid(),
@@ -21,6 +22,7 @@ export const carouselItems = (cta: ReactNode): ICarouselItem[] => [
     tagline: 'Consumer. Professional. Enterprise.',
     cta,
     imageUrl: 'assets/images/carousel-drones/mavic-2-ea.png',
+    link: '#',
   },
   {
     id: uid(),
@@ -28,6 +30,7 @@ export const carouselItems = (cta: ReactNode): ICarouselItem[] => [
     tagline: 'Consumer. Professional. Enterprise.',
     cta,
     imageUrl: 'assets/images/carousel-drones/mavic_mini_1.png',
+    link: '#',
   },
   {
     id: uid(),
@@ -35,6 +38,7 @@ export const carouselItems = (cta: ReactNode): ICarouselItem[] => [
     tagline: 'Consumer. Professional. Enterprise.',
     cta,
     imageUrl: 'assets/images/carousel-drones/phantom_4_Pro_V2_3.png',
+    link: '#',
   },
 ];
 
@@ -393,6 +397,7 @@ export const solutionsItems: ISolutionsItems[] = [
     categories: ['Surveying', 'Agriculture', 'Construction', 'Public Safety'],
     name: 'Mavic Air 2',
     type: 'Enterprise',
+    link: '#',
   },
   {
     imageUrl:
@@ -405,6 +410,7 @@ export const solutionsItems: ISolutionsItems[] = [
     ],
     name: 'Mavic Mini',
     type: 'Enterprise',
+    link: '#',
   },
   {
     imageUrl:
@@ -412,6 +418,7 @@ export const solutionsItems: ISolutionsItems[] = [
     categories: ['Media & Entertainment', 'Surveying', 'Mining', 'Forestry'],
     name: 'Mavic Mini 2',
     type: 'Enterprise',
+    link: '#',
   },
   {
     imageUrl:
@@ -419,6 +426,7 @@ export const solutionsItems: ISolutionsItems[] = [
     categories: ['Surveying', 'Forestry', 'Agriculture'],
     name: 'Matrice 30',
     type: 'Consumer',
+    link: '#',
   },
   {
     imageUrl:
@@ -426,6 +434,7 @@ export const solutionsItems: ISolutionsItems[] = [
     categories: ['Security', 'Energy & Infrastructure', 'Forestry'],
     name: 'Phantom 4 Multispectral',
     type: 'Enterprise',
+    link: '#',
   },
   {
     imageUrl:
@@ -433,6 +442,7 @@ export const solutionsItems: ISolutionsItems[] = [
     categories: ['Forestry', 'Construction', 'Agriculture'],
     name: 'Mavic 3 Multispectral',
     type: 'Consumer',
+    link: '#',
   },
   {
     imageUrl:
@@ -445,6 +455,7 @@ export const solutionsItems: ISolutionsItems[] = [
     ],
     name: 'Mavic 3 Thermal',
     type: 'Consumer',
+    link: '#',
   },
   {
     imageUrl:
@@ -452,6 +463,7 @@ export const solutionsItems: ISolutionsItems[] = [
     categories: ['Construction', 'Media & Entertainment', 'Forestry'],
     name: 'Agras T20',
     type: 'Consumer',
+    link: '#',
   },
   {
     imageUrl:
@@ -464,6 +476,7 @@ export const solutionsItems: ISolutionsItems[] = [
     ],
     name: 'Phantom 4 Pro V2',
     type: 'Enterprise',
+    link: '#',
   },
   {
     imageUrl:
@@ -471,5 +484,6 @@ export const solutionsItems: ISolutionsItems[] = [
     categories: ['Surveying', 'Energy & Infrastructure'],
     name: 'Phantom 4 Pro V1',
     type: 'Enterprise',
+    link: '#',
   },
 ];

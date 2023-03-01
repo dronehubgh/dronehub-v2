@@ -2,7 +2,7 @@ export { Button } from './Buttons/Button';
 export { IconButton } from './Buttons/IconButton';
 export { MenuButton } from './Buttons/MenuButton';
 export { ProductCTAButtons } from './Buttons/ProductCTAButtons';
-export { Carousel } from './Carousel/Carousel';
+export { ProductsCarousel } from './Carousel/Carousel';
 export { Contact } from './Contact/Contact';
 export { CustomMenuButton } from './CustomMenuButton/Menu';
 export { FrequentlyAskedQuestions } from './FrequentlyAskedQuestions';

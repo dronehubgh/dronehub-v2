@@ -5,11 +5,7 @@ import { AllServicesData } from '../../../../data';
 
 export const AllServicesLarge = () => {
   return (
-    <Box
-      bg="brand.blueGradientThree"
-      p={{ base: '2rem', lg: '3rem 0 2rem 2rem' }}
-      my="2rem"
-    >
+    <Box bg="brand.blueGradientThree" p="4rem" my="2rem">
       <Box mx="1rem" textAlign={{ base: 'center', lg: 'left' }}>
         <Text fontSize="2rem" fontWeight="bold" color="gray.100">
           Our Services
@@ -32,6 +28,7 @@ export const AllServicesLarge = () => {
             title={data.title}
             description={data.description}
             imageUrl={data.imageUrl}
+            btn1Link={data.link}
           />
         ))}
       </Grid>

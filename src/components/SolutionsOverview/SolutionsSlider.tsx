@@ -54,6 +54,7 @@ export const SolutionsSlider = ({ items }: { items: ISolutionsItems[] }) => {
                   </Text>
                   <Text>{item.type}</Text>
                   <ProductCTAButtons
+                    btn1Link={item.link}
                     containerStyles={{ justify: 'center' }}
                     btn1Styles={{
                       borderColor: 'gray.100',
