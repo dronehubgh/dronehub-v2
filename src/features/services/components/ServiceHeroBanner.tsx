@@ -1,17 +1,17 @@
 import { Box, Button, Flex, Text } from '@chakra-ui/react';
-import React from 'react';
+import React, { ReactNode } from 'react';
 
 interface ServiceHeroBannerProps {
   title: string;
   description: string;
   imageUrl: string;
-  btnLabel: string;
+  cta: ReactNode;
 }
 export const ServiceHeroBanner = ({
   title,
   description,
   imageUrl,
-  btnLabel,
+  cta,
 }: ServiceHeroBannerProps) => {
   return (
     <Box
@@ -45,9 +45,8 @@ export const ServiceHeroBanner = ({
             <Text color="gray.200" my="1rem">
               {description}
             </Text>
-            <Button bgColor="white" h="50px" px="2rem" mb="2rem">
-              {btnLabel}
-            </Button>
+
+            <Box mb={{ base: '2rem', lg: '0' }}>{cta}</Box>
           </Box>
         </Flex>
         <Box

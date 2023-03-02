@@ -7,6 +7,7 @@ import {
   DronePlatformsWeRepair,
   HowWeOperate,
   RepairProcess,
+  RequestRepair,
   WhatIsInItForYou,
   WhatWeFix,
 } from '../../features/services/drone-repairs';
@@ -18,7 +19,7 @@ const DroneRepairs: NextPage = () => {
         title="Drone Repair Services"
         description="Let’s help you get your drone flying again"
         imageUrl="https://res.cloudinary.com/djmx11b6s/image/upload/v1677543417/donehub-assets/services/illus-8_juxl9n.png"
-        btnLabel="Request a Repair"
+        cta={<RequestRepair btnProps={{ label: 'Request a Repair' }} />}
       />
       <Details />
       <Box bgColor="rgba(216, 216, 216, 0.15)" py="4rem">

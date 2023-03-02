@@ -1,7 +1,8 @@
 import { Box, Flex, Heading, Text } from '@chakra-ui/react';
 import React from 'react';
 import { BiChevronRight } from 'react-icons/bi';
-import { Button, CustomMenuButton, IconButton } from '../../../components';
+import { RequestRepair } from '.';
+import { CustomMenuButton } from '../../../components';
 
 export const BookARepair = () => {
   return (
@@ -25,13 +26,16 @@ export const BookARepair = () => {
             w={{ lg: '80%' }}
             flexDir={{ base: 'column', md: 'row' }}
           >
-            <IconButton
-              title="Fill out form"
-              icon={<BiChevronRight />}
-              minW="150px"
-              bgColor="transparent"
-              borderColor="gray.100"
-              color="gray.100"
+            <RequestRepair
+              btnProps={{
+                label: 'Fill out form',
+                icon: <BiChevronRight />,
+                minW: '200px',
+                bgColor: 'transparent',
+                borderWidth: '1px',
+                borderColor: 'gray.100',
+                color: 'gray.100',
+              }}
             />
             <CustomMenuButton title="Talk to an Expert" />
           </Flex>

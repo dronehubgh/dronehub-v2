@@ -5,3 +5,4 @@ export { WhatIsInItForYou } from './WhatIsInItForYou';
 export { WhatWeFix } from './WhatWeFix';
 export { DronePlatformsWeRepair } from './DronePlatformsWeRepair';
 export { BookARepair } from './BookARepair';
+export { RepairModal as RequestRepair } from './RepairModal';
