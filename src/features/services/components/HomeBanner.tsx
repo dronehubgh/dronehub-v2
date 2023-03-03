@@ -11,20 +11,19 @@ export const HomeBanner = () => {
       p="2rem"
       alignItems="center"
       justify="center"
-      minH="90vh"
+      minH={{ base: '50vh', sm: '80vh', lg: '90vh' }}
       bg={`top / cover no-repeat url(${coverImage})`}
       boxShadow="inset 0 0 0 2000px rgba(0, 0, 0, 0.6)"
     >
       <Text
-        w="80%"
+        maxW="650px"
         mx="auto"
-        fontSize={{ base: '1.5rem', lg: '2.5rem' }}
+        fontSize={{ base: '1.8rem', lg: '2.5rem' }}
         fontWeight="bold"
         color="gray.100"
         textAlign="center"
       >
-        Customised Solutions & Reliable
-        <br /> Support Designed for You
+        Customised Solutions & Reliable Support Designed for You
       </Text>
     </Flex>
   );

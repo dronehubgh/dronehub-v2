@@ -29,6 +29,7 @@ export const getBannerData = (
     description: category.description,
     tagline: category.tagline,
     imageUrl: urlFor(category.image).url(),
+    link: `products/${category._id}`,
   }));
 };
 

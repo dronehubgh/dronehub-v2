@@ -1,6 +1,7 @@
 import { NextPage } from 'next';
 import React from 'react';
-import { ServiceHeroBanner } from '../../features';
+import { CustomMenuButton } from '../../components';
+import { ConnectWithUs, ServiceHeroBanner } from '../../features';
 
 const DroneMaintenance: NextPage = () => {
   return (
@@ -9,8 +10,17 @@ const DroneMaintenance: NextPage = () => {
         title="Drone Maintenance & Technical Support"
         description="Top-level maintenance to keep your drone airworthy"
         imageUrl="https://res.cloudinary.com/djmx11b6s/image/upload/v1677543416/donehub-assets/services/illus-23_sq5q1s.png"
-        btnLabel="Book now"
+        cta={
+          <CustomMenuButton
+            title="Book now"
+            bgColor="white"
+            color="brand.blue"
+            w={{ base: '80%', lg: '200px' }}
+          />
+        }
       />
+
+      <ConnectWithUs description="Schedule a maintenance session for your drone products today." />
     </>
   );
 };

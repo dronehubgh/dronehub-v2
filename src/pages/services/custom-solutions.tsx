@@ -21,7 +21,7 @@ const CustomSolutions: NextPage = () => {
         }
       />
 
-      <Text textAlign="center" lineHeight="10" my="6rem" w="80%" mx="auto">
+      <Text lineHeight="10" my="6rem" w="80%" mx="auto">
         In selecting and deploying drone technology, there is no
         one-size-fits-all approach. Every project has its own specifications and
         may require a unique drone solution. At Dronehub, we explore your ideas
