@@ -1,9 +1,9 @@
-import { Box, Flex, Heading, Text } from '@chakra-ui/react';
+import { Box, BoxProps, Flex, Heading, Text } from '@chakra-ui/react';
 import React from 'react';
 import { BiChevronRight } from 'react-icons/bi';
 import { CustomMenuButton } from '../../../components';
 
-interface IConnectWithUsProps {
+interface IConnectWithUsProps extends BoxProps {
   heading?: string;
   description: string;
 }
@@ -11,9 +11,10 @@ interface IConnectWithUsProps {
 export const ConnectWithUs = ({
   heading,
   description,
+  ...rest
 }: IConnectWithUsProps) => {
   return (
-    <Box bg="brand.darkBlue">
+    <Box bg="brand.darkBlue" {...rest}>
       <Flex
         align="center"
         h={{ base: '', lg: '650px' }}

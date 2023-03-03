@@ -1,7 +1,14 @@
 import { NextPage } from 'next';
 import React from 'react';
 import { CustomMenuButton } from '../../components';
-import { ServiceHeroBanner } from '../../features';
+import { ConnectWithUs, ServiceHeroBanner } from '../../features';
+import {
+  Benefits,
+  Details,
+  HowItWorks,
+  IndustriesWeServe,
+  WhyWorkWithUs,
+} from '../../features/services/drone-rentals';
 
 const DroneRentals: NextPage = () => {
   return (
@@ -18,6 +25,17 @@ const DroneRentals: NextPage = () => {
             w={{ base: '80%', lg: '200px' }}
           />
         }
+      />
+
+      <Details />
+      <HowItWorks />
+      <Benefits />
+      <WhyWorkWithUs />
+      <IndustriesWeServe />
+      <ConnectWithUs
+        my="2rem"
+        heading="Request a quote"
+        description="Get Instant Rental Support"
       />
     </>
   );
