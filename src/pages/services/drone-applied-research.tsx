@@ -1,7 +1,13 @@
 import { NextPage } from 'next';
 import React from 'react';
 import { CustomMenuButton } from '../../components';
-import { ServiceHeroBanner } from '../../features';
+import { ConnectWithUs, ServiceHeroBanner } from '../../features';
+import {
+  AreasWeSupport,
+  Details,
+  WhoWeWorkWith,
+  WhyWorkWithUs,
+} from '../../features/services/drone-applied-research';
 
 const DroneAppliedResearch: NextPage = () => {
   return (
@@ -19,6 +25,11 @@ const DroneAppliedResearch: NextPage = () => {
           />
         }
       />
+      <Details />
+      <AreasWeSupport />
+      <WhyWorkWithUs />
+      <WhoWeWorkWith />
+      <ConnectWithUs description="Do you have an upcoming research project? Send us a message, we’d be happy to help. " />
     </>
   );
 };
