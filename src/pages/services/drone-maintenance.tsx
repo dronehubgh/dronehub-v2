@@ -2,6 +2,12 @@ import { NextPage } from 'next';
 import React from 'react';
 import { CustomMenuButton } from '../../components';
 import { ConnectWithUs, ServiceHeroBanner } from '../../features';
+import {
+  Details,
+  OurApproach,
+  Overview,
+  Programs,
+} from '../../features/services/drone-maintenance';
 
 const DroneMaintenance: NextPage = () => {
   return (
@@ -20,6 +26,10 @@ const DroneMaintenance: NextPage = () => {
         }
       />
 
+      <Details />
+      <Overview />
+      <Programs />
+      <OurApproach />
       <ConnectWithUs description="Schedule a maintenance session for your drone products today." />
     </>
   );
