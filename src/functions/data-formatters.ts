@@ -1,4 +1,3 @@
-import { ReactNode } from 'react';
 import { urlFor } from '../lib';
 import { ISanityProductCategory } from '../models';
 import {
