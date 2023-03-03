@@ -73,7 +73,7 @@ export const OurServicesData = [
   {
     title: 'Drone Repair',
     description: 'Have a drone problem? Let’s help you fix it.',
-    link: '/services/drone-repair',
+    link: '/services/drone-repairs',
     imageUrl:
       'https://res.cloudinary.com/djmx11b6s/image/upload/v1675907261/donehub-assets/Accesories/illus-4_vtgl3j.png',
   },
