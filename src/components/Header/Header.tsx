@@ -28,7 +28,7 @@ const navItems: INavItem[] = [
   {
     id: uid(),
     name: 'About us',
-    link: '/about-us',
+    link: '/about',
   },
 ];
 
