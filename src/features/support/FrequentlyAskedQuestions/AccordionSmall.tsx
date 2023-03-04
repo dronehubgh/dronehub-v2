@@ -32,7 +32,7 @@ const btnProps: AccordionButtonProps = {
 
 export const AccordionSmall = () => {
   return (
-    <Accordion allowToggle defaultIndex={[0]} p="1rem" border="none">
+    <Accordion allowToggle p="1rem" border="none">
       <AccordionItem border="none">
         <h2>
           <AccordionButton {...btnProps}>
