@@ -9,7 +9,10 @@ import {
 } from '@chakra-ui/react';
 import { contactList } from '../../data';
 
-export const Contact = () => {
+interface IContactProps {
+  hideHeading?: boolean;
+}
+export const Contact = ({ hideHeading }: IContactProps) => {
   return (
     <Box>
       <Heading
@@ -19,7 +22,7 @@ export const Contact = () => {
         mx="2rem"
         mt="3rem"
       >
-        Looking for something else?
+        {!hideHeading && 'Looking for something else?'}
       </Heading>
 
       <Grid

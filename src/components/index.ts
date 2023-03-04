@@ -15,6 +15,7 @@ export { SolutionsSlider } from './SolutionsOverview/SolutionsSlider';
 export { SwiperNavButtons } from './SwiperNavButtons';
 export { Banner } from './Banner';
 export { Partners } from './Partners';
+export { QuestionsAccordion } from './QuestionsAccordion';
 
 // styles
 export { btnStyles } from './Buttons/_styles';

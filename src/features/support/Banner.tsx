@@ -2,9 +2,9 @@ import { Flex, Heading, Text } from '@chakra-ui/react';
 import React from 'react';
 
 const coverImage =
-  'https://res.cloudinary.com/djmx11b6s/image/upload/v1677918284/donehub-assets/Mask_1_1_kdonef.png';
+  'https://res.cloudinary.com/djmx11b6s/image/upload/v1677923898/donehub-assets/Mask_1_1_chq2dc.png';
 
-export const AboutBanner = () => {
+export const SupportBanner = () => {
   return (
     <Flex
       boxSizing="border-box"
@@ -23,7 +23,7 @@ export const AboutBanner = () => {
         color="gray.100"
         textAlign="center"
       >
-        Drone Products and Solutions Provider
+        Welcome to Dronehub Support
       </Heading>
       <Text
         fontSize={{ base: 'lg', lg: 'xl' }}
