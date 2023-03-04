@@ -6,3 +6,4 @@ export * from './enterprise';
 export * from './industries';
 export * from './consumer';
 export * from './services';
+export * from './about';
