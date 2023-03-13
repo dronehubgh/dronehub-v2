@@ -10,6 +10,7 @@ import {
   FocusEventHandler,
   HTMLInputTypeAttribute,
 } from 'react';
+import { btnHeight } from '../../consts/consts';
 import { ButtonProps } from '../Buttons/Button';
 
 export const cardStyles: FlexProps = {
@@ -75,6 +76,7 @@ export const submitBtnStyles: ButtonProps = {
   title: 'Subscribe',
   type: 'submit',
   w: '100%',
+  h: btnHeight,
   bg: 'brand.blue',
   color: 'gray.100',
 };

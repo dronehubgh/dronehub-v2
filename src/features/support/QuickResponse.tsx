@@ -1,15 +1,11 @@
 import {
   Box,
-  Button,
-  ButtonGroup,
   Card,
   CardBody,
-  CardFooter,
   Divider,
   Grid,
   GridItem,
   Heading,
-  Image,
   Stack,
   Text,
 } from '@chakra-ui/react';

@@ -1,4 +1,5 @@
 import { ButtonProps, MenuItemProps } from '@chakra-ui/react';
+import { btnHeight } from '../../consts/consts';
 
 export const btnStyles: ButtonProps = {
   _hover: { boxShadow: 'md' },
@@ -8,7 +9,7 @@ export const btnStyles: ButtonProps = {
   borderWidth: 1,
   borderColor: 'gray.300',
   w: '100%',
-  h: '45px',
+  h: btnHeight,
   fontSize: { base: '12px', md: '14px' },
   my: 2,
   bg: 'white',

@@ -1,12 +1,5 @@
-import { Box } from '@chakra-ui/react';
 import { NextPage } from 'next';
-import React from 'react';
-import {
-  Button,
-  CustomMenuButton,
-  IconButton,
-  MenuButton,
-} from '../../components';
+import { CustomMenuButton } from '../../components';
 import { ConnectWithUs, ServiceHeroBanner } from '../../features';
 import {
   Details,

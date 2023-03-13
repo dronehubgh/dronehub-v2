@@ -1,6 +1,5 @@
 import {
   Box,
-  Button,
   Flex,
   Grid,
   GridItem,
@@ -8,7 +7,6 @@ import {
   Image,
   Text,
 } from '@chakra-ui/react';
-import React from 'react';
 
 export const Programs = () => {
   return (

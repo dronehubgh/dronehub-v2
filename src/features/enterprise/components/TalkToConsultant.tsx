@@ -1,7 +1,6 @@
 import { Box, Flex, Heading, Text } from '@chakra-ui/react';
-import React from 'react';
 import { BiChevronRight } from 'react-icons/bi';
-import { Button, CustomMenuButton, IconButton } from '../../../components';
+import { CustomMenuButton, IconButton } from '../../../components';
 
 export const TalkToConsultant = () => {
   return (

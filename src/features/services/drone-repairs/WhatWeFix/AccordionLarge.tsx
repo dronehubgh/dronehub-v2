@@ -1,6 +1,7 @@
 import { Box, Button, ButtonProps, Flex, Spacer } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import { FaChevronRight } from 'react-icons/fa';
+import { btnHeight } from '../../../../consts/consts';
 import { FunctionalDamage } from './FunctionalDamage';
 import { OtherIssues } from './OtherIssues';
 import { PhysicalDamage } from './PhysicalDamage';
@@ -64,6 +65,7 @@ const btnProps: ButtonProps = {
   transition: 'all .5s',
   borderBottomWidth: '1px',
   borderColor: 'gray.100',
+  h: btnHeight,
 };
 
 interface CollapsibleButtonProps extends ButtonProps {

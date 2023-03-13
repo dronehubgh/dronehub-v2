@@ -27,6 +27,7 @@ import {
   Textarea,
 } from '@chakra-ui/react';
 import { ReactNode } from 'react';
+import { btnHeight } from '../../../consts/consts';
 
 interface BtnProps extends ButtonProps {
   label: string;
@@ -52,6 +53,7 @@ export const RepairModal = ({ btnProps, title }: IRepairModalProps) => {
         _hover={{ bgColor: 'none' }}
         _active={{ bgColor: 'none' }}
         mt="5px"
+        h={btnHeight}
       >
         {label} <Text ml="0.5rem">{icon}</Text>
       </Button>
@@ -196,6 +198,7 @@ export const RepairModal = ({ btnProps, title }: IRepairModalProps) => {
               bgColor="brand.blue"
               color="gray.100"
               mr={3}
+              h={btnHeight}
             >
               Request a Repair
             </Button>

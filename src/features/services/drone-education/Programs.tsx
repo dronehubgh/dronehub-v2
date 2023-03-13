@@ -1,5 +1,6 @@
 import { Box, Button, Grid, GridItem, Heading, Text } from '@chakra-ui/react';
 import React from 'react';
+import { btnHeight } from '../../../consts/consts';
 
 export const Programs = () => {
   return (
@@ -65,6 +66,7 @@ const ProgramCard = ({ title, description }: ProgramCardProps) => {
           mr="1rem"
           my="0.5rem"
           minW="150px"
+          h={btnHeight}
         >
           Talk to Sales{' '}
         </Button>
@@ -74,6 +76,7 @@ const ProgramCard = ({ title, description }: ProgramCardProps) => {
           _hover={{ bgColor: 'none' }}
           _active={{ bgColor: 'none' }}
           minW="150px"
+          h={btnHeight}
         >
           Send an Email
         </Button>
