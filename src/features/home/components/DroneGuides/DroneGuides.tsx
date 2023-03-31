@@ -1,4 +1,5 @@
 import { Box, Flex, Heading, Text } from '@chakra-ui/react';
+import Link from 'next/link';
 import React from 'react';
 import { BiChevronRight } from 'react-icons/bi';
 import { Button } from '../../../../components';
@@ -25,14 +26,16 @@ export const DroneGuides = () => {
             </Text>
           </Box>
           <Box mt={{ base: '1.5rem', lg: '0' }}>
-            <Button
-              title="View all resources"
-              bg="transparent"
-              borderColor="gray.100"
-              color="gray.100"
-            >
-              <BiChevronRight />
-            </Button>
+            <Link href="/blog">
+              <Button
+                title="View all resources"
+                bg="transparent"
+                borderColor="gray.100"
+                color="gray.100"
+              >
+                <BiChevronRight />
+              </Button>
+            </Link>
           </Box>
         </Flex>
         <Box mb="2rem">

@@ -56,24 +56,25 @@ const Navigation = ({ isLarge }: { isLarge: boolean }) => (
   <Flex align="center">
     <NextLink
       className={`nav-item ${isLarge ? 'mx-4' : 'mx-2'} text-light`}
-      href="/"
+      href="#overview"
       passHref
     >
       Overview
     </NextLink>
     <NextLink
       className={`nav-item ${isLarge ? 'mx-4' : 'mx-2'} text-light`}
-      href="/"
+      style={{ minWidth: '80px' }}
+      href="#techSpecs"
       passHref
     >
       Tech Specs
     </NextLink>
     <NextLink
       className={`nav-item ${isLarge ? 'mx-4' : 'mx-2'} text-light`}
-      href="/"
+      href="#applications"
       passHref
     >
-      Accessories
+      Applications
     </NextLink>
   </Flex>
 );

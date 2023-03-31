@@ -32,7 +32,11 @@ export const ProductCTAButtons = ({
       </Link>
     </Box>
     <Box>
-      <CustomMenuButton title="Reserve now" {...btn2Styles} />
+      <CustomMenuButton
+        title="Reserve now"
+        {...btn2Styles}
+        _focus={{ bgColor: 'brand.blue', color: 'gray.100' }}
+      />
     </Box>
   </Flex>
 );

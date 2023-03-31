@@ -1,9 +1,8 @@
-import { Box, Flex, IconButton, IconButtonProps } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 import { ReactNode } from 'react';
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { useMedia } from 'react-use';
 import { A11y, Navigation } from 'swiper';
-import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import { SwiperOptions } from 'swiper/types/swiper-options';
 import { v4 as uid } from 'uuid';
 import { SwiperNavButtons } from '../../../../components';

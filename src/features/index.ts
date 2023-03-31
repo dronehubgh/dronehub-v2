@@ -8,3 +8,4 @@ export * from './consumer';
 export * from './services';
 export * from './about';
 export * from './support';
+export * from './deals';

@@ -96,30 +96,35 @@ export const productOverviews: { [key: string]: IProductSectionItem[] } = {
           title: 'DJI Mini 3 Pro',
           description: 'Consumer Drone',
           imageUrl: '/assets/images/drones/mavic/DJI_MIni_3_Pro_1.png',
+          link: '/products/ab67c-437868-abc573-67bac',
         },
         {
           id: uid(),
           title: 'DJI Mini 2',
           description: 'Consumer Drone',
           imageUrl: '/assets/images/drones/mavic/DJI_Mini2_2.png',
+          link: '/products/ab67c-437868-abc573-67bac',
         },
         {
           id: uid(),
           title: 'Mavic Air 2',
           description: 'Consumer Drone',
           imageUrl: '/assets/images/drones/mavic/Mavic_Air2_2.png',
+          link: '/products/ab67c-437868-abc573-67bac',
         },
         {
           id: uid(),
           title: 'DJI AIR 2S',
           description: 'Consumer Drone',
           imageUrl: '/assets/images/drones/mavic/DJI_2S_1.png',
+          link: '/products/ab67c-437868-abc573-67bac',
         },
         {
           id: uid(),
           title: 'Mavic 3',
           description: 'Prosumer Drone',
           imageUrl: '/assets/images/drones/mavic/Mavic_3_2.png',
+          link: '/products/ab67c-437868-abc573-67bac',
         },
         {
           id: uid(),
@@ -127,12 +132,14 @@ export const productOverviews: { [key: string]: IProductSectionItem[] } = {
           description: 'Enterprise Drone',
           imageUrl:
             '/assets/images/drones/mavic/Mavic _2_Enterprise_Advanced_1.png',
+          link: '/products/ab67c-437868-abc573-67bac',
         },
         {
           id: uid(),
           title: 'Mavic 2 Enterprise Dual',
           description: 'Enterprise Drone',
           imageUrl: 'assets/images/drones/mavic/DJI_MIni_3_Pro_1.png',
+          link: '/products/ab67c-437868-abc573-67bac',
           outOfStock: true,
         },
         {
@@ -140,18 +147,21 @@ export const productOverviews: { [key: string]: IProductSectionItem[] } = {
           title: 'DJI Mini SE',
           description: 'Consumer Drone',
           imageUrl: '/assets/images/drones/mavic/DJI_Mini_SE_2.png',
+          link: '/products/ab67c-437868-abc573-67bac',
         },
         {
           id: uid(),
           title: 'Mavic Mini',
           description: 'Consumer Drone',
           imageUrl: '/assets/images/drones/mavic/Mavic_Mini_2.png',
+          link: '/products/ab67c-437868-abc573-67bac',
         },
         {
           id: uid(),
           title: 'Mavic 2 Zoom',
           description: 'Consumer Drone',
           imageUrl: 'assets/images/drones/mavic/DJI_MIni_3_Pro_1.png',
+          link: '/products/ab67c-437868-abc573-67bac',
           outOfStock: true,
         },
         {
@@ -159,6 +169,7 @@ export const productOverviews: { [key: string]: IProductSectionItem[] } = {
           title: 'Mavic 2 Pro',
           description: 'Consumer Drone',
           imageUrl: 'assets/images/drones/mavic/DJI_MIni_3_Pro_1.png',
+          link: '/products/ab67c-437868-abc573-67bac',
           outOfStock: true,
         },
       ],
@@ -179,6 +190,7 @@ export const productOverviews: { [key: string]: IProductSectionItem[] } = {
           title: 'Phantom 4 RTK',
           description: 'Enterprise Drone',
           imageUrl: 'assets/images/drones/phantom/Phantom_4_RTK_3.png',
+          link: '/products/ab67c-437868-abc573-67bac',
         },
         {
           id: uid(),
@@ -186,12 +198,14 @@ export const productOverviews: { [key: string]: IProductSectionItem[] } = {
           description: 'Enterprise Drone',
           imageUrl:
             'assets/images/drones/phantom/Phantom_4_Multispectral_3.png',
+          link: '/products/ab67c-437868-abc573-67bac',
         },
         {
           id: uid(),
           title: 'Phantom 4 Pro V2',
           description: 'Prosumer Drone',
           imageUrl: 'assets/images/drones/phantom/Phantom_4_Pro_V2_3.png',
+          link: '/products/ab67c-437868-abc573-67bac',
         },
       ],
     },
@@ -211,12 +225,14 @@ export const productOverviews: { [key: string]: IProductSectionItem[] } = {
           title: 'Matrice 300 RTK',
           description: 'Enterprise Drone',
           imageUrl: 'assets/images/drones/matrice/Matrice_300_RTK_1.png',
+          link: '/products/ab67c-437868-abc573-67bac',
         },
         {
           id: uid(),
           title: 'Matrice 210 RTK V2',
           description: 'Consumer Drone',
           imageUrl: 'assets/images/drones/matrice/Matrice_300_RTK_1.png',
+          link: '/products/ab67c-437868-abc573-67bac',
           outOfStock: true,
         },
         {
@@ -224,12 +240,14 @@ export const productOverviews: { [key: string]: IProductSectionItem[] } = {
           title: 'Matrice 30',
           description: 'Enterprise Drone',
           imageUrl: 'assets/images/drones/matrice/Matrice_30_3.png',
+          link: '/products/ab67c-437868-abc573-67bac',
         },
         {
           id: uid(),
           title: 'Matrice 200 V2',
           description: 'Consumer Drone',
           imageUrl: 'assets/images/drones/matrice/Matrice_300_RTK_1.png',
+          link: '/products/ab67c-437868-abc573-67bac',
           outOfStock: true,
         },
         {
@@ -237,18 +255,21 @@ export const productOverviews: { [key: string]: IProductSectionItem[] } = {
           title: 'Matrice 30T',
           description: 'Enterprise Drone',
           imageUrl: 'assets/images/drones/matrice/Matrice_30T_3.png',
+          link: '/products/ab67c-437868-abc573-67bac',
         },
         {
           id: uid(),
           title: 'Matrice 100',
           description: 'Enterprise Drone',
           imageUrl: 'assets/images/drones/matrice/Matrice_100_2.png',
+          link: '/products/ab67c-437868-abc573-67bac',
         },
         {
           id: uid(),
           title: 'Matrice 600 Pro',
           description: 'Enterprise Drone',
           imageUrl: 'assets/images/drones/matrice/Matrice_600_Pro_4n-1.png',
+          link: '/products/ab67c-437868-abc573-67bac',
         },
       ],
     },
@@ -268,6 +289,7 @@ export const productOverviews: { [key: string]: IProductSectionItem[] } = {
           title: 'Inspire 2',
           description: 'Professional Drone',
           imageUrl: 'assets/images/drones/inspire/Inspire_2_3.png',
+          link: '/products/ab67c-437868-abc573-67bac',
         },
       ],
     },
@@ -287,24 +309,28 @@ export const productOverviews: { [key: string]: IProductSectionItem[] } = {
           title: 'Agras T10',
           description: 'Agricultiural Drone',
           imageUrl: 'assets/images/drones/agras/Agras_T10_1.png',
+          link: '/products/ab67c-437868-abc573-67bac',
         },
         {
           id: uid(),
           title: 'Agras T20',
           description: 'Agricultiural Drone',
           imageUrl: 'assets/images/drones/agras/Agras_T20_2.png',
+          link: '/products/ab67c-437868-abc573-67bac',
         },
         {
           id: uid(),
           title: 'Agras T30',
           description: 'Agricultiural Drone',
           imageUrl: 'assets/images/drones/agras/Agras_T10_1.png',
+          link: '/products/ab67c-437868-abc573-67bac',
         },
         {
           id: uid(),
           title: 'Agras MG-1P',
           description: 'Agricultiural Drone',
           imageUrl: 'assets/images/drones/agras/Agras_T20_2.png',
+          link: '/products/ab67c-437868-abc573-67bac',
           outOfStock: true,
         },
       ],
@@ -357,36 +383,42 @@ export const latestReleases = [
     title: 'DJI Mini 3 Pro',
     description: 'Consumer Drone',
     imageUrl: '/assets/images/drones/mavic/DJI_MIni_3_Pro_1.png',
+    link: '/products/ab67c-437868-abc573-67bac',
   },
   {
     id: uid(),
     title: 'DJI FPV',
     description: 'Consumer Drone',
     imageUrl: '/assets/images/latest-releases/DJI_FPV_Drone_1.png',
+    link: '/products/ab67c-437868-abc573-67bac',
   },
   {
     id: uid(),
     title: 'Matrice 30T',
     description: 'Consumer Drone',
     imageUrl: '/assets/images/drones/mavic/DJI_Mini2_2.png',
+    link: '/products/ab67c-437868-abc573-67bac',
   },
   {
     id: uid(),
     title: 'DJI Air 2S',
     description: 'Consumer Drone',
     imageUrl: '/assets/images/drones/mavic/DJI_Mini2_2.png',
+    link: '/products/ab67c-437868-abc573-67bac',
   },
   {
     id: uid(),
     title: 'Zenmuse P1',
     description: 'Aerial Camera',
     imageUrl: '/assets/images/drones/mavic/DJI_Mini2_2.png',
+    link: '/products/ab67c-437868-abc573-67bac',
   },
   {
     id: uid(),
     title: 'Zenmuse L1',
     description: 'Aerial Camera',
     imageUrl: '/assets/images/drones/mavic/DJI_Mini2_2.png',
+    link: '/products/ab67c-437868-abc573-67bac',
   },
 ];
 
@@ -397,7 +429,7 @@ export const solutionsItems: ISolutionsItems[] = [
     categories: ['Surveying', 'Agriculture', 'Construction', 'Public Safety'],
     name: 'Mavic Air 2',
     type: 'Enterprise',
-    link: '#',
+    link: '/products/8577987908709',
   },
   {
     imageUrl:
@@ -410,7 +442,7 @@ export const solutionsItems: ISolutionsItems[] = [
     ],
     name: 'Mavic Mini',
     type: 'Enterprise',
-    link: '#',
+    link: '/products/8577987908709',
   },
   {
     imageUrl:
@@ -418,7 +450,7 @@ export const solutionsItems: ISolutionsItems[] = [
     categories: ['Media & Entertainment', 'Surveying', 'Mining', 'Forestry'],
     name: 'Mavic Mini 2',
     type: 'Enterprise',
-    link: '#',
+    link: '/products/8577987908709',
   },
   {
     imageUrl:
@@ -426,7 +458,7 @@ export const solutionsItems: ISolutionsItems[] = [
     categories: ['Surveying', 'Forestry', 'Agriculture'],
     name: 'Matrice 30',
     type: 'Consumer',
-    link: '#',
+    link: '/products/8577987908709',
   },
   {
     imageUrl:
@@ -434,7 +466,7 @@ export const solutionsItems: ISolutionsItems[] = [
     categories: ['Security', 'Energy & Infrastructure', 'Forestry'],
     name: 'Phantom 4 Multispectral',
     type: 'Enterprise',
-    link: '#',
+    link: '/products/8577987908709',
   },
   {
     imageUrl:
@@ -442,7 +474,7 @@ export const solutionsItems: ISolutionsItems[] = [
     categories: ['Forestry', 'Construction', 'Agriculture'],
     name: 'Mavic 3 Multispectral',
     type: 'Consumer',
-    link: '#',
+    link: '/products/8577987908709',
   },
   {
     imageUrl:
@@ -455,7 +487,7 @@ export const solutionsItems: ISolutionsItems[] = [
     ],
     name: 'Mavic 3 Thermal',
     type: 'Consumer',
-    link: '#',
+    link: '/products/8577987908709',
   },
   {
     imageUrl:
@@ -463,7 +495,7 @@ export const solutionsItems: ISolutionsItems[] = [
     categories: ['Construction', 'Media & Entertainment', 'Forestry'],
     name: 'Agras T20',
     type: 'Consumer',
-    link: '#',
+    link: '/products/8577987908709',
   },
   {
     imageUrl:
@@ -476,7 +508,7 @@ export const solutionsItems: ISolutionsItems[] = [
     ],
     name: 'Phantom 4 Pro V2',
     type: 'Enterprise',
-    link: '#',
+    link: '/products/8577987908709',
   },
   {
     imageUrl:
@@ -484,6 +516,6 @@ export const solutionsItems: ISolutionsItems[] = [
     categories: ['Surveying', 'Energy & Infrastructure'],
     name: 'Phantom 4 Pro V1',
     type: 'Enterprise',
-    link: '#',
+    link: '/products/8577987908709',
   },
 ];

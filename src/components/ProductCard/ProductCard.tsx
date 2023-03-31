@@ -15,6 +15,7 @@ interface ProductCardProps {
   imageUrl: string;
   cta: ReactNode;
   outOfStock?: boolean;
+  link: string;
   restStyles?: IOverrides;
 }
 
@@ -29,6 +30,7 @@ export const ProductCard = ({
   imageUrl,
   outOfStock,
   restStyles,
+  link,
 }: ProductCardProps) => {
   return (
     <Flex {...cardStyles} {...restStyles?.card}>
@@ -40,7 +42,7 @@ export const ProductCard = ({
             <p className="text-danger fw-bold fst-italic">Out of Stock</p>
           ) : (
             <ProductCTAButtons
-              btn1Link="#"
+              btn1Link={link}
               btn2Styles={{ bg: 'brand.blue', color: 'gray.100' }}
             />
           )}
@@ -76,6 +78,7 @@ ProductCard.defaultProps = {
   imageUrl: '',
   cta: <></>,
   outOfStock: false,
+  link: '/products/ab67c-437868-abc573-67bac',
 };
 
 export const generateProductCards = (
@@ -84,6 +87,7 @@ export const generateProductCards = (
 ): ReactNode[] => {
   return items.map((item) => (
     <ProductCard
+      link={item.link}
       key={item.id}
       title={item.title}
       description={item.description}

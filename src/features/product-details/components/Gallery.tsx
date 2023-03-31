@@ -24,8 +24,13 @@ export const Gallery = () => {
           {...gridItemStyles}
           colSpan={{ lg: 2, base: 4 }}
           bgColor=" rgba(154, 221, 245, 0.2)"
+          h={{ base: 'auto', lg: '300px', xl: '450px' }}
         >
-          <Image src="/assets/images/drones/mavic/Mavic_Mini_2.png" alt="" />
+          <Image
+            src="/assets/images/drones/mavic/Mavic_Mini_2.png"
+            alt=""
+            width={{ base: 'auto', lg: '400px', xl: '500px' }}
+          />
         </GridItem>
         <GridItem
           {...gridItemStyles}

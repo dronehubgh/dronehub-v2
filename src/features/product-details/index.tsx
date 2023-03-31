@@ -12,7 +12,9 @@ export const ProductDetails = () => {
     <Box>
       <Header />
       <Gallery />
-      <Box>{/* <Description /> */}</Box>
+      <Box>
+        <Description />
+      </Box>
       <Contact />
       <InTheBox />
       <Accessories />

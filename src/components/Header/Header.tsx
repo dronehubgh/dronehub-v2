@@ -17,8 +17,8 @@ const navItems: INavItem[] = [
   },
   {
     id: uid(),
-    name: 'Extras',
-    link: '/extras',
+    name: 'Deals',
+    link: '/deals',
   },
   {
     id: uid(),

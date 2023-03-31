@@ -2,7 +2,7 @@ import { ProductsCarousel, Contact, OurServices } from '../../components';
 import { Products } from './components/Products';
 
 import { ICarouselItem, IProductCategory } from '../../models/app';
-import { Categories } from './components/Categories';
+import { Categories } from '../../components/Categories';
 import { LatestReleases } from './components/LatestReleases';
 
 interface IProductsProps {
@@ -24,3 +24,4 @@ export const ProductsFeature = ({ categories, bannerData }: IProductsProps) => (
 export { ProductCard } from '../../components/ProductCard/ProductCard';
 export { ProductSlider } from './components/Slider/ProductSlider';
 export { LatestReleases };
+export { DealsCarousel } from '../deals/Carousel/Carousel';

@@ -1,8 +1,9 @@
 import { Box, Flex, Heading, Text } from '@chakra-ui/react';
+import Link from 'next/link';
 import { A11y, Autoplay, Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { SwiperOptions } from 'swiper/types/swiper-options';
-import { Button } from '../../../components';
+import { Button, CustomMenuButton } from '../../../components';
 
 export const Testimonials = () => {
   const pagination = {
@@ -48,8 +49,18 @@ export const Testimonials = () => {
               flexDir={{ base: 'column', md: 'row' }}
               mb="2rem"
             >
-              <Button title="Talk to a Rep" />
-              <Button title="Explore Drone" bg="brand.blue" color="gray.100" />
+              <Box w={{ base: '100%', lg: '50%' }}>
+                <CustomMenuButton title="Talk to a Rep" />
+              </Box>
+              <Box w={{ base: '100%', lg: '50%' }}>
+                <Link href="/products">
+                  <Button
+                    title="Explore Drones"
+                    bg="brand.blue"
+                    color="gray.100"
+                  />
+                </Link>
+              </Box>
             </Flex>
             <Swiper
               {...sliderSettings}

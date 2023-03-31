@@ -1,4 +1,4 @@
-import { Grid, GridItem, Text } from '@chakra-ui/react';
+import { Box, Grid, GridItem, Text } from '@chakra-ui/react';
 import { borderCommon, commonPx } from '../../../consts';
 import { descHeaderStyles } from './_styles';
 
@@ -8,7 +8,7 @@ export const Description = () => {
       px={commonPx}
       templateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(2, 1fr)' }}
     >
-      <GridItem border={borderCommon} p={10}>
+      <GridItem border={borderCommon} p={10} id="overview">
         <Text {...descHeaderStyles}>Overview</Text>
         <Text fontSize={{ lg: '18px', base: '14px' }}>
           Capture exciting moments with the portable and convenient Mavic Mini
@@ -18,24 +18,24 @@ export const Description = () => {
         </Text>
       </GridItem>
 
-      <GridItem border={borderCommon} p={10}>
+      <GridItem border={borderCommon} p={10} id="applications">
         <Text {...descHeaderStyles}>Applications</Text>
 
         <Text fontSize={{ lg: '18px', base: '14px' }}>
           Entry-level drone best for:
-          <ul className="ms-4">
-            <li>Beginners</li>
-            <li>Photographers</li>
-            <li>Content creators</li>
-            <li>Creatives</li>
-            <li>Vloggers</li>
-          </ul>
         </Text>
+        <ul className="ms-4">
+          <li>Beginners</li>
+          <li>Photographers</li>
+          <li>Content creators</li>
+          <li>Creatives</li>
+          <li>Vloggers</li>
+        </ul>
       </GridItem>
 
       <GridItem border={borderCommon} p={10}>
         <Text {...descHeaderStyles}>Tech Specs | Summary</Text>
-        <Text fontSize={{ lg: '18px', base: '14px' }}>
+        <Box fontSize={{ lg: '18px', base: '14px' }}>
           <b>Aircraft</b>
           <ul className="ms-4">
             <li> 30 minutes maximum flight time</li>
@@ -53,13 +53,13 @@ export const Description = () => {
             <li>3-Axis gimbal</li>
             <li>Simplified recording & editing</li>
           </ul>
-        </Text>
+        </Box>
       </GridItem>
 
-      <GridItem border={borderCommon} p={10}>
+      <GridItem border={borderCommon} p={10} id="techSpecs">
         <Text {...descHeaderStyles}>Tech Specs | Extra</Text>
 
-        <Text fontSize={{ lg: '18px', base: '14px' }}>
+        <Box fontSize={{ lg: '18px', base: '14px' }}>
           <ul className="ms-4">
             <li>Aircraft Takeoff Weight: 249g</li>
             <li>Dimensions Folded: 138 x81x58mm</li>
@@ -71,7 +71,7 @@ export const Description = () => {
             <li>Max Wind Speed Resistance: 8.5-10.5 m/s (Scale 5)</li>
           </ul>
           <div className="mt-4">Download Full Tech Specs</div>
-        </Text>
+        </Box>
       </GridItem>
     </Grid>
   );

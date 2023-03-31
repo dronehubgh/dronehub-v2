@@ -12,7 +12,7 @@ import styles from './Solutions.module.scss';
 const slideStyles: CSSProperties = {
   maxWidth: '400px',
   minWidth: '300px',
-  height: '400px',
+  height: '500px',
   boxSizing: 'border-box',
   border: '1px solid #cdcdcd',
 };

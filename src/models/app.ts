@@ -37,6 +37,7 @@ export interface IProductOverview {
   title: string;
   description: string;
   imageUrl: string;
+  link: string;
   cta?: ReactNode;
 }
 
@@ -75,5 +76,14 @@ export interface IMainBannerFeaturedProducts {
   id: string;
   name: string;
   tagline: string;
+  imageUrl: string;
+}
+
+export interface IDeal {
+  id: string;
+  name: string;
+  description: string;
+  salePrice: number;
+  cutOutPrice: number;
   imageUrl: string;
 }

@@ -1,6 +1,7 @@
-import { Box, Flex, Heading, Image, Text } from '@chakra-ui/react';
+import { Box, Flex, Heading, Text } from '@chakra-ui/react';
+import Link from 'next/link';
 import React from 'react';
-import { Button } from '../../../components';
+import { Button, CustomMenuButton } from '../../../components';
 
 export const OurFocus = () => {
   return (
@@ -25,8 +26,18 @@ export const OurFocus = () => {
             w={{ lg: '80%' }}
             flexDir={{ base: 'column', md: 'row' }}
           >
-            <Button title="Talk to a Rep" />
-            <Button title="Explore Drone" bg="brand.blue" color="gray.100" />
+            <Box w={{ base: '100%', lg: '50%' }}>
+              <CustomMenuButton title="Talk to a Rep" />
+            </Box>
+            <Box w={{ base: '100%', lg: '50%' }}>
+              <Link href="/products">
+                <Button
+                  title="Explore Drones"
+                  bg="brand.blue"
+                  color="gray.100"
+                />
+              </Link>
+            </Box>
           </Flex>
         </Box>
         <Flex
@@ -37,13 +48,11 @@ export const OurFocus = () => {
             className="focus-section-design"
             w={{ base: '330px', md: '400px', lg: '550px', xl: '700px' }}
             h={{ base: '330px', md: '400px', lg: '550px', xl: '700px' }}
-            // borderWidth={{ base: '60px', md: '80px', lg: '120px' }}
             borderStyle="solid"
             borderColor="background: rgba(6, 69, 164, 0.05)"
             borderRadius="100%"
             mb={{ base: '1rem', lg: '0' }}
             bg="center / contain no-repeat url(https://res.cloudinary.com/djmx11b6s/image/upload/v1676050310/donehub-assets/Vector_xssrlw.png)"
-            // bg="center / cover no-repeat url(https://res.cloudinary.com/djmx11b6s/image/upload/v1676031491/donehub-assets/focus1_one0o0.png)"
           />
         </Flex>
       </Flex>

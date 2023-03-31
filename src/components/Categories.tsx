@@ -1,13 +1,11 @@
 import { Box, Flex, Image, Text } from '@chakra-ui/react';
-import React from 'react';
-import { productCategories } from '../../../data';
-import { IProductCategory } from '../../../models/app';
+import { IProductCategory } from '../models/app';
 import {
   categoriesStyles,
+  categoryImgStyles,
   categoryStyles,
   categoryTextStyles,
-  categoryImgStyles,
-} from './_styles';
+} from '../features/products/components/_styles';
 
 interface ICategoriesProps {
   categories: IProductCategory[];
