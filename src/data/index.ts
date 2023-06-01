@@ -81,7 +81,7 @@ export const OurServicesData = [
     title: 'Drone Rental',
     description:
       'Need drone support for whatever reason? No problem. Rent a drone for your needs.',
-    link: '/services/drone-rental',
+    link: '/services/drone-rentals',
     imageUrl:
       'https://res.cloudinary.com/djmx11b6s/image/upload/v1675907291/donehub-assets/Accesories/illus-5_vegu2n.png',
   },

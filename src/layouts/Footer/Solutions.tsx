@@ -1,11 +1,12 @@
 import { List, ListItem, Text } from '@chakra-ui/react';
 import NextLink from 'next/link';
+import React from 'react';
 
-export const ExploreProducts = () => {
+export const Solutions = () => {
   return (
     <>
       <Text fontWeight={500} mt={{ base: 10 }} mb={3}>
-        Explore Products
+        Solutions
       </Text>
 
       <List color="gray.500">
@@ -24,8 +25,8 @@ export const ExploreProducts = () => {
           borderColor="gray.500"
           py={{ base: 2, lg: 2 }}
         >
-          <NextLink href="/consumer" passHref>
-            <Text _hover={{ textDecor: 'none' }}>Professional</Text>
+          <NextLink href="/enterprise?type=integration-program" passHref>
+            <Text _hover={{ textDecor: 'none' }}>Enterprise</Text>
           </NextLink>
         </ListItem>
 
@@ -35,7 +36,7 @@ export const ExploreProducts = () => {
           py={{ base: 2, lg: 2 }}
         >
           <NextLink href="/business" passHref>
-            <Text _hover={{ textDecor: 'none' }}>Enterprise</Text>
+            <Text _hover={{ textDecor: 'none' }}>Business</Text>
           </NextLink>
         </ListItem>
       </List>

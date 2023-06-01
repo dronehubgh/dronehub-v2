@@ -24,7 +24,7 @@ export const Extras = () => {
           borderColor="gray.500"
           py={{ base: 2, lg: 2 }}
         >
-          <NextLink href="/event" passHref>
+          <NextLink href="/events" passHref>
             <Text _hover={{ textDecor: 'none' }}>Events</Text>
           </NextLink>
         </ListItem>
@@ -34,7 +34,7 @@ export const Extras = () => {
           borderColor="gray.500"
           py={{ base: 2, lg: 2 }}
         >
-          <NextLink href="/" passHref>
+          <NextLink href="/feedback" passHref>
             <Text _hover={{ textDecor: 'none' }}>Feedback</Text>
           </NextLink>
         </ListItem>
@@ -44,7 +44,7 @@ export const Extras = () => {
           borderColor="gray.500"
           py={{ base: 2, lg: 2 }}
         >
-          <NextLink href="/" passHref>
+          <NextLink href="/customer-stories" passHref>
             <Text _hover={{ textDecor: 'none' }}>Customer Stories</Text>
           </NextLink>
         </ListItem>
@@ -54,7 +54,7 @@ export const Extras = () => {
           borderColor="gray.500"
           py={{ base: 2, lg: 2 }}
         >
-          <NextLink href="/product" passHref>
+          <NextLink href="/strategic-partnership" passHref>
             <Text _hover={{ textDecor: 'none' }}>Strategic Partnership</Text>
           </NextLink>
         </ListItem>

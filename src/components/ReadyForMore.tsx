@@ -1,4 +1,4 @@
-import { Box, Flex, Text } from '@chakra-ui/react';
+import { Box, Flex, Link, Text } from '@chakra-ui/react';
 import React from 'react';
 import { Button } from './Buttons/Button';
 
@@ -28,7 +28,9 @@ export const ReadyForMore = () => {
           gap="0.5rem"
           my="1rem"
         >
-          <Button title="Talk to Sales" w={{ base: '90%', lg: '150px' }} />
+          <Link href="tel:+233554460055">
+            <Button title="Talk to Sales" w={{ base: '90%', lg: '150px' }} />
+          </Link>
           <Button
             title="Locate store"
             w={{ base: '90%', lg: '150px' }}

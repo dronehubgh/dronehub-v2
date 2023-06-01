@@ -10,15 +10,28 @@ export const ConnectWithUs = () => {
       </Text>
 
       <Flex fontSize="20px" pr={5}>
-        <Link href="https://facebook.com" isExternal {...linkStyles}>
+        <Link
+          href="https://facebook.com/dronehub.ghana"
+          isExternal
+          {...linkStyles}
+        >
           <Icon as={FaFacebookSquare} />
         </Link>
 
-        <Link href="https://twitter.com" isExternal px="30px" {...linkStyles}>
+        <Link
+          href="https://twitter.com/dronehubgh"
+          isExternal
+          px="30px"
+          {...linkStyles}
+        >
           <Icon as={FaTwitter} />
         </Link>
 
-        <Link href="https://instagram.com" isExternal {...linkStyles}>
+        <Link
+          href="https://www.instagram.com/dronehubgh"
+          isExternal
+          {...linkStyles}
+        >
           <Icon as={FaInstagram} />
         </Link>
       </Flex>

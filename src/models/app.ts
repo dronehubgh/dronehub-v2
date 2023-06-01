@@ -87,3 +87,22 @@ export interface IDeal {
   cutOutPrice: number;
   imageUrl: string;
 }
+
+export type Service =
+  | 'repairs'
+  | 'education'
+  | 'consulting'
+  | 'rental'
+  | 'maintenance'
+  | 'detection'
+  | 'custom'
+  | 'research';
+
+export type IAllServices = {
+  [key in Service]: IService;
+};
+
+export interface IService {
+  title: string;
+  link: string;
+}

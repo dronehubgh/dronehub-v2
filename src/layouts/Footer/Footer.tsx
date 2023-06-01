@@ -11,12 +11,13 @@ import NextLink from 'next/link';
 import { Newsletter } from '../../components';
 import { ReadyForMore } from '../../components/ReadyForMore';
 import { ConnectWithUs } from './ConnectWithUs';
-import { ExploreProducts } from './ExploreProducts';
+import { Industries } from './Industries';
 import { Extras } from './Extras';
 import { GetInTouch } from './GetInTouch';
 import { OurStore } from './OurStore';
 import { Services } from './Services';
 import { footerBoxStyles, linkTextStyles } from './_styles';
+import { Solutions } from './Solutions';
 
 export const Footer = () => {
   return (
@@ -62,9 +63,10 @@ export const Footer = () => {
           <Grid templateColumns={{ md: 'repeat(4, 1fr)' }}>
             <GridItem>
               <OurStore />
+              <Solutions />
             </GridItem>
             <GridItem>
-              <ExploreProducts />
+              <Industries />
             </GridItem>
             <GridItem>
               <Services />
@@ -109,7 +111,8 @@ export const Footer = () => {
               py="5"
               w={{ base: '100%', md: '40%' }}
             >
-              &copy; 2021 Dronehub Ghana Limited. All rights reserved.{' '}
+              &copy; {new Date().getFullYear()} Dronehub Ghana Limited. All
+              rights reserved.{' '}
             </Text>
 
             <Flex

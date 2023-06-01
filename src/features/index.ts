@@ -9,3 +9,7 @@ export * from './services';
 export * from './about';
 export * from './support';
 export * from './deals';
+export * from './blog';
+export * from './feedback';
+export * from './strategic-partnership';
+export * from './events';
