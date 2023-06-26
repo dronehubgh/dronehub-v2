@@ -1,9 +1,8 @@
 import { Box } from '@chakra-ui/react';
 import { ReactNode } from 'react';
 import { useMedia } from 'react-use';
-import { A11y, Navigation } from 'swiper';
+import { A11y, Navigation, SwiperOptions } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { SwiperOptions } from 'swiper/types/swiper-options';
 import { v4 as uid } from 'uuid';
 import { SwiperNavButtons } from '../../../../components';
 import { NoItemsAvailable } from './NoItemsAvailable';
