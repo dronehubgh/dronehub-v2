@@ -1,21 +1,21 @@
 import { NextPage } from 'next';
 import { ProductsFeature } from '../../features';
-import {
-  getBannerData,
-  getProductCategories,
-} from '../../functions/data-formatters';
+import { getBannerData } from '../../functions/data-formatters';
 import { client } from '../../lib';
-import { ISanityProductCategory } from '../../models';
 import {
   ICameraProperties,
   ICarouselItem,
   IDroneProperties,
+  IOtherProductsProperties,
   IProductCategory,
 } from '../../models/app';
 import {
   cameraQuery,
   dronesQuery,
+  otherProductsQuery,
+  productCategoryQuery,
   productsBannerDataQuery,
+  softwareQuery,
 } from '../../queries';
 
 interface AllProductsPageProps {
@@ -23,6 +23,8 @@ interface AllProductsPageProps {
   bannerData: ICarouselItem[];
   drones: IDroneProperties[];
   cameras: ICameraProperties[];
+  otherProducts: IOtherProductsProperties[];
+  software: IOtherProductsProperties[];
 }
 
 const AllProductsPage: NextPage<AllProductsPageProps> = ({
@@ -30,6 +32,8 @@ const AllProductsPage: NextPage<AllProductsPageProps> = ({
   bannerData,
   drones,
   cameras,
+  otherProducts,
+  software,
 }) => {
   return (
     <ProductsFeature
@@ -37,24 +41,33 @@ const AllProductsPage: NextPage<AllProductsPageProps> = ({
       bannerData={bannerData}
       drones={drones}
       cameras={cameras}
+      otherProducts={otherProducts}
+      software={software}
     />
   );
 };
 
 export const getServerSideProps = async () => {
-  const query = '*[_type == "category"]';
-  const res: ISanityProductCategory[] = await client.fetch(query);
-  const categories = getProductCategories(res);
+  const [categoriesRes, bannerRes, drones, cameras, otherProducts, software]: [
+    IProductCategory[],
+    [{ bannerProducts: IDroneProperties[] }],
+    IDroneProperties[],
+    ICameraProperties[],
+    IOtherProductsProperties[],
+    IOtherProductsProperties[]
+  ] = await Promise.all([
+    client.fetch(productCategoryQuery),
+    client.fetch(productsBannerDataQuery),
+    client.fetch(dronesQuery),
+    client.fetch(cameraQuery),
+    client.fetch(otherProductsQuery),
+    client.fetch(softwareQuery),
+  ]);
 
-  const bannerRes: [{ bannerProducts: IDroneProperties[] }] =
-    await client.fetch(productsBannerDataQuery);
   const bannerData = getBannerData(bannerRes.at(0)?.bannerProducts);
-
-  const drones: IDroneProperties[] = await client.fetch(dronesQuery);
-  const cameras: ICameraProperties[] = await client.fetch(cameraQuery);
-
+  const categories = categoriesRes;
   return {
-    props: { categories, bannerData, drones, cameras },
+    props: { categories, bannerData, drones, cameras, otherProducts, software },
   };
 };
 

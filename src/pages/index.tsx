@@ -1,10 +1,9 @@
-import type { NextPage } from 'next';
 import { OurServices, Solutions } from '../components';
 import { SliderGallery } from '../components/SliderGallery';
 import { DroneGuides, MainBanner, OurFocus, Testimonials } from '../features';
-import { getHomeBannerData } from '../functions/data-formatters';
 import { client } from '../lib';
-import { ISanityHomeBannerData } from '../models/sanity-types';
+import { IMainBannerData } from '../models/app';
+import { homeBannerDataQuery } from '../queries';
 
 const images = [
   'https://res.cloudinary.com/djmx11b6s/image/upload/v1676022073/donehub-assets/agro_o2ttkr.png',
@@ -14,7 +13,11 @@ const images = [
   'https://res.cloudinary.com/djmx11b6s/image/upload/v1676022191/donehub-assets/banner-img_cu8aii.png',
 ];
 
-const Home: NextPage = ({ bannerData }: any) => {
+interface IHomePageProps {
+  bannerData: IMainBannerData;
+}
+
+const Home = ({ bannerData }: IHomePageProps) => {
   return (
     <div>
       <MainBanner bannerData={bannerData} />
@@ -29,9 +32,8 @@ const Home: NextPage = ({ bannerData }: any) => {
 };
 
 export const getServerSideProps = async () => {
-  const query = '*[_type == "homeBannerData"]';
-  const res: ISanityHomeBannerData[] = await client.fetch(query);
-  const bannerData = getHomeBannerData(res[0]);
+  const res: IMainBannerData[] = await client.fetch(homeBannerDataQuery);
+  const bannerData = res[0];
 
   return {
     props: { bannerData },

@@ -14,9 +14,10 @@ export interface ISanityBaseProps {
   _rev: string;
 }
 
-export interface ISanityProductCategory extends ISanityBaseProps {
+export interface IProductCategory extends ISanityBaseProps {
+  id: string;
   name: string;
-  image: SanityImageSource;
+  imageUrl: string;
 }
 
 export interface ISanityDroneData extends ISanityBaseProps {
@@ -50,16 +51,16 @@ export interface ISanityBannerData extends ISanityBaseProps {
   image: SanityImageSource;
 }
 
-export interface ISanityHomeBannerData extends ISanityBaseProps {
+export interface IHomeBannerData {
   heading: string;
   tagline: string;
   featuredProducts: IHomeBannerFeaturedProduct[];
 }
 
 export interface IHomeBannerFeaturedProduct {
-  _key: string;
-  _type: string;
+  id: string;
+  slug: string;
   name: string;
   tagline: string;
-  image: SanityImageSource;
+  imageUrl: string;
 }

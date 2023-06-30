@@ -4,6 +4,7 @@ import {
   ICameraProperties,
   IDroneProperties,
   INewsletterFormValues,
+  IOtherProductsProperties,
   IProductOverview,
 } from '../models/app';
 
@@ -50,4 +51,17 @@ export const mapProductPropsToProductOverview = (
       link: `products/${drone.slug}`,
       outOfStock: drone.outOfStock || false,
     }));
+};
+
+export const mapOtherProductsToProductOverview = (
+  products: IOtherProductsProperties[]
+): IProductOverview[] => {
+  return products.map((product) => ({
+    id: product.id,
+    title: product.name,
+    description: capitalizeFirstLetter(product.type),
+    imageUrl: product.imageUrl,
+    link: `products/${product.slug}`,
+    outOfStock: product.outOfStock || false,
+  }));
 };

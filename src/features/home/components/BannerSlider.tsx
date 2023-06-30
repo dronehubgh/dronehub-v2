@@ -50,6 +50,7 @@ export const BannerSlider = ({ featuredProducts }: BannerSlider) => {
               flexDir="column"
             >
               <Image src={product.imageUrl} alt={product.name} />
+
               <Text
                 fontSize={{ base: '1.5rem', lg: '2rem' }}
                 fontWeight="bold"
@@ -62,7 +63,7 @@ export const BannerSlider = ({ featuredProducts }: BannerSlider) => {
               </Text>
               <Box w="90%" mx="auto">
                 <ProductCTAButtons
-                  btn1Link={`/products/${product.id}`}
+                  btn1Link={`/products/${product.slug}`}
                   containerStyles={{ justify: 'center' }}
                   btn1Styles={{
                     borderColor: 'gray.100',

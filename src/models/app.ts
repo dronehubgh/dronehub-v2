@@ -55,6 +55,10 @@ export interface IDroneProperties {
 }
 
 export interface ICameraProperties extends IDroneProperties {}
+export interface IOtherProductsProperties
+  extends Omit<IDroneProperties, 'tagline' | 'series'> {
+  description: string;
+}
 
 export interface IProductSectionItem {
   name: string;
@@ -90,6 +94,7 @@ export interface IMainBannerData {
 export interface IMainBannerFeaturedProducts {
   id: string;
   name: string;
+  slug: string;
   tagline: string;
   imageUrl: string;
 }

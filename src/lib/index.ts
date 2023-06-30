@@ -1,1 +1,1 @@
-export { client, urlFor } from './sanity';
+export { client } from './sanity';

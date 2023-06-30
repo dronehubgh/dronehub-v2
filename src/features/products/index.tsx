@@ -2,11 +2,15 @@ import { Contact, OurServices, ProductsCarousel } from '../../components';
 import { Products } from './components/Products';
 
 import { Categories } from '../../components/Categories';
-import { mapProductPropsToProductOverview } from '../../functions';
+import {
+  mapOtherProductsToProductOverview,
+  mapProductPropsToProductOverview,
+} from '../../functions';
 import {
   ICameraProperties,
   ICarouselItem,
   IDroneProperties,
+  IOtherProductsProperties,
   IProductCategory,
   IProductSectionItem,
   IProductsState,
@@ -18,6 +22,8 @@ interface IProductsProps {
   bannerData: ICarouselItem[];
   drones: IDroneProperties[];
   cameras: ICameraProperties[];
+  otherProducts: IOtherProductsProperties[];
+  software: IOtherProductsProperties[];
 }
 
 const accessory: IProductSectionItem = {
@@ -37,6 +43,8 @@ export const ProductsFeature = ({
   bannerData,
   drones,
   cameras,
+  otherProducts,
+  software,
 }: IProductsProps) => {
   const getProducts = (): IProductsState => ({
     mavicSeries: [
@@ -107,12 +115,12 @@ export const ProductsFeature = ({
       {
         name: 'software',
         displayName: 'Software',
-        products: [],
+        products: mapOtherProductsToProductOverview(software),
       },
       {
         name: 'other-products',
         displayName: 'Other Products',
-        products: [],
+        products: mapOtherProductsToProductOverview(otherProducts),
       },
     ],
   });
