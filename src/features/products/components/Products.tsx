@@ -1,19 +1,23 @@
 import { Box } from '@chakra-ui/react';
 import React from 'react';
 import { productOverviews } from '../../../data/products';
+import { IProductSectionItem, IProductsState } from '../../../models/app';
 import { ProductSection } from './ProductSection';
 
-const {
-  mavicSeries,
-  phantomSeries,
-  matriceSeries,
-  inspireSeries,
-  agrasSeries,
-  camerasAndGimbals,
-  softwareAndOthers,
-} = productOverviews;
+interface IProducts {
+  products: IProductsState;
+}
 
-export const Products = () => {
+export const Products = ({ products }: IProducts) => {
+  const {
+    mavicSeries,
+    phantomSeries,
+    matriceSeries,
+    inspireSeries,
+    agrasSeries,
+    camerasAndGimbals,
+    softwareAndOthers,
+  } = products;
   return (
     <Box pb="2rem">
       <ProductSection

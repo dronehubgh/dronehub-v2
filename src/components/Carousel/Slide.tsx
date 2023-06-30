@@ -12,22 +12,29 @@ export const Slide = ({ item }: { item: ICarouselItem }) => {
   return (
     <Flex {...slideStyles}>
       <Box {...headerBoxStyles}>
-        <Heading {...headingStyles}>{item.description}</Heading>
-        <Text my="3">{item.tagline}</Text>
+        <Heading {...headingStyles}>{item.tagline}</Heading>
+        <Text my="3">{item.description}</Text>
 
         <Box
           maxW={{ base: '250px', lg: '100%' }}
           mx={{ base: 'auto', lg: 'left' }}
         >
           <ProductCTAButtons
-            btn1Link="#"
+            btn1Link={item.link}
             btn1Styles={{ borderColor: 'gray.100', color: 'gray.100' }}
             btn2Styles={{ bg: 'gray.100', color: 'brand.blue' }}
           />
         </Box>
       </Box>
       <Box w="100%" {...imageBoxStyles}>
-        <Image src={item.imageUrl} alt="product image" w="100%" m="auto" />
+        <Image
+          src={item.imageUrl}
+          alt="product image"
+          w={{ base: '90%', lg: '70%' }}
+          m="auto"
+          bgPos="center"
+          bgSize="contain"
+        />
       </Box>
     </Flex>
   );

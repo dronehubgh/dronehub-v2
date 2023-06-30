@@ -1,4 +1,11 @@
-import { INewsletterFormValues } from '../models/app';
+import {
+  CameraSeries,
+  DroneSeries,
+  ICameraProperties,
+  IDroneProperties,
+  INewsletterFormValues,
+  IProductOverview,
+} from '../models/app';
 
 export const validateNewsLetterFormValues = ({
   industry,
@@ -22,4 +29,25 @@ export const validateNewsLetterFormValues = ({
     errors.industry = 'Select industry';
   }
   return errors;
+};
+
+export function capitalizeFirstLetter(text: string) {
+  const newTest = text.replaceAll('-', ' ');
+  return newTest.charAt(0).toUpperCase() + newTest.slice(1);
+}
+
+export const mapProductPropsToProductOverview = (
+  drones: IDroneProperties[] | ICameraProperties[],
+  series: DroneSeries | CameraSeries
+): IProductOverview[] => {
+  return drones
+    .filter((item) => item.series === series)
+    .map((drone) => ({
+      id: drone.id,
+      title: drone.name,
+      description: capitalizeFirstLetter(drone.type),
+      imageUrl: drone.imageUrl,
+      link: `products/${drone.slug}`,
+      outOfStock: drone.outOfStock || false,
+    }));
 };

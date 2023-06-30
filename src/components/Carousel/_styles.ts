@@ -29,4 +29,5 @@ export const headerBoxStyles: BoxProps = {
 
 export const imageBoxStyles: BoxProps = {
   my: { base: '70px', lg: '0' },
+  bgSize: 'contain',
 };

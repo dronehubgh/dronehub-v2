@@ -32,14 +32,29 @@ export interface ICarouselItem {
 }
 
 export interface IProductOverview {
-  outOfStock?: boolean;
   id: string;
   title: string;
   description: string;
   imageUrl: string;
   link: string;
+  outOfStock?: boolean;
   cta?: ReactNode;
 }
+
+export interface IDroneProperties {
+  id: string;
+  imageUrl: string;
+  name: string;
+  slug: string;
+  type: string;
+  series: DroneSeries;
+  tagline: string;
+  productType: string;
+  outOfStock?: boolean;
+  industry?: string;
+}
+
+export interface ICameraProperties extends IDroneProperties {}
 
 export interface IProductSectionItem {
   name: string;
@@ -105,4 +120,29 @@ export type IAllServices = {
 export interface IService {
   title: string;
   link: string;
+}
+
+export type DroneSeries =
+  | 'mavic-series'
+  | 'phantom-series'
+  | 'matrice-series'
+  | 'agras-series'
+  | 'dji-fpv-drone'
+  | 'inspire-series';
+
+export type CameraSeries =
+  | 'zenmuse-series'
+  | 'osmos-series'
+  | 'ronin-series'
+  | 'extra-payload';
+
+export interface IProductsState {
+  mavicSeries: IProductSectionItem[];
+  phantomSeries: IProductSectionItem[];
+  matriceSeries: IProductSectionItem[];
+  inspireSeries: IProductSectionItem[];
+  agrasSeries: IProductSectionItem[];
+  djiFPVDrones: IProductSectionItem[];
+  camerasAndGimbals: IProductSectionItem[];
+  softwareAndOthers: IProductSectionItem[];
 }

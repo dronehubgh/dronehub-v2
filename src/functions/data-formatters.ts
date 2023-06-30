@@ -1,7 +1,9 @@
+import { capitalizeFirstLetter } from '.';
 import { urlFor } from '../lib';
 import { ISanityProductCategory } from '../models';
 import {
   ICarouselItem,
+  IDroneProperties,
   IMainBannerData,
   IProductCategory,
 } from '../models/app';
@@ -20,16 +22,24 @@ export const getProductCategories = (
   }));
 };
 
-export const getBannerData = (
-  categories: ISanityBannerData[]
-): ICarouselItem[] => {
-  return categories.map((category) => ({
-    id: category._id,
-    description: category.description,
-    tagline: category.tagline,
-    imageUrl: urlFor(category.image).url(),
-    link: `products/${category._id}`,
-  }));
+export const getBannerData = (data?: IDroneProperties[]): ICarouselItem[] => {
+  return (
+    data?.map((item) => ({
+      id: item.id,
+      description: formatDescription(item.type, item.industry),
+      tagline: item.tagline,
+      imageUrl: item.imageUrl,
+      link: `products/${item.slug}`,
+    })) || []
+  );
+};
+
+const formatDescription = (type: string, industry?: string): string => {
+  return (
+    capitalizeFirstLetter(industry?.replace('-drone', '') || '') +
+    ', ' +
+    capitalizeFirstLetter(type)
+  );
 };
 
 export const getHomeBannerData = (
