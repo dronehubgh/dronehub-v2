@@ -7,18 +7,40 @@ import { InTheBox } from './components/InTheBox';
 import { Description } from './components/Description';
 import { OtherProducts } from './components/OtherProducts';
 
-export const ProductDetails = () => {
+export const ProductDetails = ({ product }: any) => {
+  const {
+    title,
+    tagline,
+    mainImage,
+    gallery,
+    inBox,
+    accessories,
+    recommended,
+    application,
+    overview,
+    summary,
+    extra,
+  } = product;
+  console.log(product);
+
   return (
     <Box>
-      <Header />
-      <Gallery />
+      <Header title={title} tagline={tagline} />
+      <Gallery mainImageUrl={mainImage} gallery={gallery} />
       <Box>
-        <Description />
+        <Description
+          application={application}
+          extra={extra}
+          overview={overview}
+          summary={summary}
+        />
       </Box>
       <Contact />
-      <InTheBox />
-      <Accessories />
-      <OtherProducts />
+      {inBox && <InTheBox inBox={inBox} />}
+      {accessories && (
+        <Accessories productName={title} accessories={accessories} />
+      )}
+      {recommended && <OtherProducts recommended={recommended} />}
     </Box>
   );
 };

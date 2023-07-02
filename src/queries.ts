@@ -92,3 +92,43 @@ export const softwareQuery = groq`
   "productType": _type ,
 }
 `;
+
+export const productQuery = groq`
+  *[_type in ["drone", "camera", "software", "other-product"] && slug.current == $slug][0] {
+    ...,
+    "id": _id,
+    "mainImage": mainImage.asset->url,
+    "gallery": gallery[].asset->url,
+    "productType": _type ,
+    "inBox": inBox[]{
+      title,
+      "images": images[].asset->url
+    },
+    "accessories": accessories[]{
+      name,
+      "imageUrl": image.asset->url
+    },
+    "recommended": recommended[]->{
+      "id": _id,
+      "imageUrl": mainImage.asset->url,
+      "name": title,
+      "slug": slug.current,
+      type,
+      series,
+      outOfStock,
+      industry,
+      tagline,
+      description,
+    }
+  }
+`;
+
+export const faqQuery = groq`
+  *[_type == 'faq' ] {
+    "id": _id,
+    category,
+    target,
+    question,
+    answer 
+  }
+`;

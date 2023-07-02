@@ -151,3 +151,19 @@ export interface IProductsState {
   camerasAndGimbals: IProductSectionItem[];
   softwareAndOthers: IProductSectionItem[];
 }
+
+type FAQTarget = 'business' | 'consumers';
+type FAQCategory =
+  | 'drone-accessories'
+  | 'drone-service'
+  | 'Drone Service'
+  | 'store'
+  | 'other-issues';
+
+export interface IFAQ {
+  id: string;
+  category: FAQCategory;
+  target: FAQTarget;
+  question: string;
+  answer: string;
+}

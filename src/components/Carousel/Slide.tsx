@@ -10,10 +10,14 @@ import {
 
 export const Slide = ({ item }: { item: ICarouselItem }) => {
   return (
-    <Flex {...slideStyles}>
+    <Flex {...slideStyles} justify="center" align="center" py="4rem">
       <Box {...headerBoxStyles}>
         <Heading {...headingStyles}>{item.tagline}</Heading>
-        <Text my="3">{item.description}</Text>
+        <Text my="3">
+          {item.description.startsWith(',')
+            ? item.description.replace(',', '')
+            : item.description}
+        </Text>
 
         <Box
           maxW={{ base: '250px', lg: '100%' }}
@@ -26,11 +30,11 @@ export const Slide = ({ item }: { item: ICarouselItem }) => {
           />
         </Box>
       </Box>
-      <Box w="100%" {...imageBoxStyles}>
+      <Box {...imageBoxStyles}>
         <Image
           src={item.imageUrl}
           alt="product image"
-          w={{ base: '90%', lg: '70%' }}
+          w={{ base: '80%', lg: '90%' }}
           m="auto"
           bgPos="center"
           bgSize="contain"

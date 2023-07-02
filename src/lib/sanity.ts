@@ -1,6 +1,6 @@
-import sanityClient, { SanityClient } from '@sanity/client';
+import { createClient, ClientConfig } from 'next-sanity';
 
-const config = {
+export const clientConfig: ClientConfig = {
   projectId: '20xcokyz',
   dataset: 'production',
   apiVersion: '2023-01-01',
@@ -8,4 +8,4 @@ const config = {
   token: process.env.sanityToken,
 };
 
-export const client = sanityClient(config);
+export const client = createClient(clientConfig);

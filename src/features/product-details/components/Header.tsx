@@ -10,7 +10,11 @@ import NextLink from 'next/link';
 import { CustomMenuButton } from '../../../components';
 import { commonPx } from '../../../consts';
 
-export const Header = () => {
+interface IHeaderProps {
+  title?: string;
+  tagline?: string;
+}
+export const Header = ({ title, tagline }: IHeaderProps) => {
   const [isLarge] = useMediaQuery('(min-width: 1024px)');
 
   const styles: FlexProps = {
@@ -36,9 +40,9 @@ export const Header = () => {
       )}
 
       <Box color="gray.100" textAlign={isLarge ? 'left' : 'center'}>
-        <Heading size="xl">Mavic Mini</Heading>
+        <Heading size="xl">{title}</Heading>
         <Text fontSize="lg" mb="1rem">
-          Fly As You Are
+          {tagline}
         </Text>
       </Box>
       <Flex>

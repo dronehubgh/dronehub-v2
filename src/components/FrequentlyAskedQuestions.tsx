@@ -11,6 +11,7 @@ import {
 } from '@chakra-ui/react';
 import { IconButton } from '.';
 import { FaChevronRight } from 'react-icons/fa';
+import Link from 'next/link';
 
 const btnStyles: AccordionButtonProps = {
   _expanded: { bg: 'rgba(253, 203, 102, 0.1)' },
@@ -29,16 +30,16 @@ export const FrequentlyAskedQuestions = () => {
           <h2>
             <AccordionButton {...btnStyles}>
               <Box as="span" flex="1" textAlign="left">
-                Is Dronehub an authorized DJI Distributor?
+                Do you offer a warranty on repair works?
               </Box>
               <AccordionIcon />
             </AccordionButton>
           </h2>
-          <AccordionPanel pb={4}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+          <AccordionPanel pb={4} textAlign="left">
+            Yes, we offer a limited warranty on repair works. Thirty days spare
+            part and service warranty for the specific repair work. This limited
+            warranty does not extend to new issues or damage resulting from
+            other factors, including general wear and tear.
           </AccordionPanel>
         </AccordionItem>
 
@@ -46,16 +47,16 @@ export const FrequentlyAskedQuestions = () => {
           <h2>
             <AccordionButton {...btnStyles}>
               <Box as="span" flex="1" textAlign="left">
-                Do you only focus on the sale of drones?
+                Does Dronehub only sell drones?
               </Box>
               <AccordionIcon />
             </AccordionButton>
           </h2>
-          <AccordionPanel pb={4}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+          <AccordionPanel pb={4} textAlign="left">
+            We do much more than the sale of drones. We offer the following
+            services and solutions: drone rental, repair, consulting,
+            maintenance, technical support, research, customs solutions and
+            end-to-end drone solutions
           </AccordionPanel>
         </AccordionItem>
 
@@ -63,28 +64,28 @@ export const FrequentlyAskedQuestions = () => {
           <h2>
             <AccordionButton {...btnStyles}>
               <Box as="span" flex="1" textAlign="left">
-                Do you provide technical support to customers?
+                Does the rental period include shipping transit time?
               </Box>
               <AccordionIcon />
             </AccordionButton>
           </h2>
-          <AccordionPanel pb={4}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+          <AccordionPanel pb={4} textAlign="left">
+            No. The rental period begins when you receive or pick up the drone
+            and ends the day you ship back or return it.
           </AccordionPanel>
         </AccordionItem>
       </Accordion>
-      <IconButton
-        icon={<FaChevronRight size="0.5rem" />}
-        title="View more FAQs"
-        my="2rem"
-        maxW="200px"
-        bgColor="brand.blue"
-        color="gray.100"
-        _active={{ bgColor: 'none' }}
-      />
+      <Link href="/support#faq">
+        <IconButton
+          icon={<FaChevronRight size="0.5rem" />}
+          title="View more FAQs"
+          my="2rem"
+          maxW="200px"
+          bgColor="brand.blue"
+          color="gray.100"
+          _active={{ bgColor: 'none' }}
+        />
+      </Link>
     </Box>
   );
 };

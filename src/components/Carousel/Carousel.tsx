@@ -9,7 +9,7 @@ export const ProductsCarousel = ({ items }: { items: ICarouselItem[] }) => {
   const pagination = {
     clickable: true,
     renderBullet: (_index: number, className: string) => {
-      return `<span class="${className} swiper-loader"></span>`;
+      return `<span class="${className} swiper-loader" style="margin-top: 2rem;"></span>`;
     },
   };
 

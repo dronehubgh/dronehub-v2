@@ -7,6 +7,7 @@ import {
   Box,
 } from '@chakra-ui/react';
 import React from 'react';
+import { IFAQ } from '../models/app';
 
 export interface IAccordionContent {
   question: string;
@@ -14,14 +15,14 @@ export interface IAccordionContent {
 }
 
 interface IQuestionsAccordionProps {
-  content: IAccordionContent[];
+  faq: IFAQ[];
 }
 
-export const QuestionsAccordion = ({ content }: IQuestionsAccordionProps) => {
+export const QuestionsAccordion = ({ faq }: IQuestionsAccordionProps) => {
   return (
     <Accordion allowToggle w="100%" px={{ base: '0', lg: '2rem' }}>
-      {content.map((item, index) => (
-        <AccordionItem key={index}>
+      {faq.map((item, index) => (
+        <AccordionItem key={item.id}>
           <h2>
             <AccordionButton
               fontWeight="bold"
@@ -33,7 +34,11 @@ export const QuestionsAccordion = ({ content }: IQuestionsAccordionProps) => {
               <AccordionIcon />
             </AccordionButton>
           </h2>
-          <AccordionPanel pb={4} fontSize={{ base: 'xs', lg: 'md' }}>
+          <AccordionPanel
+            pb={4}
+            fontSize={{ base: 'xs', lg: 'md' }}
+            textAlign="left"
+          >
             {item.answer}
           </AccordionPanel>
         </AccordionItem>

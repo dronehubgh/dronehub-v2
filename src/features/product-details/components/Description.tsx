@@ -1,8 +1,22 @@
 import { Box, Grid, GridItem, Text } from '@chakra-ui/react';
+import { PortableText } from '@portabletext/react';
+import { PortableTextBlock } from 'sanity';
+import { RichTextComponents } from '../../../components/RichTextComponent';
 import { borderCommon, commonPx } from '../../../consts';
 import { descHeaderStyles } from './_styles';
 
-export const Description = () => {
+interface IDescriptionProps {
+  overview: PortableTextBlock[];
+  application: PortableTextBlock[];
+  extra: PortableTextBlock[];
+  summary: PortableTextBlock[];
+}
+export const Description = ({
+  overview,
+  application,
+  summary,
+  extra,
+}: IDescriptionProps) => {
   return (
     <Grid
       px={commonPx}
@@ -10,18 +24,21 @@ export const Description = () => {
     >
       <GridItem border={borderCommon} p={10} id="overview">
         <Text {...descHeaderStyles}>Overview</Text>
-        <Text fontSize={{ lg: '18px', base: '14px' }}>
+        <PortableText value={overview} components={RichTextComponents} />
+
+        {/* <Text fontSize={{ lg: '18px', base: '14px' }}>
           Capture exciting moments with the portable and convenient Mavic Mini
           drone that weighs less than 249g. The drone captures beautiful aerial
           imagery with a 12MP camera. Take advantage of this beginner drone to
           capture your perfect shots.
-        </Text>
+        </Text> */}
       </GridItem>
 
       <GridItem border={borderCommon} p={10} id="applications">
         <Text {...descHeaderStyles}>Applications</Text>
+        <PortableText value={application} components={RichTextComponents} />
 
-        <Text fontSize={{ lg: '18px', base: '14px' }}>
+        {/* <Text fontSize={{ lg: '18px', base: '14px' }}>
           Entry-level drone best for:
         </Text>
         <ul className="ms-4">
@@ -30,12 +47,13 @@ export const Description = () => {
           <li>Content creators</li>
           <li>Creatives</li>
           <li>Vloggers</li>
-        </ul>
+        </ul> */}
       </GridItem>
 
       <GridItem border={borderCommon} p={10}>
         <Text {...descHeaderStyles}>Tech Specs | Summary</Text>
-        <Box fontSize={{ lg: '18px', base: '14px' }}>
+        <PortableText value={summary} components={RichTextComponents} />
+        {/* <Box fontSize={{ lg: '18px', base: '14px' }}>
           <b>Aircraft</b>
           <ul className="ms-4">
             <li> 30 minutes maximum flight time</li>
@@ -53,13 +71,14 @@ export const Description = () => {
             <li>3-Axis gimbal</li>
             <li>Simplified recording & editing</li>
           </ul>
-        </Box>
+        </Box> */}
       </GridItem>
 
       <GridItem border={borderCommon} p={10} id="techSpecs">
         <Text {...descHeaderStyles}>Tech Specs | Extra</Text>
+        <PortableText value={extra} components={RichTextComponents} />
 
-        <Box fontSize={{ lg: '18px', base: '14px' }}>
+        {/* <Box fontSize={{ lg: '18px', base: '14px' }}>
           <ul className="ms-4">
             <li>Aircraft Takeoff Weight: 249g</li>
             <li>Dimensions Folded: 138 x81x58mm</li>
@@ -71,7 +90,7 @@ export const Description = () => {
             <li>Max Wind Speed Resistance: 8.5-10.5 m/s (Scale 5)</li>
           </ul>
           <div className="mt-4">Download Full Tech Specs</div>
-        </Box>
+        </Box> */}
       </GridItem>
     </Grid>
   );

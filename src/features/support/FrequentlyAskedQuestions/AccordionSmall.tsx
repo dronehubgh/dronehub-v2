@@ -7,6 +7,7 @@ import {
   AccordionPanel,
   Box,
 } from '@chakra-ui/react';
+import { IFAQ } from '../../../models/app';
 import { AllQuestions } from './AllQuestions';
 import { DronesAndAccessories } from './DronesAndAccessories';
 import { DroneServices } from './DroneServices';
@@ -30,7 +31,11 @@ const btnProps: AccordionButtonProps = {
   _expanded: { bgColor: 'brand.blue', color: 'gray.100' },
 };
 
-export const AccordionSmall = () => {
+interface Props {
+  faq: IFAQ[];
+}
+
+export const AccordionSmall = ({ faq }: Props) => {
   return (
     <Accordion allowToggle p="1rem" border="none">
       <AccordionItem border="none">
@@ -43,7 +48,7 @@ export const AccordionSmall = () => {
           </AccordionButton>
         </h2>
         <AccordionPanel pb={4}>
-          <AllQuestions />
+          <AllQuestions faq={faq} />
         </AccordionPanel>
       </AccordionItem>
 
@@ -57,7 +62,9 @@ export const AccordionSmall = () => {
           </AccordionButton>
         </h2>
         <AccordionPanel pb={4}>
-          <DronesAndAccessories />
+          <DronesAndAccessories
+            faq={faq.filter((item) => item.category === 'drone-accessories')}
+          />
         </AccordionPanel>
       </AccordionItem>
 
@@ -71,7 +78,13 @@ export const AccordionSmall = () => {
           </AccordionButton>
         </h2>
         <AccordionPanel pb={4}>
-          <DroneServices />
+          <DroneServices
+            faq={faq.filter(
+              (item) =>
+                item.category === 'drone-service' ||
+                item.category === 'Drone Service'
+            )}
+          />
         </AccordionPanel>
       </AccordionItem>
 
@@ -85,7 +98,7 @@ export const AccordionSmall = () => {
           </AccordionButton>
         </h2>
         <AccordionPanel pb={4}>
-          <Store />
+          <Store faq={faq.filter((item) => item.category === 'store')} />
         </AccordionPanel>
       </AccordionItem>
 
@@ -99,7 +112,9 @@ export const AccordionSmall = () => {
           </AccordionButton>
         </h2>
         <AccordionPanel pb={4}>
-          <OtherIssues />
+          <OtherIssues
+            faq={faq.filter((item) => item.category === 'other-issues')}
+          />
         </AccordionPanel>
       </AccordionItem>
     </Accordion>

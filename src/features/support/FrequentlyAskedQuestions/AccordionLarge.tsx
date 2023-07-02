@@ -2,6 +2,7 @@ import { Box, Button, ButtonProps, Flex, Spacer } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import { FaChevronRight } from 'react-icons/fa';
 import { btnHeight } from '../../../consts/consts';
+import { IFAQ } from '../../../models/app';
 import { AllQuestions } from './AllQuestions';
 import { DronesAndAccessories } from './DronesAndAccessories';
 import { DroneServices } from './DroneServices';
@@ -16,7 +17,10 @@ const ids = {
   otherIssues: 'otherIssues',
 };
 
-export const AccordionLarge = () => {
+interface Props {
+  faq: IFAQ[];
+}
+export const AccordionLarge = ({ faq }: Props) => {
   const [selectedId, setSelectedId] = useState(ids.allQuestion);
 
   return (
@@ -53,11 +57,29 @@ export const AccordionLarge = () => {
           onClick={() => setSelectedId(ids.otherIssues)}
         />
       </Box>
-      {selectedId === ids.allQuestion && <AllQuestions />}
-      {selectedId === ids.droneAndAccessories && <DronesAndAccessories />}
-      {selectedId === ids.droneServices && <DroneServices />}
-      {selectedId === ids.store && <Store />}
-      {selectedId === ids.otherIssues && <OtherIssues />}
+      {selectedId === ids.allQuestion && <AllQuestions faq={faq} />}
+      {selectedId === ids.droneAndAccessories && (
+        <DronesAndAccessories
+          faq={faq.filter((item) => item.category === 'drone-accessories')}
+        />
+      )}
+      {selectedId === ids.droneServices && (
+        <DroneServices
+          faq={faq.filter(
+            (item) =>
+              item.category === 'drone-service' ||
+              item.category === 'Drone Service'
+          )}
+        />
+      )}
+      {selectedId === ids.store && (
+        <Store faq={faq.filter((item) => item.category === 'store')} />
+      )}
+      {selectedId === ids.otherIssues && (
+        <OtherIssues
+          faq={faq.filter((item) => item.category === 'other-issues')}
+        />
+      )}
     </Flex>
   );
 };

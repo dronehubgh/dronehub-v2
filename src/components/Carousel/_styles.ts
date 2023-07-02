@@ -25,9 +25,11 @@ export const slideStyles: FlexProps = {
 export const headerBoxStyles: BoxProps = {
   textAlign: { base: 'center', lg: 'left' },
   mt: { base: '4rem', lg: '' },
+  w: { base: '100%', lg: '50%' },
 };
 
 export const imageBoxStyles: BoxProps = {
-  my: { base: '70px', lg: '0' },
+  my: { base: '30px', lg: '0' },
+  w: { base: '100%', lg: '50%' },
   bgSize: 'contain',
 };

@@ -14,8 +14,7 @@
     "@chakra-ui/react": "^2.4.3",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
-    "@portabletext/react": "^2.0.1",
-    "@sanity/client": "^4.0.1",
+    "@portabletext/react": "^3.0.4",
     "@sanity/image-url": "^1.0.2",
     "bootstrap": "5.2.3",
     "formik": "^2.2.9",
@@ -35,6 +34,7 @@
     "react-reveal": "^1.2.2",
     "react-slick": "^0.29.0",
     "react-use": "^17.4.0",
+    "sanity": "^3.14.1",
     "slick-carousel": "^1.8.1",
     "swiper": "^8.4.5",
     "uuid": "^9.0.0"

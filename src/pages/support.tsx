@@ -7,8 +7,14 @@ import {
   QuickResponse,
   SupportBanner,
 } from '../features';
+import { client } from '../lib';
+import { IFAQ } from '../models/app';
+import { faqQuery } from '../queries';
 
-const SupportPage: NextPage = () => {
+interface Props {
+  faq: IFAQ[];
+}
+const SupportPage = ({ faq }: Props) => {
   return (
     <>
       <SupportBanner />
@@ -25,10 +31,18 @@ const SupportPage: NextPage = () => {
       </Box>
 
       <QuickResponse />
-      <AllFrequentlyAskedQuestions />
+      <AllFrequentlyAskedQuestions faq={faq} />
       <Contact hideHeading={true} />
     </>
   );
+};
+
+export const getServerSideProps = async () => {
+  const faq: IFAQ[] = await client.fetch(faqQuery);
+
+  return {
+    props: { faq },
+  };
 };
 
 export default SupportPage;

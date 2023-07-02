@@ -8,7 +8,11 @@ const gridItemStyles: GridItemProps = {
   alignItems: 'center',
 };
 
-export const Gallery = () => {
+interface IGalleryProps {
+  mainImageUrl: string;
+  gallery: string[];
+}
+export const Gallery = ({ mainImageUrl, gallery }: IGalleryProps) => {
   return (
     <Box>
       <Grid {...galleryGridStyles}>
@@ -18,7 +22,10 @@ export const Gallery = () => {
           colSpan={{ lg: 1, base: 4 }}
           bgColor=" rgba(173, 215, 129, 0.2)"
         >
-          <Image src="/assets/images/drones/mavic/Mavic_Mini_2.png" alt="" />
+          <Image
+            src={mainImageUrl || '/assets/images/drones/mavic/Mavic_Mini_2.png'}
+            alt=""
+          />
         </GridItem>
         <GridItem
           {...gridItemStyles}
@@ -27,7 +34,7 @@ export const Gallery = () => {
           h={{ base: 'auto', lg: '300px', xl: '450px' }}
         >
           <Image
-            src="/assets/images/drones/mavic/Mavic_Mini_2.png"
+            src={gallery[0] || '/assets/images/drones/mavic/Mavic_Mini_2.png'}
             alt=""
             width={{ base: 'auto', lg: '400px', xl: '500px' }}
           />
@@ -37,14 +44,20 @@ export const Gallery = () => {
           colSpan={{ lg: 1, base: 2 }}
           bgColor=" rgba(173, 215, 129, 0.2)"
         >
-          <Image src="/assets/images/drones/mavic/Mavic_Mini_2.png" alt="" />
+          <Image
+            src={gallery[1] || '/assets/images/drones/mavic/Mavic_Mini_2.png'}
+            alt=""
+          />
         </GridItem>
         <GridItem
           {...gridItemStyles}
           colSpan={{ lg: 1, base: 2 }}
           bgColor=" rgba(253, 203, 102, 0.2)"
         >
-          <Image src="/assets/images/drones/mavic/Mavic_Mini_2.png" alt="" />
+          <Image
+            src={gallery[2] || '/assets/images/drones/mavic/Mavic_Mini_2.png'}
+            alt=""
+          />
         </GridItem>
       </Grid>
     </Box>
