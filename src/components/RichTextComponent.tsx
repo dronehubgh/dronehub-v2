@@ -1,11 +1,12 @@
 import React from 'react';
 import { PortableTextComponents } from '@portabletext/react';
 import { Box, Image, OrderedList, Text, UnorderedList } from '@chakra-ui/react';
+import { urlFor } from '../lib/sanity';
 
 export const RichTextComponents: PortableTextComponents = {
   types: {
     image: ({ value }) => (
-      <Image src={value.imageUrl} w="90%" mx="auto" alt="" />
+      <Image src={urlFor(value).url()} w="90%" mx="auto" alt="" my="2rem" />
     ),
 
     callToAction: ({ value, isInline }) =>

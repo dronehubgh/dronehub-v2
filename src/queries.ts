@@ -143,7 +143,7 @@ export const blogQuery = groq`
 `;
 
 export const blogDetailsQuery = groq`
-  *[_type == 'blog' ] {
+  *[_type == 'blog' && slug.current == $slug ] {
     ...,
     "id": _id,
     title,
