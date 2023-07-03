@@ -9,18 +9,18 @@ export const productCategoryQuery = groq`
 `;
 
 export const homeBannerDataQuery = groq`
-*[_type == "homeBannerData"]{
-  ...,
-  heading,
-  tagline,
-  "featuredProducts": featuredProducts[]->{
-    "id": _key,
-    "slug": slug.current,
-    "name": title,
+  *[_type == "homeBannerData"]{
+    ...,
+    heading,
     tagline,
-    "imageUrl": mainImage.asset->url
+    "featuredProducts": featuredProducts[]->{
+      "id": _id,
+      "slug": slug.current,
+      "name": title,
+      tagline,
+      "imageUrl": mainImage.asset->url
+    }
   }
-}
 `;
 
 export const productsBannerDataQuery = groq`
@@ -130,5 +130,14 @@ export const faqQuery = groq`
     target,
     question,
     answer 
+  }
+`;
+
+export const blogQuery = groq`
+  *[_type == 'blog' ] {
+    "id": _id,
+    title,
+    "slug": slug.current,
+      type
   }
 `;

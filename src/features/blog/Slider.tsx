@@ -1,37 +1,22 @@
 import { Box, Button, Flex, Image, Text } from '@chakra-ui/react';
+import Link from 'next/link';
 import { CSSProperties } from 'react';
 import { BsArrowRight } from 'react-icons/bs';
 import { useMedia } from 'react-use';
 import { A11y, Autoplay, Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { SwiperOptions } from 'swiper/types/swiper-options';
-import { v4 as uid } from 'uuid';
+import { IBlogOverview } from '../../models/app';
 
-interface BlogSliderProps {}
+interface Props {
+  articles: IBlogOverview[];
+}
 
-export const BlogSlider = () => {
+export const BlogSlider = ({ articles = [] }: Props) => {
   const xxl = useMedia('(min-width: 1492px)', false);
   const xl = useMedia('(min-width: 1190px)', false);
   const lg = useMedia('(min-width: 1024px)', false);
   const md = useMedia('(min-width: 600px)', false);
-
-  // const getSize = () => {
-  //   if (xxl) return { w: '510px', h: '430px' };
-  //   if (xl) return { w: '600px', h: '450px' };
-  //   if (lg) return { w: '500px', h: '400px' };
-  //   if (md) return { w: '400px', h: '250px' };
-  //   return { w: '250px', h: '200px' };
-  // };
-
-  // const slideStyles: CSSProperties = {
-  //   // padding: '0.5rem',
-  //   maxWidth: getSize().w,
-  //   minWidth: '250px',
-  //   // height: getSize().h,
-  //   boxSizing: 'border-box',
-  //   backgroundColor: 'green',
-  //   borderRadius: '20px',
-  // };
 
   const pagination = {
     clickable: true,
@@ -59,15 +44,14 @@ export const BlogSlider = () => {
         style={{ width: '100%', height: '100%' }}
         className="dh-slider-gallery"
       >
-        <SwiperSlide>
-          <SliderStoryCard title="Zenmuse L1 LiDAR Solution Lights up the Surveying World" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <SliderStoryCard title="10 Interesting Facts About Drones" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <SliderStoryCard title="Drone Buying Tips" />
-        </SwiperSlide>
+        {articles.map((article) => (
+          <SwiperSlide key={article.id}>
+            <SliderStoryCard
+              title={article.title}
+              link={`/blog/${article.slug}`}
+            />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </Box>
   );
@@ -77,8 +61,9 @@ const linerGradient = `linear-gradient(180deg, #CCD9E3 0%, #2480CD 100%)`;
 
 interface ISliderStoryCardProps {
   title: string;
+  link: string;
 }
-const SliderStoryCard = ({ title }: ISliderStoryCardProps) => (
+const SliderStoryCard = ({ title, link }: ISliderStoryCardProps) => (
   <Flex
     w="100%"
     height={{ base: '300px', lg: '400px' }}
@@ -93,11 +78,13 @@ const SliderStoryCard = ({ title }: ISliderStoryCardProps) => (
     <Text fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }} fontWeight="bold">
       {title}
     </Text>
-    <Flex align="center" mt="1rem" fontWeight="700">
-      <Text mr="0.5rem" pb="0.4rem">
-        Read more
-      </Text>
-      <BsArrowRight />
-    </Flex>
+    <Link href={link}>
+      <Flex align="center" mt="1rem" fontWeight="700" w="fit-content">
+        <Text mr="0.5rem" pb="0.4rem">
+          Read more
+        </Text>
+        <BsArrowRight />
+      </Flex>
+    </Link>
   </Flex>
 );

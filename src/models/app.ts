@@ -167,3 +167,10 @@ export interface IFAQ {
   question: string;
   answer: string;
 }
+
+export interface IBlogOverview {
+  id: string;
+  title: string;
+  slug: string;
+  type: 'guide' | 'story';
+}

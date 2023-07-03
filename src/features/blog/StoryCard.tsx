@@ -1,12 +1,24 @@
 import { Box, BoxProps, Flex, Text } from '@chakra-ui/react';
+import Link from 'next/link';
 import React from 'react';
 import { BsArrowRight } from 'react-icons/bs';
 
 interface IStoryCardProps extends BoxProps {
   title: string;
+  link: string;
+  index: number;
   endStrNum?: number;
 }
-export const StoryCard = ({ title, endStrNum, ...rest }: IStoryCardProps) => {
+export const StoryCard = ({
+  title,
+  link,
+  index,
+  endStrNum,
+  ...rest
+}: IStoryCardProps) => {
+  const colors = ['purple.600', 'orange.400', 'blue.400', 'green.400'];
+  const bgColor = colors[Math.floor(Math.random() * colors.length)];
+
   return (
     <Flex
       w="100%"
@@ -17,6 +29,7 @@ export const StoryCard = ({ title, endStrNum, ...rest }: IStoryCardProps) => {
       h="250px"
       flexDir="column"
       justify="space-between"
+      bgColor={index === 0 ? 'brand.blue' : bgColor}
       {...rest}
     >
       <Text
@@ -28,12 +41,14 @@ export const StoryCard = ({ title, endStrNum, ...rest }: IStoryCardProps) => {
           ? title.slice(0, endStrNum || 65) + '...'
           : title}
       </Text>
-      <Flex align="center" mt="1rem" fontWeight="700">
-        <Text mr="0.5rem" pb="0.4rem">
-          Read more
-        </Text>
-        <BsArrowRight />
-      </Flex>
+      <Link href={link}>
+        <Flex align="center" mt="1rem" fontWeight="700" w="fit-content">
+          <Text mr="0.5rem" pb="0.4rem">
+            Read more
+          </Text>
+          <BsArrowRight />
+        </Flex>
+      </Link>
     </Flex>
   );
 };
