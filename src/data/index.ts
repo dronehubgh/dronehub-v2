@@ -2,6 +2,7 @@ import { FiMail, FiPhone } from 'react-icons/fi';
 import { FaInstagramSquare, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { IContactItem } from '../models/app';
 import { v4 as uid } from 'uuid';
+import { instagramUrl, linkedInUrl, twitterUrl } from '../consts';
 
 export const fields: string[] = [
   'Media',
@@ -36,7 +37,7 @@ export const contactList: IContactItem[] = [
     icon: FaLinkedin,
     heading: 'Send a Message',
     text: 'Once we receive your drone, our drone',
-    link: 'https://www.linkedin.com/company/dronehubgh/',
+    link: linkedInUrl,
   },
 
   {
@@ -44,14 +45,14 @@ export const contactList: IContactItem[] = [
     icon: FaTwitter,
     heading: 'Send a Message',
     text: 'Upon approval, we repair your drone. ',
-    link: 'https://twitter.com/DroneHubGh?s=20',
+    link: twitterUrl,
   },
   {
     id: uid(),
     icon: FaInstagramSquare,
     heading: 'Send a Message',
     text: 'When repair is complete, we will',
-    link: 'https://www.instagram.com/dronehubgh/',
+    link: instagramUrl,
   },
 ];
 

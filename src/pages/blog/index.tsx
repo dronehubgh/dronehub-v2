@@ -5,13 +5,10 @@ import {
   CustomerStories,
   Guides,
   OurStories,
-} from '../features';
-import { client } from '../lib';
-import { IBlogOverview } from '../models/app';
-import { blogQuery } from '../queries';
-
-const getIndex = (list: IBlogOverview[]) =>
-  Math.floor(Math.random() * list.length);
+} from '../../features';
+import { client } from '../../lib';
+import { IBlogOverview } from '../../models/app';
+import { blogQuery } from '../../queries';
 
 interface Props {
   articles: IBlogOverview[];

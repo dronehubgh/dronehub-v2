@@ -141,3 +141,13 @@ export const blogQuery = groq`
       type
   }
 `;
+
+export const blogDetailsQuery = groq`
+  *[_type == 'blog' ] {
+    ...,
+    "id": _id,
+    title,
+    "slug": slug.current,
+      type
+  }
+`;

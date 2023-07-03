@@ -174,3 +174,10 @@ export interface IBlogOverview {
   slug: string;
   type: 'guide' | 'story';
 }
+
+export interface IBlogArticle extends IBlogOverview {
+  tagline: string;
+  duration: number;
+  content: any;
+  relatedStories: any[];
+}
