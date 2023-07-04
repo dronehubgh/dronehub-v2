@@ -141,6 +141,17 @@ export type CameraSeries =
   | 'ronin-series'
   | 'extra-payload';
 
+export type Industry =
+  | 'agricultural'
+  | 'surveying'
+  | 'media-entertainment'
+  | 'mining'
+  | 'public-safety'
+  | 'forestry'
+  | 'energy-infrastructure'
+  | 'construction'
+  | 'security';
+
 export interface IProductsState {
   mavicSeries: IProductSectionItem[];
   phantomSeries: IProductSectionItem[];

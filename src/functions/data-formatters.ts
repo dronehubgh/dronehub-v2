@@ -5,7 +5,7 @@ export const getBannerData = (data?: IDroneProperties[]): ICarouselItem[] => {
   return (
     data?.map((item) => ({
       id: item.id,
-      description: formatDescription(item.type, item.industry),
+      description: item.type,
       tagline: item.tagline,
       imageUrl: item.imageUrl,
       link: `products/${item.slug}`,
@@ -13,7 +13,7 @@ export const getBannerData = (data?: IDroneProperties[]): ICarouselItem[] => {
   );
 };
 
-const formatDescription = (type: string, industry?: string): string => {
+export const formatDescription = (type: string, industry?: string): string => {
   return (
     capitalizeFirstLetter(industry?.replace('-drone', '') || '') +
     ', ' +

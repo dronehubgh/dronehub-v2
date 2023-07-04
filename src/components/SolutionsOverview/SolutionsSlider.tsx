@@ -4,6 +4,7 @@ import { A11y, Autoplay, Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { SwiperOptions } from 'swiper/types/swiper-options';
 import { v4 as uid } from 'uuid';
+import { IDroneProperties } from '../../models/app';
 import { ProductCTAButtons } from '../Buttons/ProductCTAButtons';
 import { SwiperNavButtons } from '../SwiperNavButtons';
 import { ISolutionsItems } from './Solutions';
@@ -16,7 +17,7 @@ const slideStyles: CSSProperties = {
   boxSizing: 'border-box',
   border: '1px solid #cdcdcd',
 };
-export const SolutionsSlider = ({ items }: { items: ISolutionsItems[] }) => {
+export const SolutionsSlider = ({ items }: { items: IDroneProperties[] }) => {
   const sliderSettings: SwiperOptions = {
     modules: [Navigation, A11y, Autoplay],
     spaceBetween: 0,
@@ -54,7 +55,7 @@ export const SolutionsSlider = ({ items }: { items: ISolutionsItems[] }) => {
                   </Text>
                   <Text>{item.type}</Text>
                   <ProductCTAButtons
-                    btn1Link={item.link}
+                    btn1Link={`/products/${item.slug}`}
                     containerStyles={{ justify: 'center' }}
                     btn1Styles={{
                       borderColor: 'gray.100',

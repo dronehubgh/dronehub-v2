@@ -28,7 +28,11 @@ export const ReadyForMore = () => {
           gap="0.5rem"
           my="1rem"
         >
-          <Link href="tel:+233554460055">
+          <Link
+            href="tel:+233554460055"
+            w={{ base: '100%', lg: 'fit-content' }}
+            textAlign="center"
+          >
             <Button title="Talk to Sales" w={{ base: '90%', lg: '150px' }} />
           </Link>
           <Button

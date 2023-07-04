@@ -1,7 +1,10 @@
 import { Box, Button, Flex, Text } from '@chakra-ui/react';
-import React, { MouseEventHandler, useState } from 'react';
+import React, { MouseEventHandler, useEffect, useState } from 'react';
 import { solutionsItems } from '../../data/products';
+import { client } from '../../lib';
+import { IDroneProperties, Industry } from '../../models/app';
 import { SolutionsSlider } from './SolutionsSlider';
+import { dronesQuery } from '../../queries';
 
 export interface ISolutionsItems {
   imageUrl: string;
@@ -16,16 +19,27 @@ interface ISolutionsProps {
 }
 
 export const Solutions = ({ title }: ISolutionsProps) => {
-  const [selectedItemText, setSelectedItemText] = useState('Surveying');
-  const [filteredItems, setFilteredItems] =
-    useState<ISolutionsItems[]>(solutionsItems);
+  const [selectedItemText, setSelectedItemText] =
+    useState<Industry>('surveying');
+  const [drones, setDrones] = useState<IDroneProperties[]>([]);
+  const [filteredDrones, setFilteredDrones] = useState<IDroneProperties[]>([]);
 
-  const handleItemClick = (text: string) => {
+  const handleItemClick = (text: Industry) => {
     setSelectedItemText(text);
-    setFilteredItems(
-      solutionsItems.filter((item) => item.categories.includes(text))
-    );
+    setFilteredDrones(drones.filter((item) => item.industry?.includes(text)));
   };
+
+  useEffect(() => {
+    async function loadDrones() {
+      const drones: IDroneProperties[] = await client.fetch(dronesQuery);
+      setDrones(drones);
+      setFilteredDrones(
+        drones.filter((drone) => drone.industry?.includes('surveying'))
+      );
+    }
+
+    loadDrones();
+  }, []);
 
   return (
     <Box bg="#FAFAFA" my="4rem">
@@ -39,63 +53,74 @@ export const Solutions = ({ title }: ISolutionsProps) => {
       </Text>
       <Flex px={{ base: '2rem', lg: '4rem' }} flexWrap="wrap" mb="2rem">
         <TabButton
-          onClick={() => handleItemClick('Surveying')}
+          id="surveying"
+          onClick={() => handleItemClick('surveying')}
           text="Surveying"
           selectedItem={selectedItemText}
         />
         <TabButton
-          onClick={() => handleItemClick('Agriculture')}
+          id="agricultural"
+          onClick={() => handleItemClick('agricultural')}
           text="Agriculture"
           selectedItem={selectedItemText}
         />
         <TabButton
-          onClick={() => handleItemClick('Media & Entertainment')}
+          id="media-entertainment"
+          onClick={() => handleItemClick('media-entertainment')}
           text="Media & Entertainment"
           selectedItem={selectedItemText}
         />
         <TabButton
-          onClick={() => handleItemClick('Public Safety')}
+          id="public-safety"
+          onClick={() => handleItemClick('public-safety')}
           text="Public Safety"
           selectedItem={selectedItemText}
         />
         <TabButton
-          onClick={() => handleItemClick('Forestry')}
+          id="forestry"
+          onClick={() => handleItemClick('forestry')}
           text="Forestry"
           selectedItem={selectedItemText}
         />
         <TabButton
-          onClick={() => handleItemClick('Security')}
+          id="security"
+          onClick={() => handleItemClick('security')}
           text="Security"
           selectedItem={selectedItemText}
         />
         <TabButton
+          id="mining"
           selectedItem={selectedItemText}
-          onClick={() => handleItemClick('Mining')}
+          onClick={() => handleItemClick('mining')}
           text="Mining"
         />
         <TabButton
-          onClick={() => handleItemClick('Energy & Infrastructure')}
+          id="energy-infrastructure"
+          onClick={() => handleItemClick('energy-infrastructure')}
           text="Energy & Infrastructure"
           selectedItem={selectedItemText}
         />
         <TabButton
-          onClick={() => handleItemClick('Construction')}
+          id="construction"
+          onClick={() => handleItemClick('construction')}
           text="Construction"
           selectedItem={selectedItemText}
         />
       </Flex>
       <Box>
-        <SolutionsSlider items={filteredItems} />
+        <SolutionsSlider items={filteredDrones} />
       </Box>
     </Box>
   );
 };
 
 export const TabButton = ({
+  id,
   text,
   selectedItem,
   onClick,
 }: {
+  id: string;
   text: string;
   selectedItem: string;
   onClick: MouseEventHandler<HTMLButtonElement>;
@@ -103,9 +128,9 @@ export const TabButton = ({
   return (
     <Button
       borderRadius="0"
-      bgColor={selectedItem === text ? 'brand.blue' : 'white'}
-      color={selectedItem === text ? 'white' : 'gray.800'}
-      _hover={{ bgColor: selectedItem === text ? 'none' : 'gray.200' }}
+      bgColor={selectedItem === id ? 'brand.blue' : 'white'}
+      color={selectedItem === id ? 'white' : 'gray.800'}
+      _hover={{ bgColor: selectedItem === id ? 'none' : 'gray.200' }}
       _active={{ bgColor: 'none' }}
       borderWidth="1px"
       borderColor="gray.200"
