@@ -21,7 +21,6 @@ export const ProductDetails = ({ product }: any) => {
     summary,
     extra,
   } = product;
-  console.log(product);
 
   return (
     <Box>

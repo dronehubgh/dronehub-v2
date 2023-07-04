@@ -44,7 +44,7 @@ export const Extras = () => {
           borderColor="gray.500"
           py={{ base: 2, lg: 2 }}
         >
-          <NextLink href="/customer-stories" passHref>
+          <NextLink href="/blog#customer-stories" passHref>
             <Text _hover={{ textDecor: 'none' }}>Customer Stories</Text>
           </NextLink>
         </ListItem>

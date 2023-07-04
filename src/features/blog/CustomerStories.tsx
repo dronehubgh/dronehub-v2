@@ -1,21 +1,30 @@
 import { Box, Divider, Flex, Heading, Image, Text } from '@chakra-ui/react';
-import React from 'react';
+import Link from 'next/link';
+import React, { useEffect, useState } from 'react';
 import { BsArrowRight } from 'react-icons/bs';
 import { A11y, Navigation, SwiperOptions } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { SwiperNavButtons } from '../../components';
+import { client } from '../../lib';
+import { storyQuery } from '../../queries';
 import { StoryCard } from './StoryCard';
 
 export const CustomerStories = () => {
-  const sliderSettings: SwiperOptions = {
-    modules: [Navigation, A11y],
-    spaceBetween: 20,
-    slidesPerView: 'auto',
-    freeMode: true,
-  };
+  const [stories, setStories] = useState<any[]>([]);
+
+  console.log(stories);
+
+  useEffect(() => {
+    async function loadStories() {
+      const res: any[] = await client.fetch(storyQuery);
+      setStories(res);
+    }
+
+    loadStories();
+  }, []);
 
   return (
-    <Box m="3rem">
+    <Box m="3rem" id="customer-stories">
       <Heading mx="2rem" size={{ base: 'md', lg: 'lg' }} py="1rem">
         Customer Stories
       </Heading>
@@ -31,26 +40,31 @@ export const CustomerStories = () => {
               maxW="400px"
             />
           </Box>
-          <Flex
-            w={{ base: '100%', lg: '50%' }}
-            p={{ base: '2rem', lg: '4rem' }}
-            flexDir="column"
-            align="start"
-            justify="center"
-            color="white"
-          >
-            <Heading size="xl">Prefos Ghana Limited</Heading>
-            <Text>Obtaining Aerial Data of Street Lighting Infrastructure</Text>
-          </Flex>
+          {stories && stories.length > 0 && (
+            <Flex
+              w={{ base: '100%', lg: '50%' }}
+              p={{ base: '2rem', lg: '4rem' }}
+              flexDir="column"
+              align="start"
+              justify="center"
+              color="white"
+            >
+              <Heading size="xl">{stories[0].customerName}</Heading>
+              <Text my="2rem">{stories[0].name}</Text>
+            </Flex>
+          )}
         </Flex>
 
-        <CustomerStoryCard />
-        <Divider />
-        <CustomerStoryCard />
-        <Divider />
-        <CustomerStoryCard />
-        <Divider />
-        <CustomerStoryCard />
+        {[...stories].slice(1, stories.length).map((story, index) => (
+          <>
+            <CustomerStoryCard
+              profileUrl={story.profilePhoto}
+              customerName={story.customerName}
+              link={`/blog/${story.slug}`}
+            />
+            <Divider />
+          </>
+        ))}
       </Box>
     </Box>
   );
@@ -59,22 +73,25 @@ export const CustomerStories = () => {
 interface ICustomerStoryCardProps {
   profileUrl: string;
   customerName: string;
-  address: string;
+  link: string;
+  address?: string;
 }
-export const CustomerStoryCard = () => {
+export const CustomerStoryCard = ({
+  profileUrl,
+  customerName,
+  link,
+}: ICustomerStoryCardProps) => {
   return (
     <Flex align="center" justify="space-between" py="1rem" px="2rem">
       <Flex align="center" w="70%">
         <Box bgColor="#9CDEF6" borderRadius="50%">
-          <Image
-            boxSize="40px"
-            src="https://res.cloudinary.com/djmx11b6s/image/upload/v1687783550/donehub-assets/profile_dv5c2j.png"
-            alt="profile"
-          />
+          <Image boxSize="40px" src={profileUrl} alt="profile" />
         </Box>
-        <Text fontWeight="bold" mx="1rem">
-          Sienna Services Limited
-        </Text>
+        <Link href={link}>
+          <Text fontWeight="bold" mx="1rem">
+            {customerName}
+          </Text>
+        </Link>
       </Flex>
       <Text w="30%">Accra, Ghana</Text>
     </Flex>

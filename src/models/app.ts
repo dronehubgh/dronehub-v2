@@ -191,4 +191,5 @@ export interface IBlogArticle extends IBlogOverview {
   duration: number;
   content: any;
   relatedStories: any[];
+  _type: string;
 }

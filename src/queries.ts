@@ -143,11 +143,22 @@ export const blogQuery = groq`
 `;
 
 export const blogDetailsQuery = groq`
-  *[_type == 'blog' && slug.current == $slug ] {
+  *[_type in ['blog', 'customerStories'] && slug.current == $slug ] {
     ...,
     "id": _id,
     title,
     "slug": slug.current,
       type
   }
+`;
+
+export const storyQuery = groq`
+ *[_type == "customerStories"] {
+  "id": _id,
+  "profilePhoto": profilePhoto.asset->url,
+  "name": title,
+  "slug": slug.current,
+  customerName,
+  industryVertical
+}
 `;
