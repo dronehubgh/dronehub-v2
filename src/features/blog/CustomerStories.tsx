@@ -1,18 +1,11 @@
 import { Box, Divider, Flex, Heading, Image, Text } from '@chakra-ui/react';
 import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
-import { BsArrowRight } from 'react-icons/bs';
-import { A11y, Navigation, SwiperOptions } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { SwiperNavButtons } from '../../components';
+import { useEffect, useState } from 'react';
 import { client } from '../../lib';
 import { storyQuery } from '../../queries';
-import { StoryCard } from './StoryCard';
 
 export const CustomerStories = () => {
   const [stories, setStories] = useState<any[]>([]);
-
-  console.log(stories);
 
   useEffect(() => {
     async function loadStories() {

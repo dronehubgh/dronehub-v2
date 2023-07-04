@@ -10,8 +10,6 @@ interface Props {
   article: IBlogArticle;
 }
 export const BlogDetails = ({ article }: Props) => {
-  console.log(article);
-
   return (
     <>
       <Header title={article.title} tagline={article.tagline} />
