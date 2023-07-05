@@ -76,7 +76,7 @@ export const InTheBox = ({ inBox }: IInBoxProps) => {
                     justifyContent="space-between"
                     gap={2}
                   >
-                    {inBoxItem.images.map((imageUrl, index) => (
+                    {inBoxItem.images?.map((imageUrl, index) => (
                       <GridItem key={index}>
                         <Image
                           h={{ md: '40vh', lg: '50vh' }}
