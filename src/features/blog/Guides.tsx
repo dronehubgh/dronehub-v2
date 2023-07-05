@@ -20,7 +20,7 @@ export const Guides = ({ articles }: Props) => {
   };
 
   return (
-    <Box my="3rem">
+    <Box my="3rem" id="guides">
       <Heading mx="2rem" size={{ base: 'md', lg: 'lg' }} py="1rem">
         Guides
       </Heading>

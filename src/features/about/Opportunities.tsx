@@ -6,10 +6,22 @@ import {
   Text,
   Image,
   Flex,
+  Button,
+  Modal,
+  ModalBody,
+  ModalCloseButton,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+  ModalOverlay,
+  useDisclosure,
+  IconButtonProps,
+  ButtonProps,
 } from '@chakra-ui/react';
 import React from 'react';
 import { BiChevronRight } from 'react-icons/bi';
 import { IconButton } from '../../components';
+import { JoinOurTeamModal } from './JoinOurTeam';
 
 export const Opportunities = () => {
   return (
@@ -29,17 +41,13 @@ export const Opportunities = () => {
           Discover endless opportunities ahead of you
         </Text>
         <Flex my="1rem" gap="10px" flexDir={{ base: 'column', md: 'row' }}>
-          <IconButton
-            title="Jin As A Volunteer"
-            icon={<BiChevronRight />}
-            maxW={{ base: '100%', md: '200px' }}
-            color="gray.100"
-            bgColor="brand.blue"
+          <JoinOurTeamModal
+            btnLabel="Join As A Volunteer"
+            btnStyle={{ color: 'gray.100', bgColor: 'brand.blue' }}
           />
-          <IconButton
-            title="Jin Our Team"
-            icon={<BiChevronRight />}
-            maxW={{ base: '100%', md: '200px' }}
+          <JoinOurTeamModal
+            btnLabel="Join Our Team"
+            btnStyle={{ color: 'gray.100', bgColor: 'brand.blue' }}
           />
         </Flex>
 

@@ -1,10 +1,10 @@
 import { Box, Button, Flex, Text } from '@chakra-ui/react';
-import React, { MouseEventHandler, useEffect, useState } from 'react';
-import { solutionsItems } from '../../data/products';
+import { MouseEventHandler, useContext, useEffect, useState } from 'react';
+import { DronesContext } from '../../context/dronesContext';
 import { client } from '../../lib';
 import { IDroneProperties, Industry } from '../../models/app';
-import { SolutionsSlider } from './SolutionsSlider';
 import { dronesQuery } from '../../queries';
+import { SolutionsSlider } from './SolutionsSlider';
 
 export interface ISolutionsItems {
   imageUrl: string;
@@ -19,9 +19,9 @@ interface ISolutionsProps {
 }
 
 export const Solutions = ({ title }: ISolutionsProps) => {
+  const { drones } = useContext(DronesContext);
   const [selectedItemText, setSelectedItemText] =
-    useState<Industry>('surveying');
-  const [drones, setDrones] = useState<IDroneProperties[]>([]);
+    useState<Industry>('agricultural');
   const [filteredDrones, setFilteredDrones] = useState<IDroneProperties[]>([]);
 
   const handleItemClick = (text: Industry) => {
@@ -30,16 +30,10 @@ export const Solutions = ({ title }: ISolutionsProps) => {
   };
 
   useEffect(() => {
-    async function loadDrones() {
-      const drones: IDroneProperties[] = await client.fetch(dronesQuery);
-      setDrones(drones);
-      setFilteredDrones(
-        drones.filter((drone) => drone.industry?.includes('surveying'))
-      );
-    }
-
-    loadDrones();
-  }, []);
+    setFilteredDrones(
+      drones.filter((drone) => drone.industry?.includes('agricultural'))
+    );
+  }, [drones]);
 
   return (
     <Box bg="#FAFAFA" my="4rem">

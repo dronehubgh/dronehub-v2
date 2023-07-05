@@ -23,12 +23,7 @@ const ForestryPage: NextPage = () => {
 
       <BannerImage imageUrl="https://res.cloudinary.com/djmx11b6s/image/upload/v1676505622/donehub-assets/industry-images/forestry_svpz8w.png" />
       <IndustryApplicationsSection {...forestry} />
-      <IndustryDroneSolutions
-        industryName="Forestry"
-        drones={solutionsItems.filter((item) =>
-          item.categories.includes('Forestry')
-        )}
-      />
+      <IndustryDroneSolutions industryName="Forestry" industry="forestry" />
 
       <Contact />
     </>

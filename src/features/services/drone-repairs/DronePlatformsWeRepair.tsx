@@ -1,9 +1,12 @@
 import { Box, Text } from '@chakra-ui/react';
-import React from 'react';
+import React, { useContext } from 'react';
 import { SolutionsSlider } from '../../../components';
+import { DronesContext } from '../../../context/dronesContext';
 import { solutionsItems } from '../../../data/products';
 
 export const DronePlatformsWeRepair = () => {
+  const { drones } = useContext(DronesContext);
+
   return (
     <Box bg="#FAFAFA" my="4rem">
       <Text
@@ -18,8 +21,8 @@ export const DronePlatformsWeRepair = () => {
 
       <Box>
         <SolutionsSlider
-          items={solutionsItems.filter((item) =>
-            item.categories.includes('Surveying')
+          items={drones.filter((item) =>
+            item.industry?.includes('agricultural')
           )}
         />
       </Box>

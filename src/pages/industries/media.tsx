@@ -25,9 +25,7 @@ const MediaPage: NextPage = () => {
       <IndustryApplicationsSection {...media} />
       <IndustryDroneSolutions
         industryName="Media & Entertainment"
-        drones={solutionsItems.filter((item) =>
-          item.categories.includes('Media & Entertainment')
-        )}
+        industry="media-entertainment"
       />
 
       <Contact />

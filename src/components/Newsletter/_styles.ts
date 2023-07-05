@@ -46,24 +46,13 @@ export const selectStyles: SelectProps = {
   fontWeight: 500,
 };
 
-export const getInputStyles = (
-  value: string,
-  type?: HTMLInputTypeAttribute,
-  name?: string,
-  onChange?: ChangeEventHandler<HTMLInputElement>,
-  onBlur?: FocusEventHandler<HTMLInputElement>
-): InputProps => ({
+export const inputStyles: InputProps = {
   m: 1,
   bg: 'white',
   h: '45px',
   borderColor: 'gray.500',
   w: '100%',
-  value,
-  type,
-  name,
-  onChange,
-  onBlur,
-});
+};
 
 export const alertStyles: TextProps = {
   textAlign: 'center',

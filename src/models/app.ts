@@ -8,20 +8,17 @@ export interface IAccessory {
   description: string;
   image: SanityImageSource;
 }
-
 export interface IMenuItem {
   id: string;
   title: string;
   link: string;
   icon: ReactNode;
 }
-
 export interface INewsletterFormValues {
   name: string;
   email: string;
   industry: string;
 }
-
 export interface ICarouselItem {
   id: string;
   description: string;
@@ -40,7 +37,6 @@ export interface IProductOverview {
   outOfStock?: boolean;
   cta?: ReactNode;
 }
-
 export interface IDroneProperties {
   id: string;
   imageUrl: string;
@@ -51,7 +47,7 @@ export interface IDroneProperties {
   tagline: string;
   productType: string;
   outOfStock?: boolean;
-  industry?: string;
+  industry?: Industry[];
 }
 
 export interface ICameraProperties extends IDroneProperties {}
@@ -59,7 +55,6 @@ export interface IOtherProductsProperties
   extends Omit<IDroneProperties, 'tagline' | 'series'> {
   description: string;
 }
-
 export interface IProductSectionItem {
   name: string;
   displayName: string;
@@ -70,13 +65,11 @@ export interface IProductCategory {
   name: string;
   iconUrl: string;
 }
-
 export interface INavItem {
   id: string;
   name: string;
   link: string;
 }
-
 export interface IContactItem {
   id: string;
   heading: string;
@@ -84,13 +77,11 @@ export interface IContactItem {
   icon: IconType;
   link: string;
 }
-
 export interface IMainBannerData {
   heading: string;
   tagline: string;
   featuredProducts: IMainBannerFeaturedProducts[];
 }
-
 export interface IMainBannerFeaturedProducts {
   id: string;
   name: string;
@@ -98,7 +89,6 @@ export interface IMainBannerFeaturedProducts {
   tagline: string;
   imageUrl: string;
 }
-
 export interface IDeal {
   id: string;
   name: string;
@@ -178,14 +168,12 @@ export interface IFAQ {
   question: string;
   answer: string;
 }
-
 export interface IBlogOverview {
   id: string;
   title: string;
   slug: string;
   type: 'guide' | 'story';
 }
-
 export interface IBlogArticle extends IBlogOverview {
   tagline: string;
   duration: number;

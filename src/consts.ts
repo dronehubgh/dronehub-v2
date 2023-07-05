@@ -12,3 +12,6 @@ export const facebookUrl = 'https://www.facebook.com/dronehub.ghana/';
 export const twitterUrl = 'https://twitter.com/DroneHubGh?s=20';
 export const instagramUrl = 'https://www.instagram.com/dronehubgh/';
 export const linkedInUrl = 'https://www.linkedin.com/company/dronehubgh/';
+
+export const emailServiceId = 'service_286ntrv';
+export const emailPublicKey = 'C_yXzaf65eEaoOdsm';

@@ -23,12 +23,7 @@ const MiningPage: NextPage = () => {
       />
       <BannerImage imageUrl="https://res.cloudinary.com/djmx11b6s/image/upload/v1676505623/donehub-assets/industry-images/mining_ikjcph.png" />
       <IndustryApplicationsSection {...mining} />
-      <IndustryDroneSolutions
-        industryName="Mining"
-        drones={solutionsItems.filter((item) =>
-          item.categories.includes('Mining')
-        )}
-      />
+      <IndustryDroneSolutions industryName="Mining" industry="mining" />
 
       <Contact />
     </>

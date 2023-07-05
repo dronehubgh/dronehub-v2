@@ -1,17 +1,21 @@
 import { Box, Text } from '@chakra-ui/react';
-import React from 'react';
+import React, { useContext } from 'react';
 import { SolutionsSlider } from '../../../components';
 import { ISolutionsItems } from '../../../components/SolutionsOverview/Solutions';
+import { DronesContext } from '../../../context/dronesContext';
+import { Industry } from '../../../models/app';
 
 interface IIndustryDroneSolutionsProps {
   industryName: string;
-  drones: ISolutionsItems[];
+  industry: Industry;
 }
 
 export const IndustryDroneSolutions = ({
   industryName,
-  drones = [],
+  industry,
 }: IIndustryDroneSolutionsProps) => {
+  const { drones } = useContext(DronesContext);
+
   return (
     <Box bg="#FAFAFA" my="4rem">
       <Text
@@ -24,7 +28,9 @@ export const IndustryDroneSolutions = ({
       </Text>
 
       <Box>
-        <SolutionsSlider items={drones} />
+        <SolutionsSlider
+          items={drones.filter((drone) => drone.industry?.includes(industry))}
+        />
       </Box>
     </Box>
   );

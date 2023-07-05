@@ -1,4 +1,5 @@
 import { Box, Text, Flex, BoxProps } from '@chakra-ui/react';
+import Link from 'next/link';
 import React from 'react';
 import { BsArrowRight } from 'react-icons/bs';
 
@@ -12,12 +13,20 @@ export const Card = ({ title, ...rest }: CardProps) => {
       <Text fontSize={{ base: '1.7rem', lg: '2.5rem' }} fontWeight="700">
         {title}
       </Text>
-      <Flex align="center" mt="4rem" fontSize="1.5rem" fontWeight="700">
-        <Text mr="0.5rem" pb="0.4rem">
-          Read more
-        </Text>{' '}
-        <BsArrowRight />
-      </Flex>
+      <Link href="/blog#guides" color="white">
+        <Flex
+          align="center"
+          mt="4rem"
+          fontSize="1.5rem"
+          fontWeight="700"
+          _hover={{ color: 'white' }}
+        >
+          <Text mr="0.5rem" pb="0.4rem">
+            Read more
+          </Text>{' '}
+          <BsArrowRight />
+        </Flex>
+      </Link>
     </Box>
   );
 };

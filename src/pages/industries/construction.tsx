@@ -25,9 +25,7 @@ const ConstructionPage: NextPage = () => {
       <IndustryApplicationsSection {...construction} />
       <IndustryDroneSolutions
         industryName="Construction"
-        drones={solutionsItems.filter((item) =>
-          item.categories.includes('Construction')
-        )}
+        industry="construction"
       />
 
       <Contact />

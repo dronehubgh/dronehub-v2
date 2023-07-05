@@ -25,9 +25,7 @@ const PublicSafetyPage: NextPage = () => {
       <IndustryApplicationsSection {...publicSafety} />
       <IndustryDroneSolutions
         industryName="Public Safety"
-        drones={solutionsItems.filter((item) =>
-          item.categories.includes('Public Safety')
-        )}
+        industry="public-safety"
       />
 
       <Contact />

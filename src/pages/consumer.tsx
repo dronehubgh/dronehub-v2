@@ -21,11 +21,7 @@ const ConsumerPage: NextPage = () => {
     <div>
       <Banner coverImage={coverImage} />
       <SliderGallery images={images} />
-      <ExploreDrones
-        drones={solutionsItems.filter((item) =>
-          item.categories.includes('Surveying')
-        )}
-      />
+      <ExploreDrones />
       <WhoWeAre />
       <Partners />
       <OurServices />

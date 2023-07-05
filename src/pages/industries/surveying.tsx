@@ -1,7 +1,6 @@
 import { NextPage } from 'next';
 import React from 'react';
 import { Contact } from '../../components';
-import { solutionsItems } from '../../data/products';
 import {
   BannerImage,
   IndustryDroneSolutions,
@@ -23,12 +22,7 @@ const SurveyingPage: NextPage = () => {
 
       <BannerImage imageUrl="https://res.cloudinary.com/djmx11b6s/image/upload/v1676505622/donehub-assets/industry-images/aerial_surveying_zg22fl.png" />
       <IndustryApplicationsSection {...survey} />
-      <IndustryDroneSolutions
-        industryName="Surveying"
-        drones={solutionsItems.filter((item) =>
-          item.categories.includes('Surveying')
-        )}
-      />
+      <IndustryDroneSolutions industryName="Surveying" industry="surveying" />
       <Contact />
     </>
   );

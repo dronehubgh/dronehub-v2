@@ -13,6 +13,8 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { Header } from '../components/Header/Header';
+import { DronesContextProvider } from '../context/dronesContext';
+import { DataFetching } from '../components/DataFetching';
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -21,9 +23,12 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <ChakraProvider theme={theme}>
-      <Header />
-      <Component {...pageProps} />
-      <Footer />
+      <DronesContextProvider>
+        <DataFetching />
+        <Header />
+        <Component {...pageProps} />
+        <Footer />
+      </DronesContextProvider>
     </ChakraProvider>
   );
 }

@@ -23,12 +23,7 @@ const SecurityPage: NextPage = () => {
 
       <BannerImage imageUrl="https://res.cloudinary.com/djmx11b6s/image/upload/v1676505623/donehub-assets/industry-images/security_mbrvmy.png" />
       <IndustryApplicationsSection {...security} />
-      <IndustryDroneSolutions
-        industryName="Security"
-        drones={solutionsItems.filter((item) =>
-          item.categories.includes('Security')
-        )}
-      />
+      <IndustryDroneSolutions industryName="Security" industry="security" />
 
       <Contact />
     </>

@@ -1,12 +1,11 @@
 import { Box } from '@chakra-ui/react';
-import { BiChevronRight } from 'react-icons/bi';
-import { IconButton } from '../../components';
 import { InfoCard } from './InfoCard';
+import { JoinOurTeamModal } from './JoinOurTeam';
 
 export { AboutBanner } from './Banner';
-export { VisionAndMission } from './VisionAndMission';
 export { Gallery as AboutGallery } from './Gallery';
 export { Opportunities } from './Opportunities';
+export { VisionAndMission } from './VisionAndMission';
 
 export const AboutUs = () => (
   <Box>
@@ -16,12 +15,9 @@ export const AboutUs = () => (
       description="We believe in a future where people and drones can thrive together."
       imageUrl="https://res.cloudinary.com/djmx11b6s/image/upload/v1677922340/donehub-assets/svg-icons/Building_an_ecosystem_for_humans_1_ki7kql.svg"
       cta={
-        <IconButton
-          maxW="200px"
-          bgColor="brand.blue"
-          color="gray.100"
-          title="Join Our Team"
-          icon={<BiChevronRight />}
+        <JoinOurTeamModal
+          btnLabel="Join Our Team"
+          btnStyle={{ bgColor: 'brand.blue', color: 'gray.100' }}
         />
       }
     />

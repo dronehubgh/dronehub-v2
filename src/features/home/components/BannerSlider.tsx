@@ -49,7 +49,11 @@ export const BannerSlider = ({ featuredProducts }: BannerSlider) => {
               align="center"
               flexDir="column"
             >
-              <Image src={product.imageUrl} alt={product.name} />
+              <Image
+                boxSize={{ base: '250px', lg: '300px' }}
+                src={product.imageUrl}
+                alt={product.name}
+              />
 
               <Text
                 fontSize={{ base: '1.5rem', lg: '2rem' }}

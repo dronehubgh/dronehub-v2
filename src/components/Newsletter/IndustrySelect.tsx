@@ -6,13 +6,11 @@ import { selectStyles } from './_styles';
 interface IIndustrySelectProps {
   value: string;
   handleChange?: ChangeEventHandler<HTMLSelectElement>;
-  handleBlur?: FocusEventHandler<HTMLSelectElement>;
 }
 
 export const IndustrySelect = ({
   value,
   handleChange,
-  handleBlur,
 }: IIndustrySelectProps) => {
   return (
     <Select
@@ -20,7 +18,6 @@ export const IndustrySelect = ({
       name="industry"
       value={value}
       onChange={handleChange}
-      onBlur={handleBlur}
     >
       <option value="">Your Industry</option>
       {fields.map((field) => (

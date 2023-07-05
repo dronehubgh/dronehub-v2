@@ -1,9 +1,15 @@
 import { Box, Flex, Heading, Text } from '@chakra-ui/react';
+import { CSSProperties } from '@emotion/serialize';
 import Link from 'next/link';
 import { A11y, Autoplay, Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { SwiperOptions } from 'swiper/types/swiper-options';
 import { Button, CustomMenuButton } from '../../../components';
+
+const style: any = {
+  position: 'relative',
+  minHeight: '500px',
+};
 
 export const Testimonials = () => {
   const pagination = {
@@ -66,50 +72,30 @@ export const Testimonials = () => {
               {...sliderSettings}
               style={{ width: '100%', height: '100%' }}
             >
-              <SwiperSlide
-                style={{
-                  position: 'relative',
-                  minHeight: '500px',
-                }}
-              >
-                <Flex
-                  justify="flex-end"
-                  align={{ base: 'flex-end', lg: 'center' }}
-                  w={{ base: '100%', lg: '90%' }}
-                  minH={{ base: '300px', lg: '700px' }}
-                  borderRightRadius="20px"
-                  p={{ base: '1rem', lg: '4rem' }}
-                  bg="center / cover no-repeat url(https://res.cloudinary.com/djmx11b6s/image/upload/v1676054037/donehub-assets/bridge_1_smtor5.png)"
-                  pos={{ base: 'relative' }}
-                >
-                  <Box
-                    bg="white"
-                    color="gray.900"
-                    p={{ base: '1rem', lg: '3rem' }}
-                    w="400px"
-                    mb={{ base: '-8rem', lg: '0' }}
-                    pos="relative"
-                  >
-                    <Text
-                      fontSize={{ base: '0.8rem', md: '1rem', lg: '1.2rem' }}
-                      w="90%"
-                      my="2rem"
-                      color="brand.blue"
-                    >
-                      “The Dronehub team is always ready to listen to you and
-                      offer timely solutions to your specific needs.”
-                    </Text>
-                    <Text
-                      fontWeight="bold"
-                      fontSize={{ base: 'lg', lg: '2xl' }}
-                    >
-                      Mr. Adabaka
-                    </Text>
-                    <Text fontSize={{ base: '0.8rem', lg: '1rem' }}>
-                      TECHNICAL MANAGER, <br /> SIENNA SERVICES LIMITED
-                    </Text>
-                  </Box>
-                </Flex>
+              <SwiperSlide style={style}>
+                <TestimonyCard
+                  testimony="The Dronehub team is always ready to listen to you and offer timely
+        solutions to your specific needs."
+                  name="Mr. Adabaka"
+                  position="TECHNICAL MANAGER"
+                  company="SIENNA SERVICES LIMITED"
+                />
+              </SwiperSlide>
+              <SwiperSlide style={style}>
+                <TestimonyCard
+                  testimony="Their customer support is timely and prompt. Business relation is great and I  recommend Dronehub to businesses"
+                  name="Mr. Larbi"
+                  position="MANAGING DIRECTOR"
+                  company="BEACON SURVEY LIMITED"
+                />
+              </SwiperSlide>
+              <SwiperSlide style={style}>
+                <TestimonyCard
+                  testimony="The expertise of your technical team and their willingness to help us in the field made the integration process smooth for our technical personnel."
+                  name="Irene Avornyo"
+                  position="PROJECT COORDINATOR"
+                  company="PREFOS GHANA LIMITED"
+                />
               </SwiperSlide>
             </Swiper>
           </Box>
@@ -118,3 +104,52 @@ export const Testimonials = () => {
     </Box>
   );
 };
+
+interface ITestimonyCardProps {
+  testimony: string;
+  name: string;
+  position: string;
+  company: string;
+}
+
+export const TestimonyCard = ({
+  testimony,
+  name,
+  position,
+  company,
+}: ITestimonyCardProps) => (
+  <Flex
+    justify="flex-end"
+    align={{ base: 'flex-end', lg: 'center' }}
+    w={{ base: '100%', lg: '90%' }}
+    minH={{ base: '300px', lg: '700px' }}
+    borderRightRadius="20px"
+    p={{ base: '1rem', lg: '4rem' }}
+    bg="center / cover no-repeat url(https://res.cloudinary.com/djmx11b6s/image/upload/v1676054037/donehub-assets/bridge_1_smtor5.png)"
+    pos={{ base: 'relative' }}
+  >
+    <Box
+      bg="white"
+      color="gray.900"
+      p={{ base: '1rem', lg: '3rem' }}
+      w="400px"
+      mb={{ base: '-8rem', lg: '0' }}
+      pos="relative"
+    >
+      <Text
+        fontSize={{ base: '0.8rem', md: '1rem', lg: '1.2rem' }}
+        w="90%"
+        my="2rem"
+        color="brand.blue"
+      >
+        “{testimony}”
+      </Text>
+      <Text fontWeight="bold" fontSize={{ base: 'lg', lg: '2xl' }}>
+        {name}
+      </Text>
+      <Text fontSize={{ base: '0.8rem', lg: '1rem' }}>
+        {position}, <br /> {company}
+      </Text>
+    </Box>
+  </Flex>
+);
