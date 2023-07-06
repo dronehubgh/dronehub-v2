@@ -68,7 +68,7 @@ export const NavbarLarge = ({ navItems }: NavbarLargeProps) => {
               color={isScrolled ? 'brand.blue' : 'gray.100'}
             />
           </Link>
-          <Link href="/enterprise?type=integration-program">
+          <Link href="/business">
             <Button
               title="Enterprise Solutions"
               bg={isScrolled ? 'brand.blue' : 'white'}
