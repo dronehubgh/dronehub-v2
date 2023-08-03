@@ -103,6 +103,7 @@ export const NavbarSmall = ({ navItems }: NavbarLargeProps) => {
                       className={`nav-item my-2 text-dark`}
                       href={navItem.link}
                       passHref
+                      onClick={onClose}
                     >
                       {navItem.name}
                     </NextLink>
@@ -119,10 +120,16 @@ export const NavbarSmall = ({ navItems }: NavbarLargeProps) => {
                       color="gray.100"
                       w="90%"
                       mx="auto"
+                      onClick={onClose}
                     />
                   </Link>
-                  <Link href="/enterprise?type=integration-program">
-                    <Button title="Enterprise Solutions" w="90%" mx="auto" />
+                  <Link href="/business">
+                    <Button
+                      title="Enterprise Solutions"
+                      w="90%"
+                      mx="auto"
+                      onClick={onClose}
+                    />
                   </Link>
                 </Box>
               </DrawerFooter>
@@ -133,6 +140,3 @@ export const NavbarSmall = ({ navItems }: NavbarLargeProps) => {
     </Box>
   );
 };
-function MutableRefObject<T>() {
-  throw new Error('Function not implemented.');
-}
